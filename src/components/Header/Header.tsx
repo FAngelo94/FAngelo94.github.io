@@ -2,8 +2,10 @@ import { Container } from './styles'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
+import { header } from "../../data"
+import logo from "../../assets/logo.png";
 
-import Curriculo from '../../assets/CV_JoaoTulio.pdf'
+import Curriculum from '../../assets/AngeloFalci.pdf'
 export function Header() {
   const [isActive, setActive] = useState(false)
 
@@ -20,8 +22,7 @@ export function Header() {
     <Container className="header-fixed">
       <Router>
         <HashLink smooth to="#home" className="logo">
-          <span>J</span>
-          <span>Tulio</span>
+        <img src={logo} alt="logo"/>
         </HashLink>
 
         <input
@@ -35,18 +36,21 @@ export function Header() {
 
         <nav className={isActive ? 'active' : ''}>
           <NavHashLink smooth to="#home" onClick={closeMenu}>
-            Home
+            {header.home}
           </NavHashLink>
           <NavHashLink smooth to="#sobre" onClick={closeMenu}>
-            Sobre mim
+            {header.aboutMe}
+          </NavHashLink>
+          <NavHashLink smooth to="#career" onClick={closeMenu}>
+            {header.career}
           </NavHashLink>
           <NavHashLink smooth to="#portfolio" onClick={closeMenu}>
-            Portfólio
+            {header.projects}
           </NavHashLink>
           <NavHashLink smooth to="#contato" onClick={closeMenu}>
-            Contato
+            {header.contacts}
           </NavHashLink>
-          <a href={Curriculo} download className="button">
+          <a href={Curriculum} download className="button">
             CV
           </a>
         </nav>

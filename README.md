@@ -1,11 +1,11 @@
-# Portfólio João Túlio
+# Curriculum di Angelo Falci (Work in Progress!)
 
-Este projeto foi criado com CRA (Create React App).
+Questo progetto è stato creato con CRA (Create React App).
 
-Este é meu site para me apresentar, aqui coloco minhas habilidades, portfólio, e formas de contato.
+Questo è il mio sito per presentarmi, qui metto le mie competenze, portfolio e contatti.
 
 
-## Tecnologias usadas:
+## Tecnologie usate:
 - React
 - Typescript
 - Styled Components

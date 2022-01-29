@@ -17,6 +17,10 @@ export const Container = styled.header`
   width: 100vw;
   z-index: 1000;
 
+  img {
+    height: 32px;
+  }
+
   nav{
     display: flex;
     align-items: center;

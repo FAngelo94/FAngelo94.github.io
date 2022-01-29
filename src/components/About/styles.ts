@@ -17,6 +17,19 @@ export const Container = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+
+    &:hover span {
+      display: block;
+    }
+
+    span {
+      position: absolute;
+      left: 50%;
+      bottom: -70%;
+      transform: translate(-50%,-50%);
+      display: none;
+    }
 
     img{
       width: 3.4rem;

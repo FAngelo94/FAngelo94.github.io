@@ -2,27 +2,29 @@ import { Container } from './styles'
 
 import reactIcon from '../../assets/react-icon.svg'
 import linkedinIcon from '../../assets/linkedin.png'
-import githubIcon from '../../assets/github.png'
-import instagramIcon from '../../assets/instagram.png'
-import discordIcon from '../../assets/discord.png'
+import githubIcon from '../../assets/github-icon.svg'
+import codepen from '../../assets/codepen.png'
+import telegram from '../../assets/telegram.png'
+import codingame from "../../assets/codingame.png"
+import logo from "../../assets/logo.png";
+import { footer} from "../../data"
 
 export function Footer() {
   return (
     <Container className="footer">
       <a href="/" className="logo">
-        <span>J</span>
-        <span>Tulio</span>
+        <img src={logo} alt="logo"/>
       </a>
       <div>
         <p>
-          Este site foi feito com <img src={reactIcon} alt="React" /> e muito
+          {footer.center} <img src={reactIcon} alt="React" /> {footer.center2}
           <span>❤️</span>
         </p>
       </div>
 
       <div className="social-media">
         <a
-          href="https://www.linkedin.com/in/jtsoares/"
+          href="https://www.linkedin.com/in/angelo-falci-1292ab76/"
           target="_blank"
           rel="noreferrer"
         >
@@ -30,7 +32,7 @@ export function Footer() {
         </a>
 
         <a
-          href="https://github.com/joaotuliojt"
+          href="https://github.com/FAngelo94"
           target="_blank"
           rel="noreferrer"
         >
@@ -38,19 +40,27 @@ export function Footer() {
         </a>
 
         <a
-          href="https://www.instagram.com/tulio_joaob/"
+          href="https://codepen.io/FAngelo94/"
           target="_blank"
           rel="noreferrer"
         >
-          <img src={instagramIcon} alt="Instagram" />
+          <img src={codepen} alt="Codepen" />
         </a>
 
         <a
-          href="https://discord.com/users/426120432991862784"
+          href="https://www.codingame.com/profile/431b0c5f5e61df133a64b701315f977d6866633"
           target="_blank"
           rel="noreferrer"
         >
-          <img src={discordIcon} alt="Discord" />
+          <img src={codingame} alt="Codingame" />
+        </a>
+        
+        <a
+          href="https://web.telegram.org/#/im?p=@fangelo94"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={telegram} alt="Telegram" />
         </a>
       </div>
     </Container>

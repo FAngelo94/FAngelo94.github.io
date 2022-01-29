@@ -10,8 +10,8 @@ export const Container = styled.footer`
   justify-content: space-between;
 
 
-  .logo{
-    font-size: 2.8rem;
+  .logo img{
+    height: 55px;
   }
 
   p{

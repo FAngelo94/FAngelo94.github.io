@@ -50,7 +50,10 @@ display: absolute;
         align-items: center;
         justify-content: space-between;
         color: var(--green);
-        margin-bottom: 3.6rem;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--green);
+
         .project-links {
           display: flex;
           align-items: center;
@@ -58,6 +61,7 @@ display: absolute;
         }
         img {
           height: 20px;
+          cursor: pointer;
         }
 
         a > img {
@@ -84,17 +88,16 @@ display: absolute;
         }
       }
 
-      footer {
-        margin-top: auto;
         .tech-list {
+          margin-top: auto;
+          color: var(--green);
           display: flex;
           align-items: center;
-          gap: 2rem;
+          gap: 1rem;
           font-size: 1.4rem;
           opacity: 0.6;
           flex-wrap: wrap;
       }
-        }
     }
   }
 

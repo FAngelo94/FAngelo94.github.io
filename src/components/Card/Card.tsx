@@ -37,7 +37,7 @@ export function Card({ title, text, skills, handleClose }: ICard) {
       <div className="project">
         <header>
           <h1>{title}</h1>
-          <img src={close} alt="Suitcase" onClick={()=>handleClose()} />
+          <img src={close} alt="Suitcase" onClick={() => handleClose()} />
         </header>
         <div className="body">
           {text.map((p, index) =>
@@ -47,14 +47,14 @@ export function Card({ title, text, skills, handleClose }: ICard) {
               <p key={index}>{traslateText(p.value)}</p>
             )
           )}
-        </div>
-        <footer>
           <ul className="tech-list">
             {skills.map((skill, index) => (
               <li>{skill}</li>
             ))}
           </ul>
-        </footer>
+        </div>
+
+        <footer></footer>
       </div>
     </Container>
   );

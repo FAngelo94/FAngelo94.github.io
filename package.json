@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "homepage": "https://fangelo94.github.io/curriculum/",
   "private": true,
   "dependencies": {
     "@formspree/react": "^2.2.4",
@@ -26,6 +27,8 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -54,6 +57,7 @@
     "@types/react-google-recaptcha": "^2.1.2",
     "@types/react-router-hash-link": "^2.4.4",
     "@types/styled-components": "^5.1.18",
-    "@types/validator": "^13.7.1"
+    "@types/validator": "^13.7.1",
+    "gh-pages": "^3.2.3"
   }
 }

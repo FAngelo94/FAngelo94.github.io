@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.43c86f1c.css",
-    "main.js": "/static/js/main.f6b01c44.js",
+    "main.js": "/static/js/main.9da24bb4.js",
     "static/media/profile-image.jpg": "/static/media/profile-image.f847245148cc12cb015a.jpg",
-    "static/media/AngeloFalci.pdf": "/static/media/AngeloFalci.c0f04880436b1a53663c.pdf",
+    "static/media/AngeloFalci.pdf": "/static/media/AngeloFalci.ffc381860e7c82ea6ce5.pdf",
     "static/media/three-year-IT.pdf": "/static/media/three-year-IT.9e77691dcaa3cf0e8f42.pdf",
     "static/media/three-year-EN.pdf": "/static/media/three-year-EN.6d0e0641614acb56e2e0.pdf",
     "static/media/masterly-IT.pdf": "/static/media/masterly-IT.ab2c625e83b95e4eb4d2.pdf",
@@ -35,10 +35,10 @@
     "static/media/external-link-icon.svg": "/static/media/external-link-icon.e5f54e725f027cf7f3e6c481893eb96f.svg",
     "static/media/windows-10.svg": "/static/media/windows-10.afea2f1c2f7e291f76e33319c63dcf62.svg",
     "main.43c86f1c.css.map": "/static/css/main.43c86f1c.css.map",
-    "main.f6b01c44.js.map": "/static/js/main.f6b01c44.js.map"
+    "main.9da24bb4.js.map": "/static/js/main.9da24bb4.js.map"
   },
   "entrypoints": [
     "static/css/main.43c86f1c.css",
-    "static/js/main.f6b01c44.js"
+    "static/js/main.9da24bb4.js"
   ]
 }

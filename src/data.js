@@ -114,6 +114,7 @@ export const career = {
 
 export const projects = {
     title: "Main Projects",
+    subtitle: "(click on the card to see more details)",
     projects: [
         // ClimberWorld
         {
@@ -239,6 +240,45 @@ export const projects = {
                     \nWhen we deploy a new components or functionalities in our application could be that we already have the API needs or we don't have it.\
                     \nIn the first case we just use them and, if necessary, we suggest some updates\
                     \nIn the second case we mock the server reply in our redux store, we pass to backend the JSON format of mocked data and they create the API."
+                }
+            ]
+        },
+        // Curriculum online
+        {
+            title: "Portfolio Online",
+            description: "I create this portfolio online to show my skills and experience.\
+            \nI used React with Typescript and style-components and I publish it on my github account through github pages.",
+            links: [
+                {
+                    label: "Website",
+                    url: "https://fangelo94.github.io/",
+                    icon: externalLinkIcon,
+                },
+                {
+                    label: "Github",
+                    url: "https://github.com/FAngelo94/FAngelo94.github.io",
+                    icon: githubIcon,
+                }
+            ],
+            mainSkills: ["React", "Typescript", "Style-components", "GiHub Pages"],
+            allSkills: ["React", "Typescript", "Style-components", "GiHub Pages", "GitHub", "gh-pages"],
+            longtext: [
+                {
+                    type: "text",
+                    value: "Starting from a model I found online I created this portfolio online improving the code and adding new components."
+                },
+                {
+                    type: "subtitle",
+                    value: "Technologies and Libraries Used"
+                },
+                {
+                    type: "text",
+                    value: "- *React* as framework\
+                    \n- *Typescript* as language\
+                    \n- *style-components* as library to manage styles\
+                    \n- *GitHub* as version control system\
+                    \n- *GitHub Pages* as static site generator\
+                    \n- *gh-pages* package to deploy the website in react using GitHub Pages"
                 }
             ]
         },

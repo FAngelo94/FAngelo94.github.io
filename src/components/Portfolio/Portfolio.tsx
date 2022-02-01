@@ -31,6 +31,7 @@ export function Portfolio() {
   return (
     <Container id="portfolio">
       <h2>{projects.title}</h2>
+      <div className="subtitle">{projects.subtitle}</div>
       <div className="projects">
         {projects.projects.map((p, index) => (
           <ScrollAnimation animateIn="flipInX" key={index}>

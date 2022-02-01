@@ -6,19 +6,41 @@ import { Contact } from "../Contact/Contact";
 import { Portfolio } from "../Portfolio/Portfolio";
 import { Career } from "../Career/Career";
 
-import boostrapIcon from "../../assets/bootstrap-icon.svg";
 import cssIcon from "../../assets/css-icon.svg";
 import htmlIcon from "../../assets/html-icon.svg";
 import jsIcon from "../../assets/js-icon.svg";
-import mysqlIcon from "../../assets/mysql-icon.svg";
 import nodeIcon from "../../assets/node-icon.svg";
 import reactIcon from "../../assets/react-icon.svg";
-import sassIcon from "../../assets/sass-icon.svg";
 import typescriptIcon from "../../assets/typescript-icon.svg";
+import androidIcon from "../../assets/android.svg";
+import bootstrapIcon from "../../assets/bootstrap.svg";
+import dockerIcon from "../../assets/docker.svg";
+import flaskIcon from "../../assets/flask.svg";
+import mysqlIcon from "../../assets/mysql.svg";
+import pythonIcon from "../../assets/python.svg";
+import windowsIcon from "../../assets/windows-10.svg";
 import vscodeIcon from "../../assets/vscode.svg";
-import vueIcon from "../../assets/vue-icon.svg";
+import ubuntuIcon from "../../assets/ubuntu.png";
 
 export function Main() {
+  const icons = [
+    { icon: jsIcon, name: "JavaScript" },
+    { icon: reactIcon, name: "React" },
+    { icon: nodeIcon, name: "Node.js" },
+    { icon: typescriptIcon, name: "TypeScript" },
+    { icon: cssIcon, name: "CSS" },
+    { icon: htmlIcon, name: "HTML" },
+    { icon: pythonIcon, name: "Python" },
+    { icon: flaskIcon, name: "Flask" },
+    { icon: mysqlIcon, name: "SQL" },
+    { icon: dockerIcon, name: "Docker" },
+    { icon: bootstrapIcon, name: "Bootstrap" },
+    { icon: vscodeIcon, name: "VS Code" },
+    { icon: androidIcon, name: "Android" },
+    { icon: windowsIcon, name: "Windows" },
+    { icon: ubuntuIcon, name: "Ubuntu" },
+  ];
+
   return (
     <Container>
       <Particles
@@ -149,63 +171,11 @@ export function Main() {
                 value: "*",
                 weight: "400",
               },
-              image: [
-                {
-                  src: boostrapIcon,
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: cssIcon,
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: htmlIcon,
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: jsIcon,
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: mysqlIcon,
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: nodeIcon,
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: reactIcon,
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: sassIcon,
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: typescriptIcon,
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: vscodeIcon,
-                  width: 20,
-                  height: 20,
-                },
-                {
-                  src: vueIcon,
-                  width: 20,
-                  height: 20,
-                },
-              ],
+              image: icons.map((i) => ({
+                src: i.icon,
+                width: 20,
+                height: 20,
+              })),
               polygon: {
                 sides: 5,
               },

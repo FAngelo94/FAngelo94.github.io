@@ -8,7 +8,7 @@ import { contacts } from "../../data";
 export function Contact(){
 
   return(
-    <Container id="contato">
+    <Container id="contacts">
       <header>
         <h2>{contacts.title}</h2>
         <p>{contacts.subtitle}</p>

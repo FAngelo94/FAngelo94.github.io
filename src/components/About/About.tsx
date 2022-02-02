@@ -38,7 +38,7 @@ export function About() {
     { icon: ubuntuIcon, name: "Ubuntu" },
   ];
   return (
-    <Container id="sobre">
+    <Container id="about">
       <div className="about-text">
         <ScrollAnimation animateIn="fadeInLeft">
           <h2>{about.title}</h2>

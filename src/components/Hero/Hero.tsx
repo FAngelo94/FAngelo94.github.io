@@ -24,7 +24,7 @@ export function Hero(){
 
           <ScrollAnimation animateIn="fadeInUp" delay={0.8*1000}>
             <BrowserRouter>
-              <NavHashLink smooth to="#contato" className="button">{hero.contacts}</NavHashLink>
+              <NavHashLink smooth to="#contacts" className="button">{hero.contacts}</NavHashLink>
             </BrowserRouter>
           </ScrollAnimation>
       </div>

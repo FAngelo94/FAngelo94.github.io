@@ -115,6 +115,7 @@ export const career = {
 export const projects = {
     title: "Main Projects",
     subtitle: "(click on the card to see more details)",
+    footerText: "For more projects looks my github or codepen! (links in footer)",
     projects: [
         // ClimberWorld
         {
@@ -764,9 +765,9 @@ export const projects = {
                 {
                     type: "text",
                     value: "- *html*\
-                    - *CSS*\
-                    - *Sass*\
-                    - *JS6*"
+                    \n- *CSS*\
+                    \n- *Sass*\
+                    \n- *JS6*"
                 },
                 {
                     type: "subtitle",

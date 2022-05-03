@@ -62,7 +62,7 @@ export function Portfolio() {
           </ScrollAnimation>
         ))}
       </div>
-
+      <div className="footer-text">{projects.footerText}</div>
       {showCard && (
         <Card
           title={showCard.title}

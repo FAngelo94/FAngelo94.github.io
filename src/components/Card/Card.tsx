@@ -1,10 +1,6 @@
 import { Container } from "./styles";
-import githubIcon from "../../assets/github-icon.svg";
-import externalLinkIcon from "../../assets/external-link-icon.svg";
-import bachelor from "../../assets/bachelor.png";
+import { useEffect } from "react";
 import close from "../../assets/close.png";
-import ScrollAnimation from "react-animate-on-scroll";
-import { projects } from "../../data";
 
 interface ICard {
   title: string;
@@ -32,6 +28,20 @@ const traslateText = (text: string) => {
 };
 
 export function Card({ title, text, skills, handleClose }: ICard) {
+
+  // Close also when click outside
+  useEffect(() => {
+    const handleClickOutside = (event: any) => {
+      if (event.key === "Escape") {
+        handleClose();
+      }
+    };
+    document.addEventListener("keydown", handleClickOutside);
+    return () => {
+      document.removeEventListener("keydown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <Container>
       <div className="project">

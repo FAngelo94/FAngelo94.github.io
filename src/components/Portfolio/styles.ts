@@ -14,6 +14,13 @@ export const Container = styled.section`
     margin-bottom: 5rem;
   }
 
+  .footer-text {
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 10px;
+  }
+
   .projects {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

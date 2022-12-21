@@ -47,7 +47,8 @@ export const about = {
   mainSkills: "Here are my main skills:",
   paragraphs: [
     "Hi, Angelo and I live in the heart of the alps, Sondrio (north of Milan), Italy. I'm passionate about programming and I'm always looking for new challenges to learn and improve my skills. I’m a very active and motivated person. My best qualities are determination and sincerity. In the other side my defects are.. wait, it is better not say my defects in a curriculum.",
-    "For the moment I work in TeamSystems, using mainly React with Redux. In my free time I develop a fullstack web application using React for frontend and Flask (Python framework) for backend. Below you can see more details about my work experience and projects!",
+    "For the moment I work in Deltatre, using mainly React with Redux to develop a custom player with many features.",
+    "In my free time I develop a fullstack web application using React for frontend and Flask (Python framework) for backend. Below you can see more details about my work experience and projects!",
     "My other hobbies are: travel, read books, board games, videogames and do a lot of sports!",
   ],
 };

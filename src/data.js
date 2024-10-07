@@ -5,6 +5,8 @@ import masterlyEn from "./assets/masterly-EN.pdf";
 import masterlyIt from "./assets/masterly-IT.pdf";
 import githubIcon from "./assets/github-icon.svg";
 import externalLinkIcon from "./assets/external-link-icon.svg";
+import googlePlay from "./assets/google-play.svg";
+import appStore from "./assets/app-store.svg";
 
 export const hero = {
   hello: "Hello 👋, I'm",
@@ -148,10 +150,83 @@ export const career = {
 };
 
 export const projects = {
-  title: "Main Projects",
-  subtitle: "(click on the card to see more details)",
+  title: "Last Main Projects",
+  subtitle: "(click on the title card to see more details)",
   footerText: "For more projects look my github or codepen! (links in footer)",
   projects: [
+    // Digitalpix
+    {
+      title: "Side Project - Digitalpix",
+      description:
+        "I developed, in React, a website and store application (for Ios and Android) to customize and buy professional photos.",
+      links: [
+        {
+          label: "Digitalpix - Play Store",
+          url: "https://play.google.com/store/apps/details?id=com.digitalpix.cassiopeia&hl=it",
+          icon: googlePlay,
+        },
+        {
+          label: "Digitalpix - App Store",
+          url: "https://apps.apple.com/it/app/digitalpix-stampa-foto/id1628519772",
+          icon: appStore,
+        },
+      ],
+      mainSkills: ["React", "React Native", "Expo", "Redux"],
+      allSkills: [
+        "React",
+        "Redux",
+        "React Native",
+        "Expo",
+        "Javascript",
+        "html",
+        "CSS",
+        "VS Code",
+        "firebase",
+        "Swagger",
+      ],
+      longtext: [
+        {
+          type: "text",
+          value:
+            "In my free time I developed the application that you can try in the links provided. Inside users can buy different product related the world of photography and, obviously, they can modify and print their photos in different formats.",
+        },
+        {
+          type: "subtitle",
+          value: "Web App in React",
+        },
+        {
+          type: "text",
+          value:
+            "First I created a web application in React and I published it on firebase. In this way user can use it also in browser.\
+          \nI analyzed ",
+        },
+        {
+          type: "subtitle",
+          value: "Mobile App in React Native",
+        },
+        {
+          type: "text",
+          value:
+            "For the backend these are the main technologies I’m using:\
+                    \n- *Flask* micro-framework developed in Python\
+                    \n- *mysql* to manage the database because the information inside the application are well structured\
+                    \n- *phpmyadmin docker image* used locally to explore the local database using an UI\
+                    \n- *docker* and *docker-compose* to develop easly the backend locally where 3 docker image are run, one for Flask, one for mysql and one for phpmyadmin\
+                    \n- *Swagger* to create a list of API documented well\
+                    \n- *pythonanywhere* to deploy the application\
+                    \n- *marshmallow, SQLAlchemy and connexion* to manage easly the tables in the db inside the API",
+        },
+        {
+          type: "subtitle",
+          value: "Other Technologies/Tools",
+        },
+        {
+          type: "text",
+          value: "- *Git*:\
+                    \n- *Visual Studio Code*",
+        },
+      ],
+    },
     // ClimberWorld
     {
       title: "Personal Project - Climberworld Web App",
@@ -238,7 +313,7 @@ export const projects = {
       links: [
         {
           label: "DeltaTre - Diva",
-          url: "https://www.deltatre.com/ott/diva",
+          url: "https://www.deltatre.com/streaming-and-digital/diva",
           icon: externalLinkIcon,
         },
       ],

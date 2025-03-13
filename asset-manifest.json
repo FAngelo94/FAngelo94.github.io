@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.43c86f1c.css",
-    "main.js": "/static/js/main.03a51ed9.js",
+    "main.js": "/static/js/main.c4e924ab.js",
     "static/media/profile-image.jpg": "/static/media/profile-image.f847245148cc12cb015a.jpg",
     "static/media/AngeloFalci.pdf": "/static/media/AngeloFalci.ffc381860e7c82ea6ce5.pdf",
     "static/media/three-year-IT.pdf": "/static/media/three-year-IT.9e77691dcaa3cf0e8f42.pdf",
@@ -15,6 +15,7 @@
     "static/media/logo.png": "/static/media/logo.d7a632682a0000bfd820.png",
     "static/media/telegram.png": "/static/media/telegram.65db574b9f74a1d788ea.png",
     "static/media/linkedin.png": "/static/media/linkedin.f249b38224ca41a0b909.png",
+    "static/media/kangury.png": "/static/media/kangury.ad97213f7df4c5472bd0.png",
     "static/media/illustration.svg": "/static/media/illustration.cf4b7a67f23b684549c4f797c62b527a.svg",
     "static/media/mysql.svg": "/static/media/mysql.e055e76cc6f04745cd7252c8a8696383.svg",
     "static/media/node-icon.svg": "/static/media/node-icon.cc3d45a160579a330a5c17cc2c8f1407.svg",
@@ -25,6 +26,7 @@
     "static/media/phone-icon.svg": "/static/media/phone-icon.fc7195139d684fa2f6bb03b8b9816095.svg",
     "static/media/email-icon.svg": "/static/media/email-icon.a5dd245e834641e729e77e40309039c4.svg",
     "static/media/python.svg": "/static/media/python.ab5b883c7057f0d1476bf89b193c1331.svg",
+    "static/media/app-store.svg": "/static/media/app-store.336f1711aebf7479bd5af3c4f6cdd5cf.svg",
     "static/media/html-icon.svg": "/static/media/html-icon.185baee7db74b83bf22eec6a6def7644.svg",
     "static/media/css-icon.svg": "/static/media/css-icon.212d777ae2db63edb235490d487dc292.svg",
     "static/media/android.svg": "/static/media/android.289e392d0a0d7a7fc3b1956bd3448eff.svg",
@@ -32,13 +34,14 @@
     "static/media/bootstrap.svg": "/static/media/bootstrap.a85a8cf68b24cd6bd9ef7e9da36687f1.svg",
     "static/media/js-icon.svg": "/static/media/js-icon.2d25723e91c8a9e057ae447ae6a73ecb.svg",
     "static/media/github-icon.svg": "/static/media/github-icon.b733fb12cb665f30988dbc522dd40f49.svg",
+    "static/media/google-play.svg": "/static/media/google-play.25f795559bdcd5b11f6f30316c5bdf7a.svg",
     "static/media/external-link-icon.svg": "/static/media/external-link-icon.e5f54e725f027cf7f3e6c481893eb96f.svg",
     "static/media/windows-10.svg": "/static/media/windows-10.afea2f1c2f7e291f76e33319c63dcf62.svg",
     "main.43c86f1c.css.map": "/static/css/main.43c86f1c.css.map",
-    "main.03a51ed9.js.map": "/static/js/main.03a51ed9.js.map"
+    "main.c4e924ab.js.map": "/static/js/main.c4e924ab.js.map"
   },
   "entrypoints": [
     "static/css/main.43c86f1c.css",
-    "static/js/main.03a51ed9.js"
+    "static/js/main.c4e924ab.js"
   ]
 }

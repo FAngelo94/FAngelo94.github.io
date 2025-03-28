@@ -7,6 +7,7 @@ import githubIcon from "./assets/github-icon.svg";
 import externalLinkIcon from "./assets/external-link-icon.svg";
 import googlePlay from "./assets/google-play.svg";
 import appStore from "./assets/app-store.svg";
+import kanguryLogo from "./assets/kangury.png";
 
 export const hero = {
   hello: "Hello 👋, I'm",
@@ -58,6 +59,12 @@ export const about = {
 export const career = {
   title: "Career",
   schools: [
+    {
+      title: "State Exam for Informatic Engineering",
+      where: "Politecnico di Milano, Italy",
+      description: "Passed the state exam for the qualification to practice as an engineer.",
+      when: "2025",
+    },
     {
       title: "Master of Computer Science and Engineering",
       where: "Politecnico di Milano, Italy",
@@ -154,11 +161,90 @@ export const projects = {
   subtitle: "(click on the title card to see more details)",
   footerText: "For more projects look my github or codepen! (links in footer)",
   projects: [
-    // Digitalpix
+    // Kangury
     {
-      title: "Side Project - Digitalpix",
+      title: "Startup - Kangury",
       description:
-        "I developed, in React, a website and store application (for Ios and Android) to customize and buy professional photos.",
+        "I developed a fullstack application using React for frontend and Django for backend.\
+        \nIn Kangury you can buy photos that will be associated to an album contained your photos or videos.\
+        \nGo to the website to see more! If you are interesting contact me to know more or to receive a discount code.",
+      links: [
+        {
+          label: "Kangury - Official Website",
+          url: "https://www.kangury.it/",
+          icon: kanguryLogo,
+        },
+      ],
+      mainSkills: ["React", "Django", "Bootstrap 5", "mysql"],
+      allSkills: [
+        "React",
+        "Redux",
+        "Javascript",
+        "Python",
+        "html",
+        "CSS",
+        "VS Code",
+        "firebase",
+        "Swagger",
+        "Django",
+        "Bootstrap 5",
+        "mysql",
+        "Amazon AWS",
+        "S3",
+        "Pythonanywhere",
+        "github"
+      ],
+      longtext: [
+        {
+          type: "text",
+          value:
+            "I developed the application that you can try in the links provided. Inside users can buy different product related the world of photography and, obviously, they can modify and print their photos in different formats.\
+            \nAfter user buy a photo he can associate it to an album where he can upload his photos or videos.",
+        },
+        {
+          type: "subtitle",
+          value: "Introduction",
+        },
+        {
+          type: "text",
+          value:
+            "I used the following technologies for 3 main reasons:\
+            \n- I already know them and I can develop the application in a short time\
+            \n- I know service where I can deploy the application fast and with zero or low cost in beginning\
+            \n- They are solid and well known technologies used in many big project with a big community that can help me in case of problems",
+        },
+        {
+          type: "subtitle",
+          value: "PWA in React",
+        },
+        {
+          type: "text",
+          value:
+            "Key features of the web application I used/developed:\
+          \n- Bootstrap 5 with SASS personalizing it in order to have a theme easily to maintain and updates in future; it's also speed up the creation of the app considering I didn't have any UI designer\
+          \n- Redux to manage the store of the application\
+          \n- Firebase to deploy the application in 2 different branch, product and test, in order to have a test environment where I can see the changes before deploy in production\
+          \n- Complex photo editor where user can modify the photo cropping and rotating it\
+          \n- Google Analytics to track the user behavior inside the application\
+          \n- Swiper for different carousels inside the application"
+        },
+        {
+          type: "subtitle",
+          value: "Backend in Django",
+        },
+        {
+          type: "text",
+          value:
+            "For the backend I used Django with mysql database and I organize the different APIs in a Swagger documentation.\
+          \nI used Amazon AWS S3 bucket to store the photos and videos uploaded by the user.",
+        },
+      ],
+    },
+    // Digitalpix
+    /* {
+      title: "Personal Project - Digitalpix",
+      description:
+        "I developed, in React, a PWA and store application (for Ios and Android) to customize and buy professional photos.",
       links: [
         {
           label: "Digitalpix - Play Store",
@@ -188,7 +274,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "In my free time I developed the application that you can try in the links provided. Inside users can buy different product related the world of photography and, obviously, they can modify and print their photos in different formats.",
+            "I developed the application that you can try in the links provided. Inside users can buy different product related the world of photography and, obviously, they can modify and print their photos in different formats.",
         },
         {
           type: "subtitle",
@@ -197,8 +283,13 @@ export const projects = {
         {
           type: "text",
           value:
-            "First I created a web application in React and I published it on firebase. In this way user can use it also in browser.\
-          \nI analyzed ",
+            "Key features of the web application I used/developed:\
+          \n- Bootstrap 5 with SASS personalizing it in order to have a theme easily to maintain and updates in future; it's also speed up the creation of the app considering I didn't have any UI designer\
+          \n- Redux to manage the store of the application\
+          \n- Firebase to deploy the application in 2 different branch, product and test, in order to have a test environment where I can see the changes before deploy in production\
+          \n- Complex photo editor where user can modify the photo cropping and rotating it\
+          \n- Google Analytics to track the user behavior inside the application\
+          \n- Swiper for different carousels inside the application"
         },
         {
           type: "subtitle",
@@ -207,32 +298,19 @@ export const projects = {
         {
           type: "text",
           value:
-            "For the backend these are the main technologies I’m using:\
-                    \n- *Flask* micro-framework developed in Python\
-                    \n- *mysql* to manage the database because the information inside the application are well structured\
-                    \n- *phpmyadmin docker image* used locally to explore the local database using an UI\
-                    \n- *docker* and *docker-compose* to develop easly the backend locally where 3 docker image are run, one for Flask, one for mysql and one for phpmyadmin\
-                    \n- *Swagger* to create a list of API documented well\
-                    \n- *pythonanywhere* to deploy the application\
-                    \n- *marshmallow, SQLAlchemy and connexion* to manage easly the tables in the db inside the API",
-        },
-        {
-          type: "subtitle",
-          value: "Other Technologies/Tools",
-        },
-        {
-          type: "text",
-          value: "- *Git*:\
-                    \n- *Visual Studio Code*",
+            "In order to publish the application also in the mobile store I developed an application in React Native including inside a WebView that show the web application.\
+          \nIn this way I can use the same code for the web application and the mobile application. Moreover I don't need to publish the mobile app in Google Store and Apple Store everytime I do an updates reducing drastically the deploying time.\
+          \nWorking alone and only in my free time I considered this the best solution to have a good result in a short time.",
         },
       ],
-    },
+    }, */
     // ClimberWorld
     {
       title: "Personal Project - Climberworld Web App",
       description:
         "Web app I'm developing as fullstack using React as frontend and Flask (Python framework) as backend. This site has the ambition to collect information about all the refuges, excursions and climbing walls of the Alps.\
-            \nClick the link to see the website!",
+            \nClick the link to see the website!\
+            \n(Note: Backend is not online anymore so you can't see the data)",
       links: [
         {
           label: "Climberworld",

@@ -21,6 +21,8 @@ import pythonIcon from "../../assets/python.svg";
 import windowsIcon from "../../assets/windows-10.svg";
 import vscodeIcon from "../../assets/vscode.svg";
 import ubuntuIcon from "../../assets/ubuntu.png";
+import djangoIcon from "../../assets/django.svg";
+import copilotIcon from "../../assets/copilot.svg";
 
 export function Main() {
   const icons = [
@@ -39,6 +41,8 @@ export function Main() {
     { icon: androidIcon, name: "Android" },
     { icon: windowsIcon, name: "Windows" },
     { icon: ubuntuIcon, name: "Ubuntu" },
+    { icon: djangoIcon, name: "Django" },
+    { icon: copilotIcon, name: "Copilot" },
   ];
 
   return (

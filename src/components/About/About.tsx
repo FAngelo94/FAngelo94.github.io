@@ -11,6 +11,8 @@ import androidIcon from "../../assets/android.svg";
 import bootstrapIcon from "../../assets/bootstrap.svg";
 import dockerIcon from "../../assets/docker.svg";
 import flaskIcon from "../../assets/flask.svg";
+import djangoIcon from "../../assets/django.svg";
+import copilotIcon from "../../assets/copilot.svg";
 import mysqlIcon from "../../assets/mysql.svg";
 import pythonIcon from "../../assets/python.svg";
 import windowsIcon from "../../assets/windows-10.svg";
@@ -29,6 +31,7 @@ export function About() {
     { icon: htmlIcon, name: "HTML" },
     { icon: pythonIcon, name: "Python" },
     { icon: flaskIcon, name: "Flask" },
+    { icon: djangoIcon, name: "Django" },
     { icon: mysqlIcon, name: "SQL" },
     { icon: dockerIcon, name: "Docker" },
     { icon: bootstrapIcon, name: "Bootstrap" },
@@ -36,6 +39,7 @@ export function About() {
     { icon: androidIcon, name: "Android" },
     { icon: windowsIcon, name: "Windows" },
     { icon: ubuntuIcon, name: "Ubuntu" },
+    { icon: copilotIcon, name: "Copilot" },
   ];
   return (
     <Container id="about">

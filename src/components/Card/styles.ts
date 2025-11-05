@@ -18,13 +18,13 @@ display: absolute;
     
 
     .project {
-      padding: 2rem 1.8rem;
-      background-color: #2b2b2b;
-      border-radius: 1.2rem;
-      transition: 0.25s;
-      display: flex;
-      flex-direction: column;
-      color: #fff;
+  padding: 2rem 1.8rem;
+  background-color: var(--card-bg);
+  border-radius: 1.2rem;
+  transition: 0.25s;
+  display: flex;
+  flex-direction: column;
+  color: var(--card-text);
 
       position: fixed;
       top: 60px;
@@ -52,7 +52,7 @@ display: absolute;
         color: var(--green);
         margin-bottom: 1rem;
         padding-bottom: 1rem;
-        border-bottom: 1px solid var(--green);
+        border-bottom: 1px solid var(--card-border);
 
         .project-links {
           display: flex;
@@ -68,7 +68,11 @@ display: absolute;
           width: 2.6rem;
           height: unset;
         }
-      }
+  }
+
+  /* overlay appearance */
+  border: 1px solid var(--card-border);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 
       h3 {
         margin-bottom: 2rem;
@@ -79,7 +83,7 @@ display: absolute;
         margin-bottom: 2rem;
         white-space: pre-wrap;
         a {
-          color: #ffff;
+          color: var(--card-link);
           border-bottom: 1px solid var(--green);
           transition: color 0.25s;
           &:hover {

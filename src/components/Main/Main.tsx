@@ -23,6 +23,7 @@ import vscodeIcon from "../../assets/vscode.svg";
 import ubuntuIcon from "../../assets/ubuntu.png";
 import djangoIcon from "../../assets/django.svg";
 import copilotIcon from "../../assets/copilot.svg";
+import viteIcon from "../../assets/vite.svg";
 
 export function Main() {
   const icons = [
@@ -43,6 +44,7 @@ export function Main() {
     { icon: ubuntuIcon, name: "Ubuntu" },
     { icon: djangoIcon, name: "Django" },
     { icon: copilotIcon, name: "Copilot" },
+    { icon: viteIcon, name: "Vite" },
   ];
 
   return (

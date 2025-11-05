@@ -24,16 +24,15 @@ interface IProject {
 export function Portfolio() {
   const [showCard, setShowCard] = React.useState<IProject>();
   const [showOlderProjects, setShowOlderProjects] = React.useState(false);
-  let emptyProject: IProject;
 
-  const firstNineProjects = projects.projects.slice(0, 9);
-  const olderProjects = projects.projects.slice(9);
+  const firstSixProjects = projects.projects.slice(0, 6);
+  const olderProjects = projects.projects.slice(6);
 
   return (
     <Container id="portfolio">
       <h2>{projects.title}</h2>
       <div className="subtitle">{projects.subtitle}</div>
-      <Projects projects={firstNineProjects} setShowCard={setShowCard} />
+      <Projects projects={firstSixProjects} setShowCard={setShowCard} />
       <Accordion>
         <button onClick={() => setShowOlderProjects(!showOlderProjects)}>
           {showOlderProjects ? "Hide Older Projects" : "Show Older Projects"}
@@ -48,7 +47,7 @@ export function Portfolio() {
           title={showCard.title}
           text={showCard.longtext}
           skills={showCard.allSkills}
-          handleClose={() => setShowCard(emptyProject)}
+          handleClose={() => setShowCard(undefined)}
         />
       )}
 
@@ -67,14 +66,14 @@ const Projects = ({ projects, setShowCard }: { projects: IProject[], setShowCard
               <div className="project-links">
                 {p.links &&
                   p.links.map((l, index2) => (
-                    <a href={l.url} key={index2} target="_blank">
+                    <a href={l.url} key={index2} target="_blank" rel="noreferrer">
                       <img src={l.icon} alt={l.label} />
                     </a>
                   ))}
               </div>
             </header>
-            <div className="body">
-              <h3 onClick={() => setShowCard(p)}>{p.title}</h3>
+            <div className="body" onClick={() => setShowCard(p)}>
+              <h3>{p.title}</h3>
               <p>{p.description}</p>
             </div>
             <footer>

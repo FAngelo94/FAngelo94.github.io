@@ -17,7 +17,8 @@ import mysqlIcon from "../../assets/mysql.svg";
 import pythonIcon from "../../assets/python.svg";
 import windowsIcon from "../../assets/windows-10.svg";
 import vscodeIcon from "../../assets/vscode.svg";
-import ubuntuIcon from "../../assets/ubuntu.png"; 
+import ubuntuIcon from "../../assets/ubuntu.png";
+import viteIcon from "../../assets/vite.svg"; 
 import ScrollAnimation from "react-animate-on-scroll";
 import { about } from "../../data";
 
@@ -40,6 +41,7 @@ export function About() {
     { icon: windowsIcon, name: "Windows" },
     { icon: ubuntuIcon, name: "Ubuntu" },
     { icon: copilotIcon, name: "Copilot" },
+    { icon: viteIcon, name: "Vite" },
   ];
   return (
     <Container id="about">

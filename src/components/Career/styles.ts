@@ -19,14 +19,16 @@ export const Container = styled.section`
     overflow: hidden;
 
     .project{
-      padding: 2rem 1.8rem;
-      background-color: #2b2b2b;
-      border-radius: 1.2rem;
-      transition: 0.25s;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      color: #FFF;
+  padding: 2rem 1.8rem;
+  background-color: var(--card-bg);
+  border-radius: 1.2rem;
+  transition: 0.25s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: var(--card-text);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
       &:hover{
         transform: translateY(-5px);
         background-color: var(--pink);
@@ -103,4 +105,33 @@ export const Container = styled.section`
       grid-template-columns: 1fr;
     }
   }
-`
+`;
+
+export const Accordion = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  place-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: black;
+
+  button {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    gap: 2rem;
+    background-color: var(--green);
+    border-radius: 1.4rem;
+    padding: 1.6rem 2.8rem;
+    transition: background-color 0.25s;
+
+    &:hover{
+      background-color: var(--pink);
+      color: #FFF;
+    }
+  }
+`;

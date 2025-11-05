@@ -25,16 +25,22 @@ export const Container = styled.header`
     display: flex;
     align-items: center;
     gap: 1.8rem;
-    a{
+    a, button{
       color: #FFFF;
       padding: 0.6rem;
       font-family: 'Red Hat Display', sans-serif;
       font-weight: 500;
       text-transform: uppercase;
       transition: filter 0.25s;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      text-decoration: none;
 
       &.button{
         padding: 0.6rem 5rem;
+        background-color: var(--green);
+        border-radius: 0.5rem;
       }
 
       &:hover{
@@ -175,7 +181,7 @@ export const Container = styled.header`
       transition: opacity 0.25s;
       background-color: var(--green);
 
-      a.button{
+      a.button, button.button{
         background-color: var(--pink);
       }
 

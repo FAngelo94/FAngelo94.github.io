@@ -4,6 +4,7 @@ import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
 import { header } from "../../data"
 import logo from "../../assets/logo.png";
+import { generateCV } from '../../utils/pdfGenerator'
 
 import Curriculum from '../../assets/AngeloFalci.pdf'
 export function Header() {
@@ -16,6 +17,16 @@ export function Header() {
 
   function closeMenu() {
     setActive(false)
+  }
+
+  function handleGenerateCV() {
+    try {
+      generateCV();
+      closeMenu(); // Close menu after generating CV
+    } catch (error) {
+      console.error('Error generating CV:', error);
+      alert('Error generating CV. Please try again.');
+    }
   }
 
   return (
@@ -50,9 +61,9 @@ export function Header() {
           <NavHashLink smooth to="#contacts" onClick={closeMenu}>
             {header.contacts}
           </NavHashLink>
-          <a href={Curriculum} download className="button">
-            CV
-          </a>
+          <button onClick={handleGenerateCV} className="button" style={{marginLeft: '10px'}}>
+            Generate PDF
+          </button>
         </nav>
 
         <div

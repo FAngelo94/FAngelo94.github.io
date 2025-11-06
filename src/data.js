@@ -173,7 +173,7 @@ export const projects = {
     // Smanno
     {
       title: "Smanno",
-      description:"I developed the fullstack application using React for frontend and Django for backend responsible to manage a fleet of different robots.\
+      description: "I developed the fullstack application using React for frontend and Django for backend responsible to manage a fleet of different robots.\
       \nThe application is runnable also in dockers containers to simplify the deployment in different environments.",
       links: [
         {
@@ -183,22 +183,111 @@ export const projects = {
         }
       ],
       mainSkills: ['Django', 'Docker', 'mysql', 'React'],
-      allSkills: ['Bootstrap 5', 'CSS', 'Django', 'Docker', 'html', 'Javascript', 'Linux', 'MobilePlanner', 'mysql', 'Python', 'React', 'Redux', 'Swagger', 'TMflow', 'VS Code', 'Windows'],
-      longtext: [],
+      allSkills: ['Bootstrap 5', "Copilot", 'CSS', 'Django', 'Docker', 'html', 'Javascript', 'Linux', 'MobilePlanner', 'mysql', 'Python', 'React', 'Redux', 'Swagger', 'TMflow', 'VS Code', 'Windows'],
+      longtext: [
+        {
+          type: "text",
+          value: "Smanno is a startup of 3 people (including me) that develops robots for healthcare and hospitality laboratorys and a platform to use them.\
+          \nThe main role of the owner of Smanno was responsible for the business development and client relationships. The other guy, CTO of Smanno, was responsible for the hardware development of robots.\
+          \nLastly I was responsible for the development of all platform software and its deployment in client environments."
+        },
+        {
+          type: "text",
+          value: "I developed the platform to be more flexible possible in order to manage different types of robots and mission without change the codebase. Briefly to do this I abstracted everything in 2 entities, Actor (like Robots and other machine/place that will interact with robots) and Mission (the task that the robots have to perform).\
+          \nThe platform is divided in 2 main parts: the backend developed in Django and the frontend developed in React, below the details."
+        },
+        {
+          type: "subtitle",
+          value: "Backend - Django",
+        },
+        {
+          type: "text",
+          value: "I developed the backend of the platform using Django and mysql as database. The main features implemented are:\
+          \n- Database architecture for managing robots, missions and user that will be use the platform\
+          \n- API necessary for frontend adding check for user permissions\
+          \n- Async processing to check the status of robots connected to the platform\
+          \n- Integration with third-party services and library to communicate with different robots\
+          \n- Admin page to access to the database directly and advanced feature like data export/import and fast edit of cells in each table\
+          \n- Creation of Django custom commands to simplify the install and management of the platform\
+          \n- Swagger documentation for all Rest APIs implemented\
+          \n- Documentation to install and manage the platform\
+          \n- Docker compose file to run and setup db, backend and frontend with just one command in the terminal"
+        },
+        {
+          type: "subtitle",
+          value: "Frontend - React",
+        },
+        {
+          type: "subtitle",
+          value: "Deployment",
+        },
+      ],
     },
     // Gut
     {
       title: "GUT",
-      description:"I built a Spotify-like frontend app where users can watch music videos and support their favorite artists with donations.\
-      \n I also collaborated to the backend development using NodeJS and Express framework.",
+      description: "I built a Spotify-like PWA with mobile-first UI, where users can watch music videos and support their favorite artists with donations.\
+      \n I also built a custom CMS to manage the platform’s content used by the PWA and contributed to the backend development using Node.js and the Express framework.",
       links: [{
         label: "GUT - Official Website",
         url: 'https://www.gutmusic.media/',
         icon: externalLinkIcon,
       }],
-      mainSkills: ['Mux', 'NodeJS', 'React', 'Typescript'],
-      allSkills: ['CSS', 'html', 'Javascript', 'Mux', 'NodeJS', 'Panda', 'React', 'Redux', 'Swagger', 'Typescript', 'Vite', 'VS Code'],
-      longtext: [],
+      mainSkills: ['Mux', 'NodeJS', 'React', 'Stripe', 'Typescript'],
+      allSkills: ["Copilot", 'CSS', 'html', 'Javascript', 'Mux', 'NodeJS', 'Panda', 'React', 'Redux', 'Stripe', 'Swagger', 'Typescript', 'Vite', 'VS Code'],
+      longtext: [
+        {
+          type: "text",
+          value: "GUT is a startup operating in the music industry.\
+          \nI didn't limited my work to just one area, but I contributed to all aspects of the platform, proposing also new features and improvements based on what GUT presentend to me.\
+          \nThe work was divided in 3 main projects: the PWA in React, the CMS in React and the backend in NodeJS and Express.\
+          \nWe worked in agile methodologies with a teams of 6 people, 3 internal and 3 external (including me). Regarding the projects I was responsible for the architecture of the PWA and CMS and I developed the main part of both applications with the help of another freelancer developer.\
+          \nI also contributed to the backend development collaborating with one of the founder of the startup.\
+          \nBelow the details about each of the 3 main projects.",
+
+        },
+        {
+          type: "subtitle",
+          value: "Frontend - PWA in React",
+        },
+        {
+          type: "text",
+          value: "I created a single page application using React + Typescript and Vite as build tool. The key features of the PWA are:\
+          \n- Mobile first design with responsive UI using CSS and Styled Components with Panda\
+          \n- Video streaming using Mux SDK, artist can upload their music videos using always Mux with progressive upload percentage showed\
+          \n- Payment system using Stripe to buy subscriptions for artists and gem token for users\
+          \n- Different techniques to optimize the performance like lazy-loaded and strong caching strategies to reduce calls to the backend\
+          \n- Install banner to install the PWA on mobile devices",
+        },
+        {
+          type: "subtitle",
+          value: "Frontend - CMS in React",
+        },
+        {
+          type: "text",
+          value: "I created a content management system (CMS) using React + Typescript and Vite as build tool in order to have 2 similar project easily maintainable also for other people in future.\
+          \nBasically we have a macrosection for the main entities of the platform: User, Content, Collection (group of Content), Audition and Tags.\
+          \nEach macrosection is divided in 2 pages:\
+          \n- A table page to see all the entities, divided in different pages with search and filter functionalities\
+          \n- A detail page to see all the details of the entity, modify it or create a new ones\
+          \nAlso in the CMS I applied caching strategies to reduce the calls to the backend that can be very heavy",
+        },
+        {
+          type: "subtitle",
+          value: "Backend - NodeJS and Express",
+        },
+        {
+          type: "text",
+          value: "One of the founder was the main resplonsible of the backend development using NodeJS and Express framework using PostgreSQL and Redis for caching.\
+          \nI collaborated with him to:\
+          \n- Design some aspect of the database structure\
+          \n- Implementing caching strategies using Redis\
+          \n- Implementing some REST api used by the PWA and CMS\
+          \n- Do some security check to be sure the APIs were safe from common attacks and not pass sensitive data in the requests\
+          \n- Create a swagger documentation for all the APIs implemented\
+          \n- Debug and solve bugs found during the development of PWA and CMS",
+        }
+      ],
     },
     // Kangury
     {
@@ -218,6 +307,7 @@ export const projects = {
       allSkills: [
         "Amazon AWS",
         "Bootstrap 5",
+        "Copilot",
         "CSS",
         "Django",
         "firebase",
@@ -225,6 +315,7 @@ export const projects = {
         "html",
         "Javascript",
         "mysql",
+        "Paypal",
         "Python",
         "Pythonanywhere",
         "React",
@@ -485,7 +576,7 @@ export const projects = {
                     \n- *JSON* as standard format to pass data between frontend and backend\
                     \n- *Jira* to manage the tasks and issues of the project\
                     \n- *Windows* or *MacOS* as operative systems",
-        }, 
+        },
         /* TODO Add Workflow Section in future
         {
             type: "subtitle",

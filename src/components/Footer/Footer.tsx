@@ -9,6 +9,8 @@ import codingame from "../../assets/codingame.png"
 import logo from "../../assets/logo.png";
 import { footer} from "../../data"
 
+const version = process.env.REACT_APP_VERSION || "dev";
+
 export function Footer() {
   return (
     <Container className="footer">
@@ -20,6 +22,7 @@ export function Footer() {
           {footer.center} <img src={reactIcon} alt="React" /> {footer.center2}
           <span>❤️</span>
         </p>
+        <small className="version">v{version}</small>
       </div>
 
       <div className="social-media">

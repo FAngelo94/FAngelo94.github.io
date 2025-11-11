@@ -24,6 +24,24 @@ export const Container = styled.footer`
       animation: spinning 5s infinite linear;
     }
   }
+
+  .version{
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* Center stacking for the text + version inside the middle column */
+  & > .version {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
   .social-media{
     display: flex;
     align-items: center;

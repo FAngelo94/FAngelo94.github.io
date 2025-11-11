@@ -218,9 +218,28 @@ export const projects = {
           value: "Frontend - React",
         },
         {
+          type: "text",
+          value: "I developed the frontend using React with Bootstrap 5 to start from a UI library because I didn't have graphics done by some designer. What user can do in the platform: depend on the role and permissions assigned to them, we have user admin, editor, executor and viewer.\
+          \nThe main features implementd are:\
+          \n- Responsive design for mobile and desktop, so user in hospital can access the platform from any device\
+          \n- Possibility to create complex missions, divided in steps, using actors and atomic mission added in the database (atomic mission are the simplest mission that can be performed by a robot, like go to a position, execute some movement with arms, etc.)\
+          \n- User can also encapsulate complex mission in order to reuse them in future without recreate everything from scratch and, in each mission, it is possible enable/disable some steps\
+          \n- Execute mission created monitoring the status of mission and actors involved returning details in case of mission fail\
+          \n- There is the possibility to stop and resume some mission\
+          \n- See statistics about mission execution and robot performance"
+        },
+        {
           type: "subtitle",
           value: "Deployment",
         },
+        {
+          type: "text",
+          value: "The application need to be installed in the server of Smanno clients (for example an hospital) and run to the devices connected to the same network where application run.\
+          \nFirst of all, as I said in the top, I created a docker compose file to run the database, backend and frontend with just one command in three different container. This also to simplify the work for other members of the team.\
+          \nNext for client I created a script that export these 3 docker images created. The script create also other script to automatize the import and run o the 3 images in the client server with just one command, both in Linux and Windows environment.\
+          \nEverything is saved in an output folder that we can copy-paste in the client server and run.\
+          \nMaybe in future this could be imporoved based on what clients need."
+        }
       ],
     },
     // Gut
@@ -597,6 +616,55 @@ export const projects = {
           }, */
       ],
     },
+    // Curriculum online
+    {
+      title: "Portfolio Online",
+      description:
+        "I create this portfolio online to show my skills and experience.\
+            \nI used React with Typescript and style-components and I publish it on my github account through github pages.",
+      links: [
+        {
+          label: "Website",
+          url: "https://fangelo94.github.io/",
+          icon: externalLinkIcon,
+        },
+        {
+          label: "Github",
+          url: "https://github.com/FAngelo94/FAngelo94.github.io",
+          icon: githubIcon,
+        },
+      ],
+      mainSkills: ["GiHub Pages", "React", "Style-components", "Typescript"],
+      allSkills: [
+        "gh-pages",
+        "GiHub Pages",
+        "GitHub",
+        "React",
+        "Style-components",
+        "Typescript",
+      ],
+      longtext: [
+        {
+          type: "text",
+          value:
+            "Starting from a model I found online I created this portfolio online improving the code and adding new components.",
+        },
+        {
+          type: "subtitle",
+          value: "Technologies and Libraries Used",
+        },
+        {
+          type: "text",
+          value:
+            "- *React* as framework\
+                    \n- *Typescript* as language\
+                    \n- *style-components* as library to manage styles\
+                    \n- *GitHub* as version control system\
+                    \n- *GitHub Pages* as static site generator\
+                    \n- *gh-pages* package to deploy the website in react using GitHub Pages",
+        },
+      ],
+    },
     // Digital Box
     {
       title: "TeamSystems - Digital Box",
@@ -680,55 +748,6 @@ export const projects = {
                     \nWhen we deploy a new components or functionalities in our application could be that we already have the API needs or we don't have it.\
                     \nIn the first case we just use them and, if necessary, we suggest some updates\
                     \nIn the second case we mock the server reply in our redux store, we pass to backend the JSON format of mocked data and they create the API.",
-        },
-      ],
-    },
-    // Curriculum online
-    {
-      title: "Portfolio Online",
-      description:
-        "I create this portfolio online to show my skills and experience.\
-            \nI used React with Typescript and style-components and I publish it on my github account through github pages.",
-      links: [
-        {
-          label: "Website",
-          url: "https://fangelo94.github.io/",
-          icon: externalLinkIcon,
-        },
-        {
-          label: "Github",
-          url: "https://github.com/FAngelo94/FAngelo94.github.io",
-          icon: githubIcon,
-        },
-      ],
-      mainSkills: ["GiHub Pages", "React", "Style-components", "Typescript"],
-      allSkills: [
-        "gh-pages",
-        "GiHub Pages",
-        "GitHub",
-        "React",
-        "Style-components",
-        "Typescript",
-      ],
-      longtext: [
-        {
-          type: "text",
-          value:
-            "Starting from a model I found online I created this portfolio online improving the code and adding new components.",
-        },
-        {
-          type: "subtitle",
-          value: "Technologies and Libraries Used",
-        },
-        {
-          type: "text",
-          value:
-            "- *React* as framework\
-                    \n- *Typescript* as language\
-                    \n- *style-components* as library to manage styles\
-                    \n- *GitHub* as version control system\
-                    \n- *GitHub Pages* as static site generator\
-                    \n- *gh-pages* package to deploy the website in react using GitHub Pages",
         },
       ],
     },

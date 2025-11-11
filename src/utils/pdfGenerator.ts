@@ -82,7 +82,7 @@ export const generateCV = () => {
   yPosition += 3;
 
   // Career section (only last 6 experiences)
-  yPosition = addSectionTitle("Professional Experience", yPosition);
+  yPosition = addSectionTitle("Last Professional Experience", yPosition);
 
   const lastSixJobs = career.jobs.slice(0, 6);
   lastSixJobs.forEach((job) => {
@@ -114,7 +114,7 @@ export const generateCV = () => {
 
   // Key Projects section (6 most recent)
   yPosition = checkNewPage(yPosition, 50);
-  yPosition = addSectionTitle("Key Projects", yPosition);
+  yPosition = addSectionTitle("Last Projects", yPosition);
 
   const keyProjects = projects.projects.filter(p => p.description && p.description.trim() !== '').slice(0, 6);
   keyProjects.forEach((project) => {

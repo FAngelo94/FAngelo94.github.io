@@ -249,7 +249,7 @@ export const projects = {
       \n I also built a custom CMS to manage the platform’s content used by the PWA and contributed to the backend development using Node.js and the Express framework.",
       links: [{
         label: "GUT - Official Website",
-        url: 'https://www.gutmusic.media/',
+        url: 'https://gutmusic.media/',
         icon: externalLinkIcon,
       }],
       mainSkills: ['Mux', 'NodeJS', 'React', 'Stripe', 'Typescript'],
@@ -390,7 +390,7 @@ export const projects = {
       ],
     },
     // Digitalpix
-    /* {
+    {
       title: "Personal Project - Digitalpix",
       description:
         "I developed, in React, a PWA and store application (for Ios and Android) to customize and buy professional photos.",
@@ -427,6 +427,17 @@ export const projects = {
         },
         {
           type: "subtitle",
+          value: "Problem Analysis",
+        },
+        {
+          type: "text",
+          value:
+            "First of all my job was find the best technologies to develop what Digitalpix needed: a web application more accessible from mobile devices and a mobile application to publish in Google Play Store and Apple App Store.\
+            \nHaving a low budget and working alone I decided to develop a PWA (Progressive Web Application) using React first of all and then develop a mobile application using React Native that include a WebView that show the PWA.\
+            \nIn this way I can use the same code for the web application and the mobile application. Moreover I don't need to publish the mobile app in Google Store and Apple Store everytime I do an updates reducing drastically the deploying time and maintenance for Digitalpix after the release.",
+        },
+        {
+          type: "subtitle",
           value: "Web App in React",
         },
         {
@@ -451,8 +462,16 @@ export const projects = {
           \nIn this way I can use the same code for the web application and the mobile application. Moreover I don't need to publish the mobile app in Google Store and Apple Store everytime I do an updates reducing drastically the deploying time.\
           \nWorking alone and only in my free time I considered this the best solution to have a good result in a short time.",
         },
+        {
+          type: "subtitle",
+          value: "Backend",
+        },
+        {
+          type: "text",
+          value: "During the project I suggested different solutions to improve the software architecture of Digitalpix and to solve some problems we found during the development.\
+          \nThe main updates I suggested was:\",
       ],
-    }, */
+    },
     // ClimberWorld
     {
       title: "Personal Project - Climberworld Web App",
@@ -596,7 +615,6 @@ export const projects = {
                     \n- *Jira* to manage the tasks and issues of the project\
                     \n- *Windows* or *MacOS* as operative systems",
         },
-        /* TODO Add Workflow Section in future
         {
             type: "subtitle",
             value: "Workflow",
@@ -613,7 +631,7 @@ export const projects = {
                       \n- *dev* is used to test the application by other developers and to see if the requirements are reached without errors\
                       \n- *test* is when we have a stable solution in dev in order to have a 'semi-prod' environment to do official demo when needs\
                       \n- *prod* is the final environment where the application is deployed and used by the real customers",
-          }, */
+          },
       ],
     },
     // Curriculum online

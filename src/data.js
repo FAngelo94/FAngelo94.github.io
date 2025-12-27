@@ -236,10 +236,40 @@ export const projects = {
           type: "text",
           value: "The application need to be installed in the server of Smanno clients (for example an hospital) and run to the devices connected to the same network where application run.\
           \nFirst of all, as I said in the top, I created a docker compose file to run the database, backend and frontend with just one command in three different container. This also to simplify the work for other members of the team.\
-          \nNext for client I created a script that export these 3 docker images created. The script create also other script to automatize the import and run o the 3 images in the client server with just one command, both in Linux and Windows environment.\
+          \nNext for client I created a script that export these 3 docker images created. The script create also other script to automatize the import and run on the 3 images in the client server with just one command, both in Linux and Windows environment.\
           \nEverything is saved in an output folder that we can copy-paste in the client server and run.\
           \nMaybe in future this could be imporoved based on what clients need."
         }
+      ],
+    },
+    {
+      title: "One TCG Hero",
+      description: "I developed a PWA in React to manage my personal card game collection. I added, and in some case improved, different usefull features I found in different website but not all in one place.\
+      \nFor experimental/learn purpose I started this project using Lovable, next I stopped to use it but continued to use massively the AI tools for development wrinting code only when strictly necessary in order to understand the real limits of this new type of develop.",
+      links: [{
+        label: "One TCG Hero - Official Website",
+        url: 'https://onetcghero.web.app/',
+        icon: externalLinkIcon,
+      }],
+      mainSkills: ['Lovable', 'React', 'Copilot', 'Firebase'],
+      allSkills: ["CSS", "Firestore", "GitHub", "html", "Javascript", "Redux", "Vite", "VS Code"],
+      longtext: [
+        {
+          type: "subtitle",
+          value: "Features implemented",
+        },
+        {
+          type: "text",
+          value: "Here a list of the main features implemented in the application:\
+          \n- Application with UI responsive for mobile and desktop with both light and dark mode support\
+          \n- User authentication using Firebase Auth with email/password\
+          \n- User can apply complex filters to find a specific card or set\
+          \n- User can create and manage his collection adding cards one by one or importing a list of cards (managing also the merging if necessary)\
+          \n- Use can create and manage his decks and, for each deck, see different statistics like number of cards, rarity distribution, cost curve and others\
+          \n- User can import decks and export them in different formats for different platform (like simulator or CardMarket)\
+          \n- User can print some cards choosing different layout and number of cards per page\
+          \n- If an user is enabled to do it by me, after login he has collection and decks saved in Firestore database in order to have same data in different devices",
+        },
       ],
     },
     // Gut
@@ -469,7 +499,10 @@ export const projects = {
         {
           type: "text",
           value: "During the project I suggested different solutions to improve the software architecture of Digitalpix and to solve some problems we found during the development.\
-          \nThe main updates I suggested was:\",
+          \nThe main updates I suggested was:\
+          \n- Create a Swagger documentation for all the APIs used in order to have a clear documentation to understand how to use them and what data send/receive\
+          \n- Save all software solutions they used internally in a Github profile created for Digitalpix in order to have a version control system and a backup of all the code developed"
+        },
       ],
     },
     // ClimberWorld

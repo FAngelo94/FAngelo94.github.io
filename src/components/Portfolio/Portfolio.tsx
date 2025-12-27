@@ -20,13 +20,14 @@ interface IProject {
     value: string;
   }>;
 }
+const VISIBLE_PROJECTS_COUNT = 3;
 
 export function Portfolio() {
   const [showCard, setShowCard] = React.useState<IProject>();
   const [showOlderProjects, setShowOlderProjects] = React.useState(false);
 
-  const firstSixProjects = projects.projects.slice(0, 6);
-  const olderProjects = projects.projects.slice(6);
+  const firstSixProjects = projects.projects.slice(0, VISIBLE_PROJECTS_COUNT);
+  const olderProjects = projects.projects.slice(VISIBLE_PROJECTS_COUNT);
 
   return (
     <Container id="portfolio">

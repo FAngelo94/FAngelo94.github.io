@@ -58,7 +58,7 @@ export const about = {
 };
 
 export const career = {
-  title: "Career",
+  title: "Career and Studies",
   schools: [
     {
       title: "State Exam for Informatic Engineering",
@@ -108,7 +108,7 @@ export const career = {
   ],
   jobs: [
     {
-      title: "FullStack Developer",
+      title: "Software Engineer",
       company: "Freelance",
       link: "https://www.linkedin.com/in/angelo-falci-1292ab76/",
       description:
@@ -173,8 +173,8 @@ export const projects = {
     // Smanno
     {
       title: "Smanno",
-      description: "I developed the fullstack application using React for frontend and Django for backend responsible to manage a fleet of different robots.\
-      \nThe application is runnable also in dockers containers to simplify the deployment in different environments.",
+      description: "I designed and developed a fullstack application to manage a fleet of different robots and their complex missions.\
+      \nThe platfrom is used in healthcare and hospitality laboratorys to automatize different task using robots.",
       links: [
         {
           label: "Smanno - Official Website",
@@ -244,8 +244,7 @@ export const projects = {
     },
     {
       title: "One TCG Hero",
-      description: "I developed a PWA in React to manage my personal card game collection. I added, and in some case improved, different usefull features I found in different website but not all in one place.\
-      \nFor experimental/learn purpose I started this project using Lovable, next I stopped to use it but continued to use massively the AI tools for development wrinting code only when strictly necessary in order to understand the real limits of this new type of develop.",
+      description: "I developed a PWA in React to manage my personal card game collection. I added, and in some case improved, different usefull features I found in different website but not all in one place.",
       links: [{
         label: "One TCG Hero - Official Website",
         url: 'https://onetcghero.web.app/',
@@ -254,6 +253,11 @@ export const projects = {
       mainSkills: ['Lovable', 'React', 'Copilot', 'Firebase'],
       allSkills: ["CSS", "Firestore", "GitHub", "html", "Javascript", "Redux", "Vite", "VS Code"],
       longtext: [
+        {
+          type: "text",
+          value: "I developed a PWA in React to manage my personal card game collection. I added, and in some case improved, different usefull features I found in different website but not all in one place.\
+          \nFor experimental/learn purpose I started this project using Lovable, next I stopped to use it but continued to use massively the AI tools for development wrinting code only when strictly necessary in order to understand the real limits of this new type of develop."
+        },
         {
           type: "subtitle",
           value: "Features implemented",
@@ -276,7 +280,7 @@ export const projects = {
     {
       title: "GUT",
       description: "I built a Spotify-like PWA with mobile-first UI, where users can watch music videos and support their favorite artists with donations.\
-      \n I also built a custom CMS to manage the platform’s content used by the PWA and contributed to the backend development using Node.js and the Express framework.",
+      \n I also built a custom CMS to manage the platform’s content used by the PWA and contributed to the backend development.",
       links: [{
         label: "GUT - Official Website",
         url: 'https://gutmusic.media/',
@@ -649,13 +653,13 @@ export const projects = {
                     \n- *Windows* or *MacOS* as operative systems",
         },
         {
-            type: "subtitle",
-            value: "Workflow",
-          },
-          {
-            type: "text",
-            value:
-              "We work in sprint of 2 weeks and between each sprint we present the work done and decide which user story take for the next sprints.\
+          type: "subtitle",
+          value: "Workflow",
+        },
+        {
+          type: "text",
+          value:
+            "We work in sprint of 2 weeks and between each sprint we present the work done and decide which user story take for the next sprints.\
                       The stories can be created by the teams that analyze next components to implement or by me and my team if we want:\
                       \n- Do a big refactor in the code\
                       \n- Do an update to old component\
@@ -664,7 +668,7 @@ export const projects = {
                       \n- *dev* is used to test the application by other developers and to see if the requirements are reached without errors\
                       \n- *test* is when we have a stable solution in dev in order to have a 'semi-prod' environment to do official demo when needs\
                       \n- *prod* is the final environment where the application is deployed and used by the real customers",
-          },
+        },
       ],
     },
     // Curriculum online

@@ -20,6 +20,8 @@ interface ICareerItem {
   }>;
 }
 
+const VISIBLE_CAREER_ITEMS_COUNT = 3;
+
 export function Career() {
   const [showOlderCareer, setShowOlderCareer] = React.useState(false);
 
@@ -29,8 +31,8 @@ export function Career() {
     ...career.schools.map(school => ({ ...school, type: "school" as const }))
   ];
 
-  const firstSixItems = allCareerItems.slice(0, 6);
-  const olderItems = allCareerItems.slice(6);
+  const firstSixItems = allCareerItems.slice(0, VISIBLE_CAREER_ITEMS_COUNT);
+  const olderItems = allCareerItems.slice(VISIBLE_CAREER_ITEMS_COUNT);
 
   return (
     <Container id="career">

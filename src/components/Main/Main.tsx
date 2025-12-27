@@ -24,6 +24,7 @@ import ubuntuIcon from "../../assets/ubuntu.png";
 import djangoIcon from "../../assets/django.svg";
 import copilotIcon from "../../assets/copilot.svg";
 import viteIcon from "../../assets/vite.svg";
+import problemSolvingIcon from "../../assets/problem-solving.svg";
 
 export function Main() {
   const icons = [
@@ -45,6 +46,7 @@ export function Main() {
     { icon: djangoIcon, name: "Django" },
     { icon: copilotIcon, name: "Copilot" },
     { icon: viteIcon, name: "Vite" },
+    { icon: problemSolvingIcon, name: "Problem Solving" },
   ];
 
   return (

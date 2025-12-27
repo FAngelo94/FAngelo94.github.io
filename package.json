@@ -1,7 +1,7 @@
 {
   "name": "curriculum",
   "version": "2.1.0",
-  "homepage": "https://fangelo94.github.io/",
+  "homepage": "https://angelofalci.com/",
   "private": true,
   "dependencies": {
     "@formspree/react": "^2.2.4",

@@ -12,10 +12,18 @@ import kanguryLogo from "./assets/kangury.png";
 export const hero = {
   hello: "Hello 👋, I'm",
   name: "Ing. Angelo Falci",
-  title: "Full Stack Developer",
+  title: "Software Engineer",
   smallResume:
     "Web developer focused on Javascript, React, Python and SQL to develop both frontend and backend applications. I love face difficult challenges that can help me to improve my skills and learn new tecnologies.",
   contacts: "Contacts",
+  mainSkills: "Here are my main skills/knowledge:",
+  paragraphs: [
+    "Hi, Angelo and I live in the heart of the alps, Sondrio (north of Milan), Italy. I'm passionate about programming and I'm always looking for new challenges to learn and improve my skills. I’m a very active and motivated person. My best qualities are determination and sincerity. In the other side my defects are.. wait, it is better not say my defects in a curriculum.",
+    "I'm appasionated to AI and I use/test different tools to speed up and improve my work.",
+    "In my free time I like experiment and try new tecnlogies developing fullstack web applications. Below you can see more details about my work experience and projects!",
+    "My other hobbies are: travel, read books, board games, videogames and do sport",
+    "I have patent B and A"
+  ],
 };
 
 export const header = {
@@ -43,18 +51,6 @@ export const form = {
   thanks: "Thanks for your message! I'll get back to you as soon as possible!",
   backToTop: "Back to top",
   send: "Send",
-};
-
-export const about = {
-  title: "About Me",
-  mainSkills: "Here are my main skills:",
-  paragraphs: [
-    "Hi, Angelo and I live in the heart of the alps, Sondrio (north of Milan), Italy. I'm passionate about programming and I'm always looking for new challenges to learn and improve my skills. I’m a very active and motivated person. My best qualities are determination and sincerity. In the other side my defects are.. wait, it is better not say my defects in a curriculum.",
-    "I'm appasionated to AI and I use/test different tools to speed up and improve my work.",
-    "In my free time I like experiment and try new tecnlogies developing fullstack web applications. Below you can see more details about my work experience and projects!",
-    "My other hobbies are: travel, read books, board games, videogames and do sport",
-    "I have patent B and A"
-  ],
 };
 
 export const career = {

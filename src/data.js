@@ -28,10 +28,13 @@ export const hero = {
 
 export const header = {
   home: "Home",
+  prices: "Prices",
+  whoiam: "Who I Am",
   career: "Career",
   aboutMe: "About Me",
   projects: "Projects",
   contacts: "Contacts",
+  experience: "Experience",
 };
 
 export const footer = {

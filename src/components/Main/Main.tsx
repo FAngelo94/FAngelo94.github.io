@@ -1,6 +1,6 @@
 import Particles from "react-tsparticles";
 import { Container } from "./styles";
-import { Hero } from "../Hero/Hero";
+import { WhoIAm } from "../WhoIAm/WhoIAm";
 import { Contact } from "../Contact/Contact";
 import { Portfolio } from "../Portfolio/Portfolio";
 import { Career } from "../Career/Career";
@@ -223,7 +223,7 @@ export function Main() {
           },
         }}
       />
-      <Hero></Hero>
+      <WhoIAm></WhoIAm>
       <Career></Career>
       <Portfolio></Portfolio>
       <Contact></Contact>

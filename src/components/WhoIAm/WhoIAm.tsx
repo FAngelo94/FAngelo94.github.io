@@ -1,4 +1,3 @@
-import { BrowserRouter } from "react-router-dom"
 import { Container } from "./styles"
 import cssIcon from "../../assets/css-icon.svg";
 import htmlIcon from "../../assets/html-icon.svg";
@@ -20,7 +19,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import profileImage from "../../assets/profile-image.jpg";
 import { hero } from "../../data"
 
-export function Hero() {
+export function WhoIAm() {
   const icons = [
     { icon: problemSolvingIcon, name: "ProblemSolving" },
     { icon: jsIcon, name: "JavaScript" },
@@ -40,7 +39,7 @@ export function Hero() {
     { icon: viteIcon, name: "Vite" },
   ];
   return (
-    <Container id="home">
+    <Container id="whoiam">
       <div className="hero-title">
         <ScrollAnimation animateIn="fadeInUp">
           <p>{hero.hello}</p>

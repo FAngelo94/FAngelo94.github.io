@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const Container = styled.section`
   padding-top: 15%;
   background: rgba(0,0,0,0);

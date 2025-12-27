@@ -49,19 +49,19 @@ export function Header() {
           <NavHashLink smooth to="#home" onClick={closeMenu}>
             {header.home}
           </NavHashLink>
-          <NavHashLink smooth to="#about" onClick={closeMenu}>
-            {header.aboutMe}
+          <NavHashLink smooth to="#prices" onClick={closeMenu}>
+            {header.prices}
+          </NavHashLink>
+          <NavHashLink smooth to="#whoiam" onClick={closeMenu}>
+            {header.whoiam}
           </NavHashLink>
           <NavHashLink smooth to="#career" onClick={closeMenu}>
-            {header.career}
-          </NavHashLink>
-          <NavHashLink smooth to="#portfolio" onClick={closeMenu}>
-            {header.projects}
+            {header.experience}
           </NavHashLink>
           <NavHashLink smooth to="#contacts" onClick={closeMenu}>
             {header.contacts}
           </NavHashLink>
-          <button onClick={handleGenerateCV} className="button" style={{marginLeft: '10px'}}>
+          <button onClick={handleGenerateCV} className="button" style={{marginLeft: '10px', width: '120px', padding: '5px 0'}}>
             Generate PDF
           </button>
         </nav>

@@ -24,6 +24,8 @@ import djangoIcon from "../../assets/django.svg";
 import copilotIcon from "../../assets/copilot.svg";
 import viteIcon from "../../assets/vite.svg";
 import problemSolvingIcon from "../../assets/problem-solving.svg";
+import { Home } from "../Home/Home";
+import { Prices } from "../Prices/Prices";
 
 export function Main() {
   const icons = [
@@ -223,10 +225,13 @@ export function Main() {
           },
         }}
       />
+      <Home></Home>
+      <Prices></Prices>
+      <Contact></Contact>
       <WhoIAm></WhoIAm>
       <Career></Career>
       <Portfolio></Portfolio>
-      <Contact></Contact>
+      
     </Container>
   );
 }

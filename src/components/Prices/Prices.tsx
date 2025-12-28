@@ -24,7 +24,7 @@ interface IProject {
 }
 // Carousel shows all projects; previous visible count no longer used.
 
-export function Portfolio() {
+export function Prices() {
   const [showCard, setShowCard] = React.useState<IProject>();
   
   React.useEffect(() => {
@@ -49,7 +49,7 @@ export function Portfolio() {
   }, []);
 
   return (
-    <Container id="portfolio">
+    <Container id="prices">
       <h2>{projects.title}</h2>
       <div className="subtitle">{projects.subtitle}</div>
       <Projects projects={projects.projects} setShowCard={setShowCard} />

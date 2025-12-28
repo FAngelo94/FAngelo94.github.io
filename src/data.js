@@ -173,7 +173,7 @@ export const projects = {
     {
       title: "Smanno",
       description: "I designed and developed a fullstack application to manage a fleet of different robots and their complex missions.\
-      \nThe platfrom is used in healthcare and hospitality laboratorys to automatize different task using robots.",
+      \nThe platfrom is used in healthcare and hospitality laboratories to automatize different task using robots.",
       links: [
         {
           label: "Smanno - Official Website",
@@ -186,7 +186,7 @@ export const projects = {
       longtext: [
         {
           type: "text",
-          value: "Smanno is a startup of 3 people (including me) that develops robots for healthcare and hospitality laboratorys and a platform to use them.\
+          value: "Smanno is a startup of 3 people (including me) that develops robots for healthcare and hospitality laboratories and a platform to use them.\
           \nThe main role of the owner of Smanno was responsible for the business development and client relationships. The other guy, CTO of Smanno, was responsible for the hardware development of robots.\
           \nLastly I was responsible for the development of all platform software and its deployment in client environments."
         },

@@ -36,8 +36,17 @@ export function Career() {
       cards.forEach(c => { maxH = Math.max(maxH, c.offsetHeight); });
       cards.forEach(c => { c.style.minHeight = `${maxH}px`; });
     };
-    // run after layout
-    requestAnimationFrame(applyUniformHeights);
+    const run = () => setTimeout(applyUniformHeights, 0);
+    // run after layout and after fonts load (first visit/incognito)
+    requestAnimationFrame(run);
+    // fonts ready improves first-render consistency
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const fontsReady = (document as any).fonts?.ready;
+    if (fontsReady && typeof fontsReady.then === 'function') {
+      fontsReady.then(run);
+    } else {
+      window.addEventListener('load', run, { once: true });
+    }
     window.addEventListener('resize', applyUniformHeights);
     return () => window.removeEventListener('resize', applyUniformHeights);
   }, []);

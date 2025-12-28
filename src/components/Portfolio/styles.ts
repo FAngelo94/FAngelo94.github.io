@@ -34,6 +34,30 @@ export const Container = styled.section`
     align-items: stretch;
   }
 
+  /* Place pagination below the carousel, centered */
+  .swiper-pagination.outside{
+    position: static;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    transform: none;
+  }
+
+  /* Hide default inner pagination to avoid overlap */
+  .projects .swiper-pagination{
+    display: none !important;
+  }
+
+  /* Bullet styling (outside) */
+  .swiper-pagination.outside .swiper-pagination-bullet{
+    background: var(--card-border);
+    opacity: 0.6;
+  }
+  .swiper-pagination.outside .swiper-pagination-bullet-active{
+    background: var(--green);
+    opacity: 1;
+  }
+
   .projects {
     /* no grid: cards are inside Swiper slides */
     padding: 0;

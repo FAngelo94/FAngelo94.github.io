@@ -21,13 +21,22 @@ export const Container = styled.section`
     margin-top: 10px;
   }
 
-  .projects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 2rem;
+  /* Swiper container overrides */
+  .swiper {
     padding: 1rem;
-    overflow: hidden;
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+  .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .projects {
+    /* no grid: cards are inside Swiper slides */
+    padding: 0;
 
     .project {
   padding: 2rem 1.8rem;
@@ -103,17 +112,7 @@ export const Container = styled.section`
     }
   }
 
-  @media (max-width: 960px) {
-    .projects {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  @media (max-width: 740px) {
-    .projects {
-      grid-template-columns: 1fr;
-    }
-  }
+  /* Responsive handled by Swiper breakpoints */
 `;
 
 export const Accordion = styled.section`

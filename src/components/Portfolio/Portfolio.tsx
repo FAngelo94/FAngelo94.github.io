@@ -1,9 +1,11 @@
 import React from "react";
-import { Container, Accordion } from "./styles";
+import { Container } from "./styles";
 import suitcase from "../../assets/suitcase.png";
 import ScrollAnimation from "react-animate-on-scroll";
 import { projects } from "../../data";
 import { Card } from "../Card/Card";
+import { Carousel } from "../Carousel/Carousel";
+import { TileCard } from "../Card/TileCard";
 
 interface IProject {
   title: string;
@@ -20,28 +22,28 @@ interface IProject {
     value: string;
   }>;
 }
-const VISIBLE_PROJECTS_COUNT = 3;
+// Carousel shows all projects; previous visible count no longer used.
 
 export function Portfolio() {
   const [showCard, setShowCard] = React.useState<IProject>();
-  const [showOlderProjects, setShowOlderProjects] = React.useState(false);
-
-  const firstSixProjects = projects.projects.slice(0, VISIBLE_PROJECTS_COUNT);
-  const olderProjects = projects.projects.slice(VISIBLE_PROJECTS_COUNT);
+  
+  React.useEffect(() => {
+    const applyUniformHeights = () => {
+      const cards = document.querySelectorAll<HTMLDivElement>('#portfolio .project');
+      let maxH = 0;
+      cards.forEach(c => { maxH = Math.max(maxH, c.offsetHeight); });
+      cards.forEach(c => { c.style.minHeight = `${maxH}px`; });
+    };
+    requestAnimationFrame(applyUniformHeights);
+    window.addEventListener('resize', applyUniformHeights);
+    return () => window.removeEventListener('resize', applyUniformHeights);
+  }, []);
 
   return (
     <Container id="portfolio">
       <h2>{projects.title}</h2>
       <div className="subtitle">{projects.subtitle}</div>
-      <Projects projects={firstSixProjects} setShowCard={setShowCard} />
-      <Accordion>
-        <button onClick={() => setShowOlderProjects(!showOlderProjects)}>
-          {showOlderProjects ? "Hide Older Projects" : "Show Older Projects"}
-        </button>
-      </Accordion>
-      {showOlderProjects && (
-        <Projects projects={olderProjects} setShowCard={setShowCard} />
-      )}
+      <Projects projects={projects.projects} setShowCard={setShowCard} />
       <div className="footer-text">{projects.footerText}</div>
       {showCard && (
         <Card
@@ -58,35 +60,27 @@ export function Portfolio() {
 
 const Projects = ({ projects, setShowCard }: { projects: IProject[], setShowCard: (project: IProject) => void }) => {
   return (
-    <div className="projects">
+    <Carousel>
       {projects.map((p, index) => (
         <ScrollAnimation animateIn="flipInX" key={index}>
-          <div className="project">
-            <header>
-              <img src={suitcase} alt="Suitcase" />
-              <div className="project-links">
-                {p.links &&
-                  p.links.map((l, index2) => (
-                    <a href={l.url} key={index2} target="_blank" rel="noreferrer">
-                      <img src={l.icon} alt={l.label} />
-                    </a>
-                  ))}
-              </div>
-            </header>
-            <div className="body" onClick={() => setShowCard(p)}>
-              <h3>{p.title}</h3>
-              <p>{p.description}</p>
-            </div>
-            <footer>
-              <ul className="tech-list">
-                {p.mainSkills.map((skill, index) => (
-                  <li key={index}>{skill}</li>
+          <TileCard
+            headerIconSrc={suitcase}
+            headerRight={p.links ? (
+              <>
+                {p.links.map((l, index2) => (
+                  <a href={l.url} key={index2} target="_blank" rel="noreferrer">
+                    <img src={l.icon} alt={l.label} />
+                  </a>
                 ))}
-              </ul>
-            </footer>
-          </div>
+              </>
+            ) : undefined}
+            title={p.title}
+            body={<p>{p.description}</p>}
+            footerList={p.mainSkills}
+            onClickBody={() => setShowCard(p)}
+          />
         </ScrollAnimation>
       ))}
-    </div>
+    </Carousel>
   )
 }

@@ -1,9 +1,11 @@
 import React from "react";
-import { Container, Accordion } from "./styles";
+import { Container } from "./styles";
 import bachelor from "../../assets/bachelor.png";
 import suitcase from "../../assets/suitcase.png";
 import ScrollAnimation from "react-animate-on-scroll";
 import { career } from "../../data";
+import { Carousel } from "../Carousel/Carousel";
+import { TileCard } from "../Card/TileCard";
 
 interface ICareerItem {
   title: string;
@@ -20,82 +22,64 @@ interface ICareerItem {
   }>;
 }
 
-const VISIBLE_CAREER_ITEMS_COUNT = 3;
-
 export function Career() {
-  const [showOlderCareer, setShowOlderCareer] = React.useState(false);
-
   // Combine jobs and schools into a single array with type information
   const allCareerItems: ICareerItem[] = [
     ...career.jobs.map(job => ({ ...job, type: "job" as const })),
     ...career.schools.map(school => ({ ...school, type: "school" as const }))
   ];
 
-  const firstSixItems = allCareerItems.slice(0, VISIBLE_CAREER_ITEMS_COUNT);
-  const olderItems = allCareerItems.slice(VISIBLE_CAREER_ITEMS_COUNT);
+  React.useEffect(() => {
+    const applyUniformHeights = () => {
+      const cards = document.querySelectorAll<HTMLDivElement>('#career .project');
+      let maxH = 0;
+      cards.forEach(c => { maxH = Math.max(maxH, c.offsetHeight); });
+      cards.forEach(c => { c.style.minHeight = `${maxH}px`; });
+    };
+    // run after layout
+    requestAnimationFrame(applyUniformHeights);
+    window.addEventListener('resize', applyUniformHeights);
+    return () => window.removeEventListener('resize', applyUniformHeights);
+  }, []);
 
   return (
     <Container id="career">
       <h2>{career.title}</h2>
-      <CareerItems items={firstSixItems} />
-      <Accordion>
-        <button onClick={() => setShowOlderCareer(!showOlderCareer)}>
-          {showOlderCareer ? "Hide Older Career Steps" : "Show Older Career Steps"}
-        </button>
-      </Accordion>
-      {showOlderCareer && (
-        <CareerItems items={olderItems} />
-      )}
+      <CareerItems items={allCareerItems} />
     </Container>
   );
 }
 
 const CareerItems = ({ items }: { items: ICareerItem[] }) => {
   return (
-    <div className="projects">
+    <Carousel>
       {items.map((item, index) => (
-        <ScrollAnimation 
-          key={index}
-          animateIn="flipInX">
-          <div className="project">
-            <header>
-              <img src={item.type === "job" ? suitcase : bachelor} alt={item.type === "job" ? "Suitcase" : "Bachelor"} />
-              <div className="project-links">
-                {item.type === "job" && item.link && item.company && (
-                  <a href={item.link}>{item.company}</a>
+        <ScrollAnimation animateIn="flipInX" key={index}>
+          <TileCard
+            headerIconSrc={item.type === "job" ? suitcase : bachelor}
+            headerRight={item.type === "job" && item.link && item.company ? (
+              <a href={item.link}>{item.company}</a>
+            ) : undefined}
+            title={item.title}
+            body={item.type === 'job' ? (
+              <p>{item.description}</p>
+            ) : (
+              <>
+                <p>{item.where}</p>
+                {item.description && (
+                  <p>
+                    {item.description}
+                    {item.links && item.links.map((link, i) => (
+                      <a href={link.url} target="_blank" rel="noreferrer" key={i}>{link.title}</a>
+                    ))}
+                  </p>
                 )}
-              </div>
-            </header>
-            <div className="body">
-              <h3>{item.title}</h3>
-              {item.type === "job" ? (
-                <p>{item.description}</p>
-              ) : (
-                <>
-                  <p>{item.where}</p>
-                  {item.description && (
-                    <p>
-                      {item.description}
-                      {item.links &&
-                        item.links.map((link, index) => (
-                          <a href={link.url} target="_blank" rel="noreferrer"
-                          key={index}>
-                            {link.title}
-                          </a>
-                        ))}
-                    </p>
-                  )}
-                </>
-              )}
-            </div>
-            <footer>
-              <ul className="tech-list">
-                <li>{item.type === "job" ? item.whereAndWhen : item.when}</li>
-              </ul>
-            </footer>
-          </div>
+              </>
+            )}
+            footerList={[item.type === 'job' ? (item.whereAndWhen ?? '') : (item.when ?? '')]}
+          />
         </ScrollAnimation>
       ))}
-    </div>
+    </Carousel>
   );
 };

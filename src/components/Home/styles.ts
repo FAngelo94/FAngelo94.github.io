@@ -4,44 +4,27 @@ export const Container = styled.section`
   padding-top: 15%;
   background: rgba(0,0,0,0);
 
-  .hero-body{
+  .home-body{
     display: flex;
     justify-content: space-between;
     gap: 8rem;
   }
 
-  .hard-skills{
-    margin-top: 1.6rem;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.8rem;
+  .home-title h1{
+    font-size: clamp(2rem, 6vw, 6rem);
+    line-height: 1.1;
+    margin: 0;
   }
 
-  .hability{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-
-    &:hover span {
-      display: block;
-    }
-
-    span {
-      position: absolute;
-      left: 50%;
-      bottom: -70%;
-      transform: translate(-50%,-50%);
-      display: none;
-    }
-
-    img{
-      width: 3.4rem;
-    }
+  .highlight{
+    color: var(--green);
   }
 
-  .hero-text{
+  .center {
+    text-align: center;
+  }
+
+    .home-text{
     & > p{
       font-size: 1.8rem;
     }
@@ -65,25 +48,51 @@ export const Container = styled.section`
     padding: 1.4rem 6rem;
   }
 
-  .hero-image{
+  .home-image{
     img{
       max-width: 500px;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
     }
+  }
+
+  /* Bullet list styling for home paragraphs */
+  .bullet-list p{
+    position: relative;
+    margin: 0.75rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .bullet-list p::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 0.6rem;
+    height: 0.6rem;
+    background: var(--green);
+    border-radius: 50%;
   }
 
 
   @media(max-width: 960px){
     display: block;
     margin-top: 15%;
-    .hero-text{
+    .home-body{
+      flex-direction: column;
+      align-items: center;
+      gap: 2.4rem;
+    }
+    .home-text{
 
       h1{
         font-size: 5rem;
       }
     }
     
-    .hero-image{
-      display: none;
+    .home-image{
+      display: block;
     }
   }
 

@@ -1,5 +1,5 @@
 import jsPDF from 'jspdf';
-import { hero, career, projects } from '../data';
+import { hero, career, projects, whoIam } from '../data';
 
 export const generateCV = () => {
   const doc = new jsPDF();
@@ -51,7 +51,9 @@ export const generateCV = () => {
   yPosition += lineHeight + 5;
 
   doc.setFontSize(12);
-  yPosition = addWrappedText(hero.smallResume, margin, yPosition, pageWidth - 2 * margin);
+  whoIam.paragraphs.forEach((line) => {
+    yPosition = addWrappedText(line, margin, yPosition, pageWidth - 2 * margin);
+  });
   yPosition += 6;
 
   yPosition = addSectionTitle("About Me", yPosition);

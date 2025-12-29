@@ -68,6 +68,9 @@ export const Container = styled.section`
   .hero-image{
     img{
       max-width: 500px;
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
     }
   }
 
@@ -75,6 +78,11 @@ export const Container = styled.section`
   @media(max-width: 960px){
     display: block;
     margin-top: 15%;
+    .hero-body{
+      flex-direction: column;
+      align-items: center;
+      gap: 2.4rem;
+    }
     .hero-text{
 
       h1{
@@ -83,7 +91,7 @@ export const Container = styled.section`
     }
     
     .hero-image{
-      display: none;
+      display: block;
     }
   }
 

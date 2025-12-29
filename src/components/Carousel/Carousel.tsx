@@ -28,6 +28,7 @@ export function Carousel({ className = 'projects', children }: CarouselProps) {
           0: { slidesPerView: 1 },
           740: { slidesPerView: 2 },
           960: { slidesPerView: 3 },
+          1600: { slidesPerView: 4 },
         }}
       >
         {React.Children.map(children, (child, idx) => (

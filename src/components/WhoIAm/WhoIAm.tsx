@@ -17,7 +17,7 @@ import viteIcon from "../../assets/vite.svg";
 import problemSolvingIcon from "../../assets/problem-solving.svg";
 import ScrollAnimation from "react-animate-on-scroll";
 import profileImage from "../../assets/profile-image.jpg";
-import { hero } from "../../data"
+import { hero, whoIam } from "../../data"
 
 export function WhoIAm() {
   const icons = [
@@ -55,7 +55,7 @@ export function WhoIAm() {
             <h3>{hero.title}</h3>
           </ScrollAnimation>
 
-          {hero.paragraphs.map((p, index) => (
+          {whoIam.paragraphs.map((p, index) => (
             <ScrollAnimation
               key={index}
               animateIn="fadeInLeft"

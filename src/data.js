@@ -13,8 +13,6 @@ export const hero = {
   hello: "Hello 👋, I'm",
   name: "Ing. Angelo Falci",
   title: "Software Engineer",
-  smallResume:
-    "Web developer focused on Javascript, React, Python and SQL to develop both frontend and backend applications. I love face difficult challenges that can help me to improve my skills and learn new tecnologies.",
   contacts: "Contacts",
   mainSkills: "Here are my main skills/knowledge:",
   paragraphs: [
@@ -25,6 +23,27 @@ export const hero = {
     "I have patent B and A"
   ],
 };
+
+export const whoIam = {
+  paragraphs: ["I’m a passionate software engineer focused on problem solving and building pragmatic solutions to real client needs.", 
+  "I’ve worked with both large companies and early-stage startups, collaborating in teams as well as delivering projects end-to-end independently.",
+  "I’m used to working directly with clients, understanding real business needs, and turning them into working software.",
+  "I’m comfortable across the full stack and quick to learn new technologies, also leveraging modern AI tools to work more efficiently."],
+}
+
+export const home = {
+  title: ["Hire a", "Software Engineer", "in less than 24 hours"],
+  subtitle: "I'm the right person for you if:",
+  paragraphs: [
+    "You need a web developer for your team.",
+    "You need someone to develop all software for your startup from scratch.",
+    "You need to improve your website/application with new features or fix existing ones.",
+    "You want a consultant for your idea/project before starting the development",
+    "You aren't sure about technologies and developer you need for your project",
+    "You want propose me a collaboration",
+  ],
+  footerText: "Not waste your time, contact me and let's build something great together! If you aren't satisfied, I will refund you 100%!",
+}
 
 export const header = {
   home: "Home",

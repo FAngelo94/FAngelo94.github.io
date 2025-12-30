@@ -57,10 +57,11 @@ export const prices = {
   title: "My Plans",
   subtitle: "Choose the plan that best suits your needs.",
   footerText: "If you have special needs or requests, contact me and I will create a custom plan for you!",
+  ctaBookPlan: "Book this plan",
   plans: [{
     title: "€ 750",
     description: "Ideally for small tasks or to have a developer available for a short period of time.",
-    included: [""],
+    included: ["I work in 1 of your project", "If you aren't satisfied, I will refund you 100%", "You can contact me for support anytime"],
     footer: "For small developments",
     type: "WEEKLY",
     icon: weeklyIcon,
@@ -72,6 +73,7 @@ export const prices = {
   {
     title: "€ 2500",
     description: "Ideally for medium/large projects where you need a developer full-time for a month.",
+    included: ["I work in 1 of your project", "If you aren't satisfied, I will refund you 100%", "You can contact me for support anytime"],
     footer: "The most popular",
     type: "MONTHLY",
     icon: monthlyIcon,
@@ -83,6 +85,7 @@ export const prices = {
   {
     title: "€ 45",
     description: "Ideally for small tasks or to have a developer available for a short period of time.",
+    included: [],
     footer: "If you have to account for hours",
     type: "HOURLY",
     icon: hourlyIcon,
@@ -94,6 +97,7 @@ export const prices = {
   {
     title: "Custom",
     description: "If you have special needs or requests, contact me and I will create a custom plan for you!",
+    included: [],
     footer: "Let's create your plan",
     type: "CUSTOM",
     icon: customIcon,
@@ -105,6 +109,7 @@ export const prices = {
   {
     title: "€ 60",
     description: "Ideally for small tasks or to have a developer available for a short period of time.",
+    included: [],
     footer: "For a single consultant",
     type: "CONSULTANT",
     icon: hourlyIcon,

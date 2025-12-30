@@ -1,15 +1,16 @@
 import React from "react";
 import { Container } from "./styles";
-import project from "../../assets/project.png";
 import ScrollAnimation from "react-animate-on-scroll";
-import { prices } from "../../data";
+import { prices, contacts } from "../../data";
 import { Card } from "../Card/Card";
 import { Carousel } from "../Carousel/Carousel";
 import { TileCard } from "../Card/TileCard";
+import { openCalendarPopup } from "../../utils/calendar";
 
 interface IPriceProps {
   title: string;
   description: string;
+  included?: string[];
   footer: string;
   type: string;
   icon: string;
@@ -29,7 +30,6 @@ export function Prices() {
       <h2>{prices.title}</h2>
       <div className="subtitle">{prices.subtitle}</div>
       <Projects prices={prices.plans} setShowCard={setShowCard} />
-      <div className="footer-text">{prices.footerText}</div>
       {showCard && (
         <Card
           title={showCard.title}
@@ -43,19 +43,38 @@ export function Prices() {
   );
 }
 
-const Projects = ({ prices, setShowCard }: { prices: IPriceProps[], setShowCard: (project: IPriceProps) => void }) => {
+const Projects = ({ prices: plans, setShowCard }: { prices: IPriceProps[], setShowCard: (project: IPriceProps) => void }) => {
   return (
     <Carousel>
-      {prices.map((p, index) => (
+      {plans.map((p, index) => (
         <ScrollAnimation animateIn="flipInX" key={index}>
           <TileCard
             headerIconSrc={p.icon}
             headerRight={<span className="type">
               {p.type}
             </span>}
-            title={p.title}
-            body={<p>{p.description}</p>}
+            title={
+              <>
+                {p.title}
+                {p.type && <small>/{String(p.type).toLowerCase()}</small>}
+              </>
+            }
+            body={
+              p.included && p.included.length > 0 ? (
+                <ul className="bullet-list">
+                  {p.included.map((it, i) => (
+                    <li key={i}>{it}</li>
+                  ))}
+                </ul>
+              ) : (
+                <></>
+              )
+            }
             footerList={p.footer ? [p.footer] : []}
+            ctaLabel={prices.ctaBookPlan}
+            onCtaClick={() => openCalendarPopup(contacts.calendarLink)}
+            secondaryCtaLabel={"More details"}
+            onSecondaryCtaClick={() => setShowCard(p)}
             onClickBody={() => setShowCard(p)}
           />
         </ScrollAnimation>

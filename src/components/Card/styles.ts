@@ -75,12 +75,12 @@ display: absolute;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
 
       h3 {
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
       }
 
       p {
         letter-spacing: 0.12rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
         white-space: pre-wrap;
         a {
           color: var(--card-link);
@@ -141,7 +141,7 @@ export const TileCard = styled.div`
     align-items: center;
     justify-content: space-between;
     color: var(--blue);
-    margin-bottom: 3.6rem;
+    margin-bottom: 1.5rem;
 
     .project-links{
       display: flex;
@@ -150,6 +150,15 @@ export const TileCard = styled.div`
 
       a {
         color: var(--green);
+        display: flex;
+        align-items: baseline;
+        gap: .6rem;
+
+        small{
+          font-size: 1.4rem;
+          font-weight: 600;
+          opacity: 0.8;
+        }
       }
     }
 
@@ -164,7 +173,7 @@ export const TileCard = styled.div`
   }
 
   h3{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .body{
@@ -173,7 +182,7 @@ export const TileCard = styled.div`
 
   p{
     letter-spacing: 0.12rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     a{
       color: var(--card-link);
       border-bottom: 1px solid var(--green);
@@ -186,6 +195,9 @@ export const TileCard = styled.div`
 
   footer{
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
     .tech-list{
       display: flex;
       align-items: center;
@@ -194,5 +206,54 @@ export const TileCard = styled.div`
       opacity: 0.6;
       flex-wrap: wrap;
     }
+    .card-actions{
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+
+      button {
+        flex: 1;
+      }
+    }
+    .card-cta{
+      background: var(--green);
+      color: #121212;
+      border: 1px solid var(--green);
+      border-radius: .8rem;
+      padding: 0.9rem 1.4rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s ease, filter .2s ease;
+      &:hover{ transform: translateY(-2px); filter: brightness(1.05); }
+      &:active{ transform: translateY(0); }
+    }
+    .card-cta.secondary{
+      background: transparent;
+      color: var(--green);
+      border: 2px solid var(--green);
+    }
+  }
+
+  /* bullet list for card content */
+  .bullet-list{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+  .bullet-list li{
+    position: relative;
+    padding-left: 1.6rem;
+    margin: .6rem 0;
+  }
+  .bullet-list li::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: .8rem;
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+    background: var(--green);
   }
 `;

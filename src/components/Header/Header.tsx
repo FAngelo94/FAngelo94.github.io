@@ -6,7 +6,6 @@ import { header } from "../../data"
 import logo from "../../assets/logo.png";
 import { generateCV } from '../../utils/pdfGenerator'
 
-import Curriculum from '../../assets/AngeloFalci.pdf'
 export function Header() {
   const [isActive, setActive] = useState(false)
 

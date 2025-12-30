@@ -4,13 +4,17 @@ import { TileCard as TileCardContainer } from "./styles";
 interface TileCardProps {
   headerIconSrc: string;
   headerRight?: React.ReactNode; // icons or company link
-  title: string;
+  title: React.ReactNode; // allow rich title content
   body: React.ReactNode; // description/content
   footerList: string[]; // list items shown in footer
   onClickBody?: () => void; // optional click handler on body
+  ctaLabel?: string; // optional CTA button label
+  onCtaClick?: () => void; // optional CTA click handler
+  secondaryCtaLabel?: string; // optional secondary CTA
+  onSecondaryCtaClick?: () => void; // handler for secondary CTA
 }
 
-export function TileCard({ headerIconSrc, headerRight, title, body, footerList, onClickBody }: TileCardProps) {
+export function TileCard({ headerIconSrc, headerRight, title, body, footerList, onClickBody, ctaLabel, onCtaClick, secondaryCtaLabel, onSecondaryCtaClick }: TileCardProps) {
   return (
     <TileCardContainer className="tile-card">
       <header>
@@ -29,6 +33,20 @@ export function TileCard({ headerIconSrc, headerRight, title, body, footerList, 
             <li key={i}>{v}</li>
           ))}
         </ul>
+        {(ctaLabel || secondaryCtaLabel) && (
+          <div className="card-actions">
+            {ctaLabel && (
+              <button className="card-cta" type="button" onClick={onCtaClick}>
+                {ctaLabel}
+              </button>
+            )}
+            {secondaryCtaLabel && (
+              <button className="card-cta secondary" type="button" onClick={onSecondaryCtaClick}>
+                {secondaryCtaLabel}
+              </button>
+            )}
+          </div>
+        )}
       </footer>
     </TileCardContainer>
   );

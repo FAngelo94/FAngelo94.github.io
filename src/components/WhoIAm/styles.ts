@@ -94,11 +94,4 @@ margin-top: 5rem;
       display: block;
     }
   }
-
-  @media(max-width: 600px){
-    margin-top: 25%;
-  }
-  @media(max-width: 480px){
-    margin-top: 35%;
-  }
 `

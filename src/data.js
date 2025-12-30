@@ -43,6 +43,10 @@ export const home = {
     "You want propose me a collaboration",
   ],
   footerText: "Not waste your time, contact me and let's build something great together! If you aren't satisfied, I will refund you 100%!",
+  ctas: {
+    lookPlans: "Look my plans",
+    speakGoals: "Speak about your goals",
+  },
 }
 
 export const prices = {
@@ -70,6 +74,7 @@ export const contacts = {
   subtitle:
     "If you aren't free in available slots, use my other contacts to reach me and I will respond as soon as possible!",
   bookACall: "Book a Call",
+  calendarLink: "https://calendar.app.google/dcnshtZYNqVt4KQx6",
 };
 
 export const form = {

@@ -1,7 +1,8 @@
 import { Container } from "./styles"
 import ScrollAnimation from "react-animate-on-scroll";
 import softwareEngineer from "../../assets/software-engineer.png";
-import { hero, home } from "../../data"
+import { hero, home, contacts } from "../../data"
+import { openCalendarPopup } from "../../utils/calendar"
 
 export function Home() {
 
@@ -54,13 +55,13 @@ export function Home() {
           className="button"
           onClick={() => document.getElementById('prices')?.scrollIntoView({ behavior: 'smooth' })}
         >
-          Look my plans
+          {home.ctas.lookPlans}
         </button>
         <button
           className="button button-secondary"
-          onClick={() => document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => openCalendarPopup(contacts.calendarLink)}
         >
-          Speak about your goals
+          {home.ctas.speakGoals}
         </button>
       </div>
     </Container>

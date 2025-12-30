@@ -11,7 +11,7 @@ import kanguryLogo from "./assets/kangury.png";
 
 export const hero = {
   hello: "Hello 👋, I'm",
-  name: "Ing. Angelo Falci",
+  name: "Angelo Falci",
   title: "Software Engineer",
   contacts: "Contacts",
   mainSkills: "Here are my main skills/knowledge:",
@@ -39,10 +39,14 @@ export const home = {
     "You need someone to develop all software for your startup from scratch.",
     "You need to improve your website/application with new features or fix existing ones.",
     "You want a consultant for your idea/project before starting the development",
-    "You aren't sure about technologies and developer you need for your project",
+    "You aren't sure about what technologies and developer you need for your project",
     "You want propose me a collaboration",
   ],
   footerText: "Not waste your time, contact me and let's build something great together! If you aren't satisfied, I will refund you 100%!",
+}
+
+export const prices = {
+  title: "My Plans",
 }
 
 export const header = {
@@ -64,7 +68,8 @@ export const footer = {
 export const contacts = {
   title: "Contact Me😃",
   subtitle:
-    "Feel free to contact me if you want to propose me interesting jobs, projects or just if you want an exchange of ideas!💡",
+    "If you aren't free in available slots, use my other contacts to reach me and I will respond as soon as possible!",
+  bookACall: "Book a Call",
 };
 
 export const form = {
@@ -138,7 +143,7 @@ export const career = {
       company: "DeltaTre",
       link: "https://www.deltatre.com/",
       description:
-        "I work to Diva project (https://www.deltatre.com/ott/diva), a custom player video with many features. The main technologies I use are React, Vanilla JS, Typescript, RXjs, Node, Storybook, Webpack, Babel",
+        "I work to Diva project, a custom player video with many features. The main technologies I use are React, Vanilla JS, Typescript, RXjs, Node, Storybook, Webpack, Babel",
       whereAndWhen: "Remote, 09/2022 - 04/2025",
     },
     {

@@ -60,7 +60,7 @@ export function WhoIAm() {
               key={index}
               animateIn="fadeInLeft"
               delay={(0.4 + index / 5) * 1000}
-              style={{ marginTop: "2rem", marginBottom: "2rem" }}
+              style={{ marginTop: "0.5rem", marginBottom: "0.5rem" }}
             >
               <p>{p}</p>
             </ScrollAnimation>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  padding-top: 15%;
+margin-top: 5rem;
   background: rgba(0,0,0,0);
 
   .hero-body{

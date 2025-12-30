@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  padding-top: 15%;
+  padding-top: 85px;
   background: rgba(0,0,0,0);
+  font-size: clamp(16px, 2vw, 24px);
 
   .home-body{
     display: flex;
@@ -49,11 +50,20 @@ export const Container = styled.section`
   }
 
   .home-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     img{
       max-width: 500px;
       width: 100%;
       height: auto;
       border-radius: 16px;
+      margin: auto;
+
+      @media(max-width: 600px){
+        max-width: 250px;
+      }
     }
   }
 
@@ -75,10 +85,32 @@ export const Container = styled.section`
     border-radius: 50%;
   }
 
+  /* Actions at bottom of Home section */
+  .home-actions{
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .home-actions .button{
+    margin-top: 0;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.6rem;
+    flex: 1;
+  }
+
+  .home-actions .button-secondary{
+    background: transparent;
+    color: var(--green);
+    border: 2px solid var(--green);
+  }
+
 
   @media(max-width: 960px){
     display: block;
-    margin-top: 15%;
     .home-body{
       flex-direction: column;
       align-items: center;
@@ -94,12 +126,5 @@ export const Container = styled.section`
     .home-image{
       display: block;
     }
-  }
-
-  @media(max-width: 600px){
-    margin-top: 25%;
-  }
-  @media(max-width: 480px){
-    margin-top: 35%;
   }
 `

@@ -8,11 +8,9 @@ export function Home() {
   return (
     <Container id="home">
       <div className="home-title">
-        <ScrollAnimation animateIn="fadeInUp" delay={0.2 * 1000}>
-          <h1>
-            {home.title[0]} <span className="highlight">{home.title[1]}</span> {home.title[2]}
-          </h1>
-        </ScrollAnimation>
+        <h1>
+          {home.title[0]} <span className="highlight">{home.title[1]}</span> {home.title[2]}
+        </h1>
       </div>
 
       <div className="home-body">
@@ -51,7 +49,20 @@ export function Home() {
         </div>
       </div>
 
-      
+      <div className="home-actions">
+        <button
+          className="button"
+          onClick={() => document.getElementById('prices')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          Look my plans
+        </button>
+        <button
+          className="button button-secondary"
+          onClick={() => document.getElementById('contacts')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          Speak about your goals
+        </button>
+      </div>
     </Container>
   )
 }

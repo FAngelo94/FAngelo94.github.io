@@ -86,7 +86,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html{
-    font-size: 62.5%;
+    font-size: clamp(62.5%, 1.2vw, 65%);
   }
 
   body{

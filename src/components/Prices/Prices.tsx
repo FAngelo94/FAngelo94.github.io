@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "./styles";
 import project from "../../assets/project.png";
 import ScrollAnimation from "react-animate-on-scroll";
-import { projects } from "../../data";
+import { prices, projects } from "../../data";
 import { Card } from "../Card/Card";
 import { Carousel } from "../Carousel/Carousel";
 import { TileCard } from "../Card/TileCard";
@@ -50,7 +50,7 @@ export function Prices() {
 
   return (
     <Container id="prices">
-      <h2>{projects.title}</h2>
+      <h2>{prices.title}</h2>
       <div className="subtitle">{projects.subtitle}</div>
       <Projects projects={projects.projects} setShowCard={setShowCard} />
       <div className="footer-text">{projects.footerText}</div>

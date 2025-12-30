@@ -1,4 +1,5 @@
 import React from "react";
+import { TileCard as TileCardContainer } from "./styles";
 
 interface TileCardProps {
   headerIconSrc: string;
@@ -11,7 +12,7 @@ interface TileCardProps {
 
 export function TileCard({ headerIconSrc, headerRight, title, body, footerList, onClickBody }: TileCardProps) {
   return (
-    <div className="project">
+    <TileCardContainer className="tile-card">
       <header>
         <img src={headerIconSrc} alt="Card icon" />
         <div className="project-links">
@@ -29,6 +30,6 @@ export function TileCard({ headerIconSrc, headerRight, title, body, footerList, 
           ))}
         </ul>
       </footer>
-    </div>
+    </TileCardContainer>
   );
 }

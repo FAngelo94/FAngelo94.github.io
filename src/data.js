@@ -8,6 +8,10 @@ import externalLinkIcon from "./assets/external-link-icon.svg";
 import googlePlay from "./assets/google-play.svg";
 import appStore from "./assets/app-store.svg";
 import kanguryLogo from "./assets/kangury.png";
+import hourlyIcon from "./assets/1-hour.svg";
+import weeklyIcon from "./assets/7-days.svg";
+import monthlyIcon from "./assets/30-days.svg";
+import customIcon from "./assets/customize.svg";
 
 export const hero = {
   hello: "Hello 👋, I'm",
@@ -25,10 +29,10 @@ export const hero = {
 };
 
 export const whoIam = {
-  paragraphs: ["I’m a passionate software engineer focused on problem solving and building pragmatic solutions to real client needs.", 
-  "I’ve worked with both large companies and early-stage startups, collaborating in teams as well as delivering projects end-to-end independently.",
-  "I’m used to working directly with clients, understanding real business needs, and turning them into working software.",
-  "I’m comfortable across the full stack and quick to learn new technologies, also leveraging modern AI tools to work more efficiently."],
+  paragraphs: ["I’m a passionate software engineer focused on problem solving and building pragmatic solutions to real client needs.",
+    "I’ve worked with both large companies and early-stage startups, collaborating in teams as well as delivering projects end-to-end independently.",
+    "I’m used to working directly with clients, understanding real business needs, and turning them into working software.",
+    "I’m comfortable across the full stack and quick to learn new technologies, also leveraging modern AI tools to work more efficiently."],
 }
 
 export const home = {
@@ -51,6 +55,65 @@ export const home = {
 
 export const prices = {
   title: "My Plans",
+  subtitle: "Choose the plan that best suits your needs.",
+  footerText: "If you have special needs or requests, contact me and I will create a custom plan for you!",
+  plans: [{
+    title: "€ 750",
+    description: "Ideally for small tasks or to have a developer available for a short period of time.",
+    included: [""],
+    footer: "For small developments",
+    type: "WEEKLY",
+    icon: weeklyIcon,
+    longtext: [{
+      type: "text",
+      value: "With this plan you can have me available for 20 hours per week to work on your project.\nThis plan is ideal for small tasks or to have a developer available for a short period of time."
+    }],
+  },
+  {
+    title: "€ 2500",
+    description: "Ideally for medium/large projects where you need a developer full-time for a month.",
+    footer: "The most popular",
+    type: "MONTHLY",
+    icon: monthlyIcon,
+    longtext: [{
+      type: "text",
+      value: "With this plan you can have me available full-time for a month to work on your project.\nThis plan is ideal for medium/large projects where you need a developer full-time for a month."
+    }],
+  },
+  {
+    title: "€ 45",
+    description: "Ideally for small tasks or to have a developer available for a short period of time.",
+    footer: "If you have to account for hours",
+    type: "HOURLY",
+    icon: hourlyIcon,
+    longtext: [{
+      type: "text",
+      value: "With this plan you can have me available for 1 hour to work on your project.\nThis plan is ideal for small tasks or to have a developer available for a short period of time."
+    }],
+  },
+  {
+    title: "Custom",
+    description: "If you have special needs or requests, contact me and I will create a custom plan for you!",
+    footer: "Let's create your plan",
+    type: "CUSTOM",
+    icon: customIcon,
+    longtext: [{
+      type: "text",
+      value: "If you have special needs or requests, contact me and I will create a custom plan for you!"
+    }],
+  },
+  {
+    title: "€ 60",
+    description: "Ideally for small tasks or to have a developer available for a short period of time.",
+    footer: "For a single consultant",
+    type: "CONSULTANT",
+    icon: hourlyIcon,
+    longtext: [{
+      type: "text",
+      value: "With this plan you can have me available for 1 hour to work on your project with priority over other clients.\nThis plan is ideal for small tasks or to have a developer available for a short period of time with priority."
+    }],
+  }
+  ]
 }
 
 export const header = {

@@ -12,11 +12,55 @@ interface CarouselProps {
 }
 
 export function Carousel({ className = 'projects', children }: CarouselProps) {
+  const rootRef = React.useRef<HTMLDivElement>(null);
   const paginationRef = React.useRef<HTMLDivElement>(null);
   const [swiperInst, setSwiperInst] = React.useState<any>(null);
 
+  React.useEffect(() => {
+    const el = paginationRef.current;
+    if (!swiperInst || !el) return;
+    swiperInst.params.pagination = {
+      ...(swiperInst.params.pagination || {}),
+      el,
+      clickable: true,
+    } as any;
+    try {
+      swiperInst.pagination.destroy();
+    } catch {}
+    swiperInst.pagination.init();
+    swiperInst.pagination.render();
+    swiperInst.pagination.update();
+  }, [swiperInst, paginationRef.current]);
+
+  React.useEffect(() => {
+    const equalize = () => {
+      const root = rootRef.current;
+      if (!root) return;
+      const cards = Array.from(root.querySelectorAll<HTMLElement>('.tile-card'));
+      if (!cards.length) return;
+      cards.forEach((c) => (c.style.minHeight = ''));
+      let max = 0;
+      cards.forEach((c) => {
+        max = Math.max(max, c.offsetHeight);
+      });
+      cards.forEach((c) => (c.style.minHeight = `${max}px`));
+    };
+    const run = () => setTimeout(equalize, 0);
+    run();
+    const onResize = () => equalize();
+    window.addEventListener('resize', onResize);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const fontsReady = (document as any).fonts?.ready;
+    if (fontsReady && typeof fontsReady.then === 'function') {
+      fontsReady.then(run);
+    } else {
+      window.addEventListener('load', run, { once: true } as any);
+    }
+    return () => window.removeEventListener('resize', onResize);
+  }, [children]);
+
   return (
-    <Container>
+    <Container ref={rootRef}>
       <Swiper
         className={className}
         modules={[Navigation, Pagination]}
@@ -36,20 +80,6 @@ export function Carousel({ className = 'projects', children }: CarouselProps) {
         ))}
       </Swiper>
       <div ref={paginationRef} className="swiper-pagination outside" />
-      {/** Attach pagination after both swiper and ref are ready */}
-      {React.useEffect(() => {
-        const el = paginationRef.current;
-        if (!swiperInst || !el) return;
-        swiperInst.params.pagination = {
-          ...(swiperInst.params.pagination || {}),
-          el,
-          clickable: true,
-        } as any;
-        try { swiperInst.pagination.destroy(); } catch {}
-        swiperInst.pagination.init();
-        swiperInst.pagination.render();
-        swiperInst.pagination.update();
-      }, [swiperInst, paginationRef.current])}
     </Container>
   );
 }

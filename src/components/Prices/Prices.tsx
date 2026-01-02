@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "./styles";
 import ScrollAnimation from "react-animate-on-scroll";
-import { prices, contacts } from "../../data";
+import { useI18n } from "../../i18n/I18nProvider";
 import { Card } from "../Card/Card";
 import { Carousel } from "../Carousel/Carousel";
 import { TileCard } from "../Card/TileCard";
@@ -22,14 +22,15 @@ interface IPriceProps {
 // Carousel shows all projects; previous visible count no longer used.
 
 export function Prices() {
+  const { t } = useI18n();
   const [showCard, setShowCard] = React.useState<IPriceProps>();
 
 
   return (
     <Container id="prices">
-      <h2>{prices.title}</h2>
-      <div className="subtitle">{prices.subtitle}</div>
-      <Projects prices={prices.plans} setShowCard={setShowCard} />
+      <h2>{t.prices.title}</h2>
+      <div className="subtitle">{t.prices.subtitle}</div>
+      <Projects prices={t.prices.plans} ctas={t.prices} contacts={t.contacts} setShowCard={setShowCard} />
       {showCard && (
         <Card
           title={showCard.title}
@@ -44,7 +45,7 @@ export function Prices() {
   );
 }
 
-const Projects = ({ prices: plans, setShowCard }: { prices: IPriceProps[], setShowCard: (project: IPriceProps) => void }) => {
+const Projects = ({ prices: plans, ctas, contacts, setShowCard }: { prices: IPriceProps[], ctas: { ctaBookPlan: string; ctaMoreDetails?: string; }, contacts: { calendarLink: string }, setShowCard: (project: IPriceProps) => void }) => {
   return (
     <Carousel>
       {plans.map((p, index) => (
@@ -72,9 +73,9 @@ const Projects = ({ prices: plans, setShowCard }: { prices: IPriceProps[], setSh
               )
             }
             footerList={p.footer ? [p.footer] : []}
-            ctaLabel={prices.ctaBookPlan}
+            ctaLabel={ctas.ctaBookPlan}
             onCtaClick={() => openCalendarPopup(contacts.calendarLink)}
-            secondaryCtaLabel={prices.ctaMoreDetails}
+            secondaryCtaLabel={ctas.ctaMoreDetails}
             onSecondaryCtaClick={() => setShowCard(p)}
             onClickBody={() => setShowCard(p)}
           />

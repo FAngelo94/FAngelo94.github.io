@@ -6,27 +6,28 @@ import githubIcon from "../../assets/github-icon.svg";
 import codepen from "../../assets/codepen.png";
 import telegram from "../../assets/telegram.png";
 import codingame from "../../assets/codingame.png";
-import { contacts } from "../../data";
+import { useI18n } from "../../i18n/I18nProvider";
 import { openCalendarPopup } from "../../utils/calendar";
 
 
 export function Contact() {
+  const { t } = useI18n();
 
   return (
     <Container id="contacts">
       <header>
-        <h2>{contacts.title}</h2>
+        <h2>{t.contacts.title}</h2>
       </header>
 
       <div className="actions">
         <button
           className="button calendar"
-          onClick={(e) => { e.preventDefault(); openCalendarPopup(contacts.calendarLink); }}
+          onClick={(e) => { e.preventDefault(); openCalendarPopup(t.contacts.calendarLink); }}
         >
-          {contacts.bookACall}
+          {t.contacts.bookACall}
         </button>
       </div>
-      <p>{contacts.subtitle}</p>
+      <p>{t.contacts.subtitle}</p>
       <div className="actions">
           <a className="button button-secondary" href="mailto:a.falci@live.it">
             <img src={emailIcon} alt="Email" />

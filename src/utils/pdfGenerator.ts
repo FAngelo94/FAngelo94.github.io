@@ -1,5 +1,20 @@
 import jsPDF from 'jspdf';
-import { hero, career, projects, whoIam } from '../data';
+import { en } from '../i18n/en';
+import { it as itLang } from '../i18n/it';
+
+// choose translations based on stored locale or browser language
+const getLocaleTranslations = () => {
+  if (typeof window === 'undefined') return en;
+  const stored = window.localStorage.getItem('locale');
+  if (stored === 'it') return itLang;
+  if (stored === 'en') return en;
+  const nav = navigator.language?.toLowerCase();
+  if (nav?.startsWith('it')) return itLang;
+  return en;
+};
+
+const t = getLocaleTranslations();
+const { hero, career, projects, whoIam, home } = t;
 
 export const generateCV = () => {
   const doc = new jsPDF();
@@ -21,11 +36,11 @@ export const generateCV = () => {
     doc.setFontSize(16);
     doc.setFont("helvetica", "bold");
     doc.text(title, margin, y);
-    
+
     // Add underline
     doc.setLineWidth(0.5);
     doc.line(margin, y + 2, pageWidth - margin, y + 2);
-    
+
     doc.setFont("helvetica", "normal");
     return y + lineHeight + 8;
   };
@@ -39,6 +54,23 @@ export const generateCV = () => {
     return currentY;
   };
 
+    // Localized section titles
+  const locale = (typeof window !== 'undefined') ? (window.localStorage.getItem('locale') || navigator.language || 'en') : 'en';
+  const isIt = locale.toString().toLowerCase().startsWith('it') || locale === 'it';
+  const labels = {
+    aboutMe: isIt ? 'Chi sono' : 'About Me',
+    websiteInvite: isIt ? "Per il CV completo e maggiori dettagli visita il mio sito: https://fangelo94.github.io/" : 'For the full CV and more details please visit my website: https://fangelo94.github.io/',
+    contacts: isIt ? 'Contatti' : 'Contacts',
+    lastExperience: isIt ? 'Ultime esperienze professionali' : 'Last Professional Experience',
+    projects: isIt ? 'Ultimi progetti' : 'Last Projects',
+    projectsInvite: isIt ? 'Per la lista completa dei progetti e i dettagli visita il mio sito.' : 'For the complete list of projects and full details for each project, please visit my website.',
+    allTech: isIt ? "Tutte le tecnologie che ho usato" : 'All technologies I used',
+    mainTech: isIt ? 'Tecnologie principali' : 'Main Technologies',
+    education: isIt ? 'Formazione' : 'Education',
+    visitCareer: isIt ? 'Per vedere tutte le mie esperienze visita il mio sito.' : 'To see my complete list of work experiences please visit my website.',
+    mainSubtitle: isIt ? 'Sono la persona giusta per te se' : 'I am the right person for you if',
+  };
+
   // Header
   doc.setFontSize(24);
   doc.setFont("helvetica", "bold");
@@ -50,40 +82,44 @@ export const generateCV = () => {
   doc.text(hero.title, margin, yPosition);
   yPosition += lineHeight + 5;
 
+  yPosition = addSectionTitle(labels.mainSubtitle, yPosition);
+
+  doc.setFontSize(12);
+  home.paragraphs.forEach((line) => {
+    yPosition = addWrappedText(line, margin, yPosition, pageWidth - 2 * margin);
+  });
+  yPosition += 6;
+
+  yPosition = addSectionTitle(labels.aboutMe, yPosition);
+
+  // Add about paragraphs
   doc.setFontSize(12);
   whoIam.paragraphs.forEach((line) => {
     yPosition = addWrappedText(line, margin, yPosition, pageWidth - 2 * margin);
   });
   yPosition += 6;
 
-  yPosition = addSectionTitle("About Me", yPosition);
-  
-  // Add about paragraphs
-  hero.paragraphs.forEach((paragraph) => {
-    yPosition = addWrappedText(paragraph, margin, yPosition, pageWidth - 2 * margin);
-  });
-  yPosition += 5;
-
-    // Invite to visit website for full CV (before About Me)
+  // Invite to visit website for full CV (before About Me)
   yPosition = checkNewPage(yPosition, 20);
   doc.setFontSize(11);
   doc.setFont("helvetica", "italic");
-  yPosition = addWrappedText("For the full CV and more details please visit my website: https://fangelo94.github.io/", margin, yPosition, pageWidth - 2 * margin, 11);
+  yPosition = addWrappedText(labels.websiteInvite, margin, yPosition, pageWidth - 2 * margin, 11);
   yPosition += 5;
 
   // Contacts section
-  yPosition = addSectionTitle("Contacts", yPosition);
-  
+  yPosition = addSectionTitle(labels.contacts, yPosition);
+
   doc.setFontSize(11);
   doc.setFont("helvetica", "normal");
   yPosition = addWrappedText("Email: a.falci@live.it", margin, yPosition, pageWidth - 2 * margin, 11);
   yPosition = addWrappedText("Phone: +39 347 3927579", margin, yPosition, pageWidth - 2 * margin, 11);
   yPosition = addWrappedText("LinkedIn: https://www.linkedin.com/in/angelo-falci-1292ab76/", margin, yPosition, pageWidth - 2 * margin, 11);
   yPosition = addWrappedText("GitHub: https://github.com/FAngelo94/FAngelo94.github.io", margin, yPosition, pageWidth - 2 * margin, 11);
-  yPosition += 3;
+  yPosition += 50;
 
   // Career section (only last 6 experiences)
-  yPosition = addSectionTitle("Last Professional Experience", yPosition);
+  yPosition = checkNewPage(yPosition, 40);
+  yPosition = addSectionTitle(labels.lastExperience, yPosition);
 
   const lastSixJobs = career.jobs.slice(0, 6);
   lastSixJobs.forEach((job) => {
@@ -110,12 +146,12 @@ export const generateCV = () => {
   yPosition = checkNewPage(yPosition, 24);
   doc.setFontSize(11);
   doc.setFont("helvetica", "italic");
-  yPosition = addWrappedText("To see my complete list of work experiences please visit my website.", margin, yPosition, pageWidth - 2 * margin, 11);
+  yPosition = addWrappedText(labels.visitCareer, margin, yPosition, pageWidth - 2 * margin, 11);
   yPosition += 5;
 
   // Key Projects section (6 most recent)
   yPosition = checkNewPage(yPosition, 50);
-  yPosition = addSectionTitle("Last Projects", yPosition);
+  yPosition = addSectionTitle(labels.projects, yPosition);
 
   const keyProjects = projects.projects.filter(p => p.description && p.description.trim() !== '').slice(0, 6);
   keyProjects.forEach((project) => {
@@ -128,14 +164,15 @@ export const generateCV = () => {
 
     doc.setFont("helvetica", "normal");
     yPosition = addWrappedText(project.description, margin, yPosition, pageWidth - 2 * margin, 10);
-    
+
     // Add main skills
     const skills = (project.allSkills && project.allSkills.length > 0) ? project.allSkills : (project.mainSkills || []);
     if (skills && skills.length > 0) {
       yPosition += 1;
       doc.setFontSize(10);
       doc.setFont("helvetica", "italic");
-      yPosition = addWrappedText(`Technologies: ${skills.join(', ')}`, margin, yPosition, pageWidth - 2 * margin, 10);
+      const techLabel = isIt ? 'Tecnologie: ' : 'Technologies: ';
+      yPosition = addWrappedText(`${techLabel}${skills.join(', ')}`, margin, yPosition, pageWidth - 2 * margin, 10);
     }
     yPosition += 4;
   });
@@ -144,12 +181,23 @@ export const generateCV = () => {
   yPosition = checkNewPage(yPosition, 24);
   doc.setFontSize(11);
   doc.setFont("helvetica", "italic");
-  yPosition = addWrappedText("For the complete list of projects and full details for each project, please visit my website.", margin, yPosition, pageWidth - 2 * margin, 11);
+  yPosition = addWrappedText(labels.projectsInvite, margin, yPosition, pageWidth - 2 * margin, 11);
   yPosition += 5;
 
   // All technologies I used
   yPosition = checkNewPage(yPosition, 40);
-  yPosition = addSectionTitle("All technologies I used", yPosition);
+  yPosition = addSectionTitle(labels.mainTech, yPosition);
+  const mainTechSet = new Set<string>('Javascript, Python, React, OpenAI, Django, VS Code, TypeScript, HTML, CSS, Vite, Docker, AWS, Firebase, MySQL, Android, Windows, Ubuntu'.split(', ').map(s => s.trim()));
+
+  const mainTechList = Array.from(mainTechSet).sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+  if (mainTechList.length > 0) {
+    // Print as comma separated but split across lines if long
+    const techText = mainTechList.join(', ');
+    yPosition = addWrappedText(techText, margin, yPosition, pageWidth - 2 * margin, 11);
+    yPosition += 5;
+  }
+
+  yPosition = addSectionTitle(labels.allTech, yPosition);
 
   // Collect technologies from projects (allSkills preferred, fallback to mainSkills)
   const techSet = new Set<string>();
@@ -171,7 +219,7 @@ export const generateCV = () => {
 
   // Education section (moved after Projects)
   yPosition = checkNewPage(yPosition, 50);
-  yPosition = addSectionTitle("Education", yPosition);
+  yPosition = addSectionTitle(labels.education, yPosition);
 
   career.schools.forEach((school) => {
     yPosition = checkNewPage(yPosition, 35);

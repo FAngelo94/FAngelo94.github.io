@@ -2,11 +2,12 @@ import { Container } from './styles'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
-import { header } from "../../data"
+import { useI18n } from "../../i18n/I18nProvider"
 import logo from "../../assets/logo.png";
 import { generateCV } from '../../utils/pdfGenerator'
 
 export function Header() {
+  const { t, locale, setLocale } = useI18n();
   const [isActive, setActive] = useState(false)
 
   function toggleTheme() {
@@ -32,7 +33,7 @@ export function Header() {
     <Container className="header-fixed">
       <Router>
         <HashLink smooth to="#home" className="logo">
-        <img src={logo} alt="logo"/>
+          <img src={logo} alt="logo" />
         </HashLink>
 
         <input
@@ -42,33 +43,38 @@ export function Header() {
           id="switch"
           name="mode"
         />
-        <label htmlFor="switch">Toggle</label>
+        <label htmlFor="switch">{t.header.toggle}</label>
+
+
 
         <nav className={isActive ? 'active' : ''}>
           <NavHashLink smooth to="#home" onClick={closeMenu}>
-            {header.home}
+            {t.header.home}
           </NavHashLink>
           <NavHashLink smooth to="#prices" onClick={closeMenu}>
-            {header.prices}
+            {t.header.prices}
           </NavHashLink>
           <NavHashLink smooth to="#contacts" onClick={closeMenu}>
-            {header.contacts}
+            {t.header.contacts}
           </NavHashLink>
           <NavHashLink smooth to="#whoiam" onClick={closeMenu}>
-            {header.whoiam}
+            {t.header.whoiam}
           </NavHashLink>
           <NavHashLink smooth to="#career" onClick={closeMenu}>
-            {header.experience}
+            {t.header.experience}
           </NavHashLink>
+          <button className="lang-switch" onClick={() => setLocale(locale === 'en' ? 'it' : 'en')}>
+            {locale === 'en' ? 'IT' : 'EN'}
+          </button>
           <button onClick={handleGenerateCV} className="button button-pdf">
-            {header.generatePdf}
+            {t.header.generatePdf}
           </button>
         </nav>
 
         <div
           aria-expanded={isActive ? 'true' : 'false'}
           aria-haspopup="true"
-          aria-label={isActive ? 'Fechar menu' : 'Abrir menu'}
+          aria-label={isActive ? t.header.menuClose : t.header.menuOpen}
           className={isActive ? 'menu active' : 'menu'}
           onClick={() => {
             setActive(!isActive)

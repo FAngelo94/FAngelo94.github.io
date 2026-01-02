@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "./styles";
 import project from "../../assets/project.png";
 import ScrollAnimation from "react-animate-on-scroll";
-import { projects } from "../../data";
+import { useI18n } from "../../i18n/I18nProvider";
 import { Card } from "../Card/Card";
 import { Carousel } from "../Carousel/Carousel";
 import { TileCard } from "../Card/TileCard";
@@ -25,15 +25,16 @@ interface IProject {
 // Carousel shows all projects; previous visible count no longer used.
 
 export function Portfolio() {
+  const { t } = useI18n();
   const [showCard, setShowCard] = React.useState<IProject>();
 
 
   return (
     <Container id="portfolio">
-      <h2>{projects.title}</h2>
-      <div className="subtitle">{projects.subtitle}</div>
-      <Projects projects={projects.projects} setShowCard={setShowCard} />
-      <div className="footer-text">{projects.footerText}</div>
+      <h2>{t.projects.title}</h2>
+      <div className="subtitle">{t.projects.subtitle}</div>
+      <Projects projects={t.projects.projects} setShowCard={setShowCard} />
+      <div className="footer-text">{t.projects.footerText}</div>
       {showCard && (
         <Card
           title={showCard.title}

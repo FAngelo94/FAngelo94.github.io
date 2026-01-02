@@ -3,7 +3,7 @@ import { Container } from "./styles";
 import bachelor from "../../assets/bachelor.png";
 import suitcase from "../../assets/suitcase.png";
 import ScrollAnimation from "react-animate-on-scroll";
-import { career } from "../../data";
+import { useI18n } from "../../i18n/I18nProvider";
 import { Carousel } from "../Carousel/Carousel";
 import { TileCard } from "../Card/TileCard";
 
@@ -23,15 +23,16 @@ interface ICareerItem {
 }
 
 export function Career() {
+  const { t } = useI18n();
   // Combine jobs and schools into a single array with type information
   const allCareerItems: ICareerItem[] = [
-    ...career.jobs.map(job => ({ ...job, type: "job" as const })),
-    ...career.schools.map(school => ({ ...school, type: "school" as const }))
+    ...t.career.jobs.map(job => ({ ...job, type: "job" as const })),
+    ...t.career.schools.map(school => ({ ...school, type: "school" as const }))
   ];
 
   return (
     <Container id="career">
-      <h2>{career.title}</h2>
+      <h2>{t.career.title}</h2>
       <CareerItems items={allCareerItems} />
     </Container>
   );

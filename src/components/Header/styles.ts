@@ -54,6 +54,20 @@ export const Container = styled.header`
       padding: 5px 0;
     }
 
+    .lang-switch{
+      background: transparent;
+      width: 40px;
+      border: 1px solid var(--green);
+      color: #fff;
+      border-radius: 0.6rem;
+      padding: 0.4rem 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      transition: filter 0.25s, transform 0.2s;
+      &:hover{ filter: brightness(1.1); transform: translateY(-1px); }
+      &:active{ transform: translateY(0); }
+    }
+
   }
 
   .menu-container{

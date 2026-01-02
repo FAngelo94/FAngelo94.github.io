@@ -18,9 +18,10 @@ import problemSolvingIcon from "../../assets/problem-solving.svg";
 import ScrollAnimation from "react-animate-on-scroll";
 import openAiIcon from "../../assets/openai.svg";
 import profileImage from "../../assets/profile-image.jpg";
-import { hero, whoIam } from "../../data"
+import { useI18n } from "../../i18n/I18nProvider"
 
 export function WhoIAm() {
+  const { t } = useI18n();
   const icons = [
     { icon: problemSolvingIcon, name: "ProblemSolving" },
     { icon: jsIcon, name: "JavaScript" },
@@ -44,20 +45,20 @@ export function WhoIAm() {
     <Container id="whoiam">
       <div className="hero-title">
         <ScrollAnimation animateIn="fadeInUp">
-          <p>{hero.hello}</p>
+          <p>{t.hero.hello}</p>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" delay={0.2 * 1000}>
-          <h1>{hero.name}</h1>
+          <h1>{t.hero.name}</h1>
         </ScrollAnimation>
       </div>
 
       <div className="hero-body">
         <div className="hero-text">
           <ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
-            <h3>{hero.title}</h3>
+            <h3>{t.hero.title}</h3>
           </ScrollAnimation>
 
-          {whoIam.paragraphs.map((p, index) => (
+          {t.whoIam.paragraphs.map((p, index) => (
             <ScrollAnimation
               key={index}
               animateIn="fadeInLeft"
@@ -69,7 +70,7 @@ export function WhoIAm() {
           ))}
 
           <ScrollAnimation animateIn="fadeInLeft" delay={0.7 * 1000}>
-            <h3>{hero.mainSkills}</h3>
+            <h3>{t.hero.mainSkills}</h3>
           </ScrollAnimation>
 
           <div className="hard-skills">

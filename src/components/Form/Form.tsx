@@ -4,9 +4,10 @@ import { toast, ToastContainer } from "react-toastify";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useEffect, useState } from "react";
 import validator from "validator";
-import { form } from "../../data";
+import { useI18n } from "../../i18n/I18nProvider";
 
 export function Form() {
+  const { t } = useI18n();
   const [state, handleSubmit] = useForm("myyozglw");
 
   const [validEmail, setValidEmail] = useState(false);
@@ -35,13 +36,13 @@ export function Form() {
   if (state.succeeded) {
     return (
       <ContainerSucces>
-        <h3>{form.thanks}</h3>
+        <h3>{t.form.thanks}</h3>
         <button
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          {form.backToTop}
+          {t.form.backToTop}
         </button>
         <ToastContainer />
       </ContainerSucces>
@@ -50,7 +51,7 @@ export function Form() {
 
   return (
     <Container>
-      <h2>{form.useModule}</h2>
+      <h2>{t.form.useModule}</h2>
       <form onSubmit={handleSubmit}>
         <input
           placeholder="Email"
@@ -65,7 +66,7 @@ export function Form() {
         <ValidationError prefix="Email" field="email" errors={state.errors} />
         <textarea
           required
-          placeholder={form.leaveMessage}
+          placeholder={t.form.leaveMessage}
           id="message"
           name="message"
           onChange={(e) => {
@@ -87,7 +88,7 @@ export function Form() {
           type="submit"
           disabled={state.submitting || !validEmail || !message || !isHuman}
         >
-          {form.send}
+          {t.form.send}
         </button>
       </form>
       <ToastContainer />

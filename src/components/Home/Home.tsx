@@ -1,27 +1,28 @@
 import { Container } from "./styles"
 import ScrollAnimation from "react-animate-on-scroll";
 import softwareEngineer from "../../assets/software-engineer.png";
-import { home, contacts } from "../../data"
+import { useI18n } from "../../i18n/I18nProvider"
 import { openCalendarPopup } from "../../utils/calendar"
 
 export function Home() {
+  const { t } = useI18n();
 
   return (
     <Container id="home">
       <div className="home-title">
         <h1>
-          {home.title[0]} <span className="highlight">{home.title[1]}</span> {home.title[2]}
+          {t.home.title[0]} <span className="highlight">{t.home.title[1]}</span> {t.home.title[2]}
         </h1>
       </div>
 
       <div className="home-body">
         <div className="home-text">
           <ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
-            <h3>{home.subtitle}</h3>
+            <h3>{t.home.subtitle}</h3>
           </ScrollAnimation>
 
           <div className="bullet-list">
-            {home.paragraphs.map((p, index) => (
+            {t.home.paragraphs.map((p, index) => (
               <ScrollAnimation
                 key={index}
                 animateIn="fadeInLeft"
@@ -38,7 +39,7 @@ export function Home() {
             style={{ marginTop: "2rem", marginBottom: "2rem" }}
           >
             <p className="center highlight">
-              {home.footerText}
+              {t.home.footerText}
             </p>
           </ScrollAnimation>
 
@@ -55,13 +56,13 @@ export function Home() {
           className="button"
           onClick={() => document.getElementById('prices')?.scrollIntoView({ behavior: 'smooth' })}
         >
-          {home.ctas.lookPlans}
+          {t.home.ctas.lookPlans}
         </button>
         <button
           className="button button-secondary"
-          onClick={() => openCalendarPopup(contacts.calendarLink)}
+          onClick={() => openCalendarPopup(t.contacts.calendarLink)}
         >
-          {home.ctas.speakGoals}
+          {t.home.ctas.speakGoals}
         </button>
       </div>
     </Container>

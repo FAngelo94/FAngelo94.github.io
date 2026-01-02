@@ -165,7 +165,7 @@ export const prices = {
     longtext: [
       {
         type: "text",
-        value: "Generally I prefer not work counting the hours, for my experience it's a waste of time for both sides and it is more difficult count how much you will spend upfront"
+        value: "Generally I prefer not work counting the hours, for my experience it's a waste of time for both sides and it is more difficult count how much you will spend upfront but it can be useful in some specific cases."
       },
       {
         type: "subtitle",
@@ -203,7 +203,10 @@ export const header = {
   projects: "Projects",
   contacts: "Contacts",
   experience: "Experience",
-  generatePdf: "Generate CV PDF",
+  toggle: "Toggle",
+  generatePdf: "Generate PDF",
+  menuOpen: "Open menu",
+  menuClose: "Close menu",
 };
 
 export const footer = {

@@ -16,6 +16,7 @@ import ubuntuIcon from "../../assets/ubuntu.png";
 import viteIcon from "../../assets/vite.svg";
 import problemSolvingIcon from "../../assets/problem-solving.svg";
 import ScrollAnimation from "react-animate-on-scroll";
+import openAiIcon from "../../assets/openai.svg";
 import profileImage from "../../assets/profile-image.jpg";
 import { hero, whoIam } from "../../data"
 
@@ -25,6 +26,7 @@ export function WhoIAm() {
     { icon: jsIcon, name: "JavaScript" },
     { icon: pythonIcon, name: "Python" },
     { icon: reactIcon, name: "React" },
+    { icon: openAiIcon, name: "OpenAI" },
     { icon: djangoIcon, name: "Django" },
     { icon: vscodeIcon, name: "VS Code" },
     { icon: typescriptIcon, name: "TypeScript" },

@@ -98,7 +98,7 @@ export const Container = styled.section`
   .home-actions .button{
     margin-top: 0;
     padding: 1.2rem 2.4rem;
-    font-size: 1.6rem;
+    font-size: clamp(16px, 2vw, 24px);
     flex: 1;
   }
 

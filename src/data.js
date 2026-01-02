@@ -29,10 +29,13 @@ export const hero = {
 };
 
 export const whoIam = {
-  paragraphs: ["I’m a passionate software engineer focused on problem solving and building pragmatic solutions to real client needs.",
+  paragraphs: [
+    "I’m a passionate software engineer focused on problem solving and building pragmatic solutions to real client needs.",
     "I’ve worked with both large companies and early-stage startups, collaborating in teams as well as delivering projects end-to-end independently.",
     "I’m used to working directly with clients, understanding real business needs, and turning them into working software.",
-    "I’m comfortable across the full stack and quick to learn new technologies, also leveraging modern AI tools to work more efficiently."],
+    "I’m comfortable across the full stack and quick to learn new technologies, also leveraging modern AI tools to work more efficiently",
+    "I value clear and direct communication with my clients. I want them to fully understand how I plan to solve their problem, and I’m always honest if there’s something I don’t know at that moment.",
+  ],
 }
 
 export const home = {

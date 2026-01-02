@@ -24,6 +24,7 @@ import djangoIcon from "../../assets/django.svg";
 import copilotIcon from "../../assets/copilot.svg";
 import viteIcon from "../../assets/vite.svg";
 import problemSolvingIcon from "../../assets/problem-solving.svg";
+import openaiIcon from "../../assets/openai.svg";
 import { Home } from "../Home/Home";
 import { Prices } from "../Prices/Prices";
 
@@ -47,6 +48,8 @@ export function Main() {
     { icon: djangoIcon, name: "Django" },
     { icon: copilotIcon, name: "Copilot" },
     { icon: viteIcon, name: "Vite" },
+    { icon: openaiIcon, name: "OpenAI" },
+
     { icon: problemSolvingIcon, name: "Problem Solving" },
   ];
 

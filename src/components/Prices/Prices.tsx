@@ -74,7 +74,7 @@ const Projects = ({ prices: plans, setShowCard }: { prices: IPriceProps[], setSh
             footerList={p.footer ? [p.footer] : []}
             ctaLabel={prices.ctaBookPlan}
             onCtaClick={() => openCalendarPopup(contacts.calendarLink)}
-            secondaryCtaLabel={"More details"}
+            secondaryCtaLabel={prices.ctaMoreDetails}
             onSecondaryCtaClick={() => setShowCard(p)}
             onClickBody={() => setShowCard(p)}
           />

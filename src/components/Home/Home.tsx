@@ -1,7 +1,7 @@
 import { Container } from "./styles"
 import ScrollAnimation from "react-animate-on-scroll";
 import softwareEngineer from "../../assets/software-engineer.png";
-import { hero, home, contacts } from "../../data"
+import { home, contacts } from "../../data"
 import { openCalendarPopup } from "../../utils/calendar"
 
 export function Home() {

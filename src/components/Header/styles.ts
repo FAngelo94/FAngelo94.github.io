@@ -48,6 +48,12 @@ export const Container = styled.header`
       }
     }
 
+    .button.button-pdf{
+      margin-left: 10px;
+      width: 160px;
+      padding: 5px 0;
+    }
+
   }
 
   .menu-container{

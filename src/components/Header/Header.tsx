@@ -60,8 +60,8 @@ export function Header() {
           <NavHashLink smooth to="#career" onClick={closeMenu}>
             {header.experience}
           </NavHashLink>
-          <button onClick={handleGenerateCV} className="button" style={{marginLeft: '10px', width: '120px', padding: '5px 0'}}>
-            Generate PDF
+          <button onClick={handleGenerateCV} className="button button-pdf">
+            {header.generatePdf}
           </button>
         </nav>
 

@@ -61,6 +61,7 @@ export const prices = {
   subtitle: "Choose the plan that best suits your needs.",
   footerText: "If you have special needs or requests, contact me and I will create a custom plan for you!",
   ctaBookPlan: "Book this plan",
+  ctaMoreDetails: "More details",
   plans: [{
     title: "€ 750",
     description: "Ideally for small tasks or to have a developer available for a short period of time.",
@@ -202,6 +203,7 @@ export const header = {
   projects: "Projects",
   contacts: "Contacts",
   experience: "Experience",
+  generatePdf: "Generate CV PDF",
 };
 
 export const footer = {

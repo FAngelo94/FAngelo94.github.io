@@ -54,6 +54,17 @@ display: absolute;
         padding-bottom: 1rem;
         border-bottom: 1px solid var(--card-border);
 
+        h1{
+          display: flex;
+          align-items: baseline;
+          gap: .8rem;
+        }
+        h1 small{
+          font-size: 1.8rem;
+          font-weight: 700;
+          opacity: .85;
+        }
+
         .project-links {
           display: flex;
           align-items: center;

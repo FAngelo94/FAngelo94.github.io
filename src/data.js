@@ -40,13 +40,13 @@ export const home = {
   subtitle: "I'm the right person for you if:",
   paragraphs: [
     "You need a web developer for your team.",
-    "You need someone to develop all software for your startup from scratch.",
     "You need to improve your website/application with new features or fix existing ones.",
+    "You need someone to develop all software for your startup from scratch.",
     "You want a consultant for your idea/project before starting the development",
     "You aren't sure about what technologies and developer you need for your project",
     "You want propose me a collaboration",
   ],
-  footerText: "Not waste your time, contact me and let's build something great together! If you aren't satisfied, I will refund you 100%!",
+  footerText: "Not waste your time, contact me and let's build something great together!",
   ctas: {
     lookPlans: "Look my plans",
     speakGoals: "Speak about your goals",
@@ -61,63 +61,132 @@ export const prices = {
   plans: [{
     title: "€ 750",
     description: "Ideally for small tasks or to have a developer available for a short period of time.",
-    included: ["I work in 1 of your project", "If you aren't satisfied, I will refund you 100%", "You can contact me for support anytime"],
+    included: ["I work in 1 of your project for 1 week", "If you aren't satisfied, I will refund you 100%", "You can contact me for support anytime"],
     footer: "For small developments",
     type: "WEEKLY",
     icon: weeklyIcon,
-    longtext: [{
-      type: "text",
-      value: "With this plan you can have me available for 20 hours per week to work on your project.\nThis plan is ideal for small tasks or to have a developer available for a short period of time."
-    }],
+    longtext: [
+      {
+        type: "subtitle",
+        value: "How it works?",
+      },
+      {
+        type: "text",
+        value: "With this plan you 'rent' me for 1 week to work on in 1 of your project without wasting time in contracts or other bureaucracy. Call me and I can start the day after.\
+        \nThis plan is ideal for small tasks or to test me before starting a longer collaboration."
+      },
+      {
+        type: "subtitle",
+        value: "Advantages",
+      },
+      {
+        type: "text",
+        value: "- You can have a developer available in less than 24 hours\
+        \n- I don't waste time in counting hours, I work counting the results updating you periodically\
+        \n- You can pay me until you need me, without long-term contracts\
+        \n- You know exactly how much you will pay upfront\
+        \n- If you aren't satisfied I will refund you the entire week cost"
+      }
+    ],
   },
   {
     title: "€ 2500",
     description: "Ideally for medium/large projects where you need a developer full-time for a month.",
-    included: ["I work in 1 of your project", "If you aren't satisfied, I will refund you 100%", "You can contact me for support anytime"],
+    included: ["I work in 1 of your project for 1 month", "If you aren't satisfied, I will refund you 100%", "You can contact me for support anytime"],
     footer: "The most popular",
     type: "MONTHLY",
     icon: monthlyIcon,
-    longtext: [{
-      type: "text",
-      value: "With this plan you can have me available full-time for a month to work on your project.\nThis plan is ideal for medium/large projects where you need a developer full-time for a month."
-    }],
-  },
-  {
-    title: "€ 45",
-    description: "Ideally for small tasks or to have a developer available for a short period of time.",
-    included: [],
-    footer: "If you have to account for hours",
-    type: "HOURLY",
-    icon: hourlyIcon,
-    longtext: [{
-      type: "text",
-      value: "With this plan you can have me available for 1 hour to work on your project.\nThis plan is ideal for small tasks or to have a developer available for a short period of time."
-    }],
+    longtext: [
+      {
+        type: "subtitle",
+        value: "How it works?",
+      },
+      {
+        type: "text",
+        value: "With this plan you 'rent' me for 1 month to work on in 1 of your project without wasting time in contracts or other bureaucracy. Call me and I can start the day after.\
+        \nThis plan is ideal if you need a developer to work with you or your teams for 1 or more month witout long-term contracts."
+      },
+      {
+        type: "subtitle",
+        value: "Advantages",
+      },
+      {
+        type: "text",
+        value: "- You can have a developer available in less than 24 hours\
+        \n- I don't waste time in counting hours, I work counting the results updating you periodically\
+        \n- You can pay me until you need me, without long-term contracts\
+        \n- You know exactly how much you will pay upfront\
+        \n- If we start and you aren't satisfied you can stop the rent when you want and I will refund you the first week cost"
+      }
+    ],
   },
   {
     title: "Custom",
     description: "If you have special needs or requests, contact me and I will create a custom plan for you!",
-    included: [],
+    included: ["I will create a custom plan based on your needs", "You can contact me for support anytime"],
     footer: "Let's create your plan",
     type: "CUSTOM",
     icon: customIcon,
-    longtext: [{
-      type: "text",
-      value: "If you have special needs or requests, contact me and I will create a custom plan for you!"
-    }],
+    longtext: [
+      {
+        type: "subtitle",
+        value: "How it works?",
+      },
+      {
+        type: "text",
+        value: "Choose this plan if you’re not sure how much time you’ll need or if you have specific requirements.\
+        \nContact me, we'll discuss about your needs and I'll create a custom plan for you.\
+        \nIn some case I can give you a discount, or rise the price, based on your situation"
+      },
+      {
+        type: "subtitle",
+        value: "Examples where this is useful",
+      },
+      {
+        type: "text",
+        value: "- If you are a startup with few budget, you can have a discount and give me equity in your startup\
+        \n- If you need a developer for a long period of time (more than 3 months) I can give you a discount\
+        \n- If you need someone to mantain your project that necessary few hours per week/month I can give you a discount\
+        \n- If you need to develop your solution in short time I can rise the price to prioritize your project"
+      }
+    ],
   },
   {
-    title: "€ 60",
-    description: "Ideally for small tasks or to have a developer available for a short period of time.",
-    included: [],
-    footer: "For a single consultant",
-    type: "CONSULTANT",
+    title: "€ 45",
+    description: "Ideally for small tasks or to have a developer/consultant available for a short period of time.",
+    included: ["If you need to count the hours", "You can contact me for support anytime", "I will fill out your timesheet regularly"],
+    footer: "If you have to account for hours",
+    type: "HOURLY",
     icon: hourlyIcon,
-    longtext: [{
-      type: "text",
-      value: "With this plan you can have me available for 1 hour to work on your project with priority over other clients.\nThis plan is ideal for small tasks or to have a developer available for a short period of time with priority."
-    }],
-  }
+    longtext: [
+      {
+        type: "text",
+        value: "Generally I prefer not work counting the hours, for my experience it's a waste of time for both sides and it is more difficult count how much you will spend upfront"
+      },
+      {
+        type: "subtitle",
+        value: "When use this plan",
+      },
+      {
+        type: "text",
+        value: "- If you need a developer for very small tasks that can be done in few hours\
+        \n- If you need a consulting meeting\
+        \n- If you need to count the hours for your internal processes"
+      }
+    ],
+  },
+    /* {
+      title: "€ 60",
+      description: "Ideally for small tasks or to have a developer available for a short period of time.",
+      included: [],
+      footer: "For a single consultant",
+      type: "CONSULTANT",
+      icon: hourlyIcon,
+      longtext: [{
+        type: "text",
+        value: "With this plan you can have me available for 1 hour to work on your project with priority over other clients.\nThis plan is ideal for small tasks or to have a developer available for a short period of time with priority."
+      }],
+    } */
   ]
 }
 

@@ -4,6 +4,7 @@ import close from "../../assets/close.png";
 
 interface ICard {
   title: string;
+  type?: string;
   text: Array<{
     type: string;
     value: string;
@@ -27,7 +28,7 @@ const traslateText = (text: string) => {
   });
 };
 
-export function Card({ title, text, skills, handleClose }: ICard) {
+export function Card({ title, type, text, skills, handleClose }: ICard) {
 
   // Close also when click outside
   // Close on ESC
@@ -65,7 +66,10 @@ export function Card({ title, text, skills, handleClose }: ICard) {
     <Container>
       <div className="project">
         <header>
-          <h1>{title}</h1>
+          <h1>
+            {title}
+            {type && type.toLowerCase() !== "custom" && <small>/ {String(type).toLowerCase()}</small>}
+          </h1>
           <img src={close} alt="Suitcase" onClick={() => handleClose()} />
         </header>
         <div className="body">

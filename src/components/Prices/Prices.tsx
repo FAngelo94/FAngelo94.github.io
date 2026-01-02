@@ -33,8 +33,9 @@ export function Prices() {
       {showCard && (
         <Card
           title={showCard.title}
+          type={showCard.type}
           text={showCard.longtext}
-          skills={[showCard.footer]}
+          skills={[]}
           handleClose={() => setShowCard(undefined)}
         />
       )}
@@ -56,7 +57,7 @@ const Projects = ({ prices: plans, setShowCard }: { prices: IPriceProps[], setSh
             title={
               <>
                 {p.title}
-                {p.type && <small>/{String(p.type).toLowerCase()}</small>}
+                {p.type && p.type.toLowerCase() !== "custom" && <small>/{String(p.type).toLowerCase()}</small>}
               </>
             }
             body={

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { secondaryButton } from "../../styles/mixins";
 
 export const Container = styled.section`
   padding-top: 85px;
@@ -102,11 +103,7 @@ export const Container = styled.section`
     flex: 1;
   }
 
-  .home-actions .button-secondary{
-    background: transparent;
-    color: var(--green);
-    border: 2px solid var(--green);
-  }
+  ${secondaryButton}
 
 
   @media(max-width: 960px){

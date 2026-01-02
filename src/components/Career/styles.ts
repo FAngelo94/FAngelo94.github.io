@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { swiperOutsidePagination } from "../../styles/mixins";
 
 
 export const Container = styled.section`
@@ -10,42 +11,7 @@ export const Container = styled.section`
     margin-bottom: 5rem;
   }
 
-  /* Swiper container overrides */
-  .swiper {
-    padding: 1rem;
-    overflow: visible;
-  }
-
-  .swiper-slide {
-    height: auto;
-  }
-  .swiper-wrapper {
-    align-items: stretch;
-  }
-
-  /* Place pagination below the carousel, centered */
-  .swiper-pagination.outside{
-    position: static;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    transform: none;
-  }
-
-  /* Hide default inner pagination to avoid overlap */
-  .projects .swiper-pagination{
-    display: none !important;
-  }
-
-  /* Bullet styling (outside) */
-  .swiper-pagination.outside .swiper-pagination-bullet{
-    background: var(--card-border);
-    opacity: 0.6;
-  }
-  .swiper-pagination.outside .swiper-pagination-bullet-active{
-    background: var(--green);
-    opacity: 1;
-  }
+  ${swiperOutsidePagination}
 
   .projects{
     padding: 0;

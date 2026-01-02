@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { swiperOutsidePagination, sectionTitle, footerText } from "../../styles/mixins";
 
 export const Container = styled.section`
   margin-top: 5rem;
@@ -8,60 +9,9 @@ export const Container = styled.section`
     font-weight: bold;
   }
 
-  h2 {
-    text-align: center;
-    font-size: 4rem;
-    margin-bottom: 1rem;
-  }
-  .subtitle {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 5rem;
-  }
-
-  .footer-text {
-    width: 100%;
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: 10px;
-  }
-
-  /* Swiper container overrides */
-  .swiper {
-    padding: 1rem;
-    overflow: visible;
-  }
-
-  .swiper-slide {
-    height: auto;
-  }
-  .swiper-wrapper {
-    align-items: stretch;
-  }
-
-  /* Place pagination below the carousel, centered */
-  .swiper-pagination.outside{
-    position: static;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    transform: none;
-  }
-
-  /* Hide default inner pagination to avoid overlap */
-  .projects .swiper-pagination{
-    display: none !important;
-  }
-
-  /* Bullet styling (outside) */
-  .swiper-pagination.outside .swiper-pagination-bullet{
-    background: var(--card-border);
-    opacity: 0.6;
-  }
-  .swiper-pagination.outside .swiper-pagination-bullet-active{
-    background: var(--green);
-    opacity: 1;
-  }
+  ${sectionTitle}
+  ${footerText}
+  ${swiperOutsidePagination}
 
   .projects {
     /* no grid: cards are inside Swiper slides */

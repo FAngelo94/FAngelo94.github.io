@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { secondaryButton } from "../../styles/mixins";
 
 export const Container = styled.section`
   margin-top: 5rem;
@@ -45,12 +46,7 @@ export const Container = styled.section`
   .actions .button img {
     width: 2.4rem;
   }
-
-  .button.button-secondary {
-    border: 2px solid var(--green);
-    background: transparent;
-    color: var(--green);
-  }
+  ${secondaryButton}
 
   .social-links {
     gap: 1.6rem;

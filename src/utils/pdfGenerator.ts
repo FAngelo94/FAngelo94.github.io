@@ -2,14 +2,16 @@ import jsPDF from 'jspdf';
 import { en } from '../i18n/en';
 import { it as itLang } from '../i18n/it';
 
-// choose translations based on stored locale or browser language
+// choose translations based on URL parameter (default EN)
 const getLocaleTranslations = () => {
   if (typeof window === 'undefined') return en;
-  const stored = window.localStorage.getItem('locale');
-  if (stored === 'it') return itLang;
-  if (stored === 'en') return en;
-  const nav = navigator.language?.toLowerCase();
-  if (nav?.startsWith('it')) return itLang;
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get('lang');
+    if (lang === 'it') return itLang;
+  } catch (e) {
+    // ignore parsing errors and fallback to EN
+  }
   return en;
 };
 
@@ -55,8 +57,8 @@ export const generateCV = () => {
   };
 
     // Localized section titles
-  const locale = (typeof window !== 'undefined') ? (window.localStorage.getItem('locale') || navigator.language || 'en') : 'en';
-  const isIt = locale.toString().toLowerCase().startsWith('it') || locale === 'it';
+  const localeParam = (typeof window !== 'undefined') ? new URLSearchParams(window.location.search).get('lang') : null;
+  const isIt = localeParam === 'it';
   const labels = {
     aboutMe: isIt ? 'Chi sono' : 'About Me',
     websiteInvite: isIt ? "Per il CV completo e maggiori dettagli visita il mio sito: https://fangelo94.github.io/" : 'For the full CV and more details please visit my website: https://fangelo94.github.io/',

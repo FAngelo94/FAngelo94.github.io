@@ -340,7 +340,7 @@ export const career = {
 
 export const projects = {
   title: "Last Main Projects",
-  subtitle: "(click on the title or text card to see more details)",
+  subtitle: "(click on the title or text of the card to see more details)",
   footerText: "For more projects look my github or codepen! (links in footer)",
   projects: [
     // Smanno
@@ -384,7 +384,8 @@ export const projects = {
           \n- Creation of Django custom commands to simplify the install and management of the platform\
           \n- Swagger documentation for all Rest APIs implemented\
           \n- Documentation to install and manage the platform\
-          \n- Docker compose file to run and setup db, backend and frontend with just one command in the terminal"
+          \n- Docker compose file to run and setup db, backend and frontend with just one command in the terminal\
+          \n- Socket services to have real-time update in the frontend dashboard about robots and missions status"
         },
         {
           type: "subtitle",
@@ -396,7 +397,7 @@ export const projects = {
           \nThe main features implementd are:\
           \n- Responsive design for mobile and desktop, so user in hospital can access the platform from any device\
           \n- Possibility to create complex missions, divided in steps, using actors and atomic mission added in the database (atomic mission are the simplest mission that can be performed by a robot, like go to a position, execute some movement with arms, etc.)\
-          \n- User can also encapsulate complex mission in order to reuse them in future without recreate everything from scratch and, in each mission, it is possible enable/disable some steps\
+          \n- User can also encapsulate complex mission in order to reuse them in future in other mission without recreate everything from scratch and, in each mission, it is possible enable/disable some steps\
           \n- Execute mission created monitoring the status of mission and actors involved returning details in case of mission fail\
           \n- There is the possibility to stop and resume some mission\
           \n- See statistics about mission execution and robot performance"
@@ -415,9 +416,10 @@ export const projects = {
         }
       ],
     },
+    // One TCG Hero
     {
       title: "One TCG Hero",
-      description: "I developed a PWA in React to manage my personal card game collection. I added, and in some case improved, different usefull features I found in different website but not all in one place.",
+      description: "I developed a PWA in React and deployed in Firebase to manage my personal card game collection. I added, and in some case improved, different usefull features I found in different website but not all in one place.",
       links: [{
         label: "One TCG Hero - Official Website",
         url: 'https://onetcghero.web.app/',
@@ -429,7 +431,8 @@ export const projects = {
         {
           type: "text",
           value: "I developed a PWA in React to manage my personal card game collection. I added, and in some case improved, different usefull features I found in different website but not all in one place.\
-          \nFor experimental/learn purpose I started this project using Lovable, next I stopped to use it but continued to use massively the AI tools for development wrinting code only when strictly necessary in order to understand the real limits of this new type of develop."
+          \nFor experimental/learn purpose I started this project using Lovable, next I stopped to use it but continued to use massively the AI tools for development wrinting code only when strictly necessary in order to understand the real limits of this new type of develop.\
+          \nOften I created task on Github with technical details and I assigned it to Copilot to generate the code, next I reviewed and, when necessary, modified the code generated to fit my needs."
         },
         {
           type: "subtitle",
@@ -515,13 +518,64 @@ export const projects = {
         }
       ],
     },
+    // Curriculum online
+    {
+      title: "Portfolio Online",
+      description:
+        "I create this portfolio online to show my skills and experience.\
+            \nI used React with Typescript and style-components and I publish it on Firebase using a custom domain.",
+      links: [
+        {
+          label: "Website",
+          url: "https://angelofalci.com",
+          icon: externalLinkIcon,
+        },
+        {
+          label: "Github",
+          url: "https://github.com/FAngelo94/FAngelo94.github.io",
+          icon: githubIcon,
+        },
+      ],
+      mainSkills: ["Firebase", "React", "Style-components", "Typescript"],
+      allSkills: [
+        "Firebase",
+        "gh-pages",
+        "GiHub Pages",
+        "GitHub",
+        "React",
+        "Style-components",
+        "Typescript",
+      ],
+      longtext: [
+        {
+          type: "text",
+          value:
+            "Starting from a model I found online I created this portfolio online improving the code, adding new components and multilanguage support with Italian and English.\
+            \nIn a previous version I published the portfolio using GitHub Pages but now I decided to use Firebase hosting with a custom domain to have more control and flexibility.",
+        },
+        {
+          type: "subtitle",
+          value: "Technologies and Libraries Used",
+        },
+        {
+          type: "text",
+          value:
+            "- *React* as framework\
+                    \n- *Typescript* as language\
+                    \n- *style-components* as library to manage styles\
+                    \n- *GitHub* as version control system\
+                    \n- *Firebase* as hosting service\
+                    \n- *jspdf* and *html2canvas* to generate a simplified PDF version of the portfolio",
+        },
+      ],
+    },
     // Kangury
     {
       title: "Startup - Kangury",
       description:
         "I developed a fullstack application using React for frontend and Django for backend.\
         \nIn Kangury you can buy photos that will be associated to an album contained your photos or videos.\
-        \nGo to the website to see more! If you are interesting contact me to know more or to receive a discount code.",
+        \nGo to the website to see more!",
       links: [
         {
           label: "Kangury - Official Website",
@@ -555,7 +609,8 @@ export const projects = {
           type: "text",
           value:
             "I developed the application that you can try in the links provided. Inside users can buy different product related the world of photography and, obviously, they can modify and print their photos in different formats.\
-            \nAfter user buy a photo he can associate it to an album where he can upload his photos or videos.",
+            \nAfter user buy a photo he can associate it to an album where he can upload his photos or videos.\
+            \nIf you are interested to collaborate in this startup contact me and I can provide you also a discount code!",
         },
         {
           type: "subtitle",
@@ -686,8 +741,7 @@ export const projects = {
     {
       title: "Personal Project - Climberworld Web App",
       description:
-        "Web app I'm developing as fullstack using React as frontend and Flask (Python framework) as backend. This site has the ambition to collect information about all the refuges, excursions and climbing walls of the Alps.\
-            \nClick the link to see the website!\
+        "Web app I developed as fullstack using React as frontend and Flask (Python framework) as backend. This site has the ambition to collect information about all the refuges, excursions and climbing walls of the Alps.\
             \n(Note: Backend is not online anymore so you can't see the data)",
       links: [
         {
@@ -717,8 +771,8 @@ export const projects = {
         {
           type: "text",
           value:
-            "In my free time I'm working to to this application in order to learn new things and keep training the knowledge I already have.\
-                    \nFor the moment I’m working on it alone and I’m developing both frontend and backend.",
+            "In my free time I worked on this application in order to learn new things and keep training the knowledge I already have and learn new ones.\
+            \nI developed both frontend and backend.",
         },
         {
           type: "subtitle",
@@ -727,7 +781,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "For the frontend these are the main technologies I’m using:\
+            "For the frontend these are the main technologies I used:\
                     \n- *React* as frontend\
                     \n- *Redux* to manage the store of application\
                     \n- *Styled* components to manage the style\
@@ -740,7 +794,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "For the backend these are the main technologies I’m using:\
+            "For the backend these are the main technologies I used:\
                     \n- *Flask* micro-framework developed in Python\
                     \n- *mysql* to manage the database because the information inside the application are well structured\
                     \n- *phpmyadmin docker image* used locally to explore the local database using an UI\
@@ -791,7 +845,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "I work, using Agile methodologies, as frontend developer, to Diva project in order to improve old functionalities  and develop new ones.",
+            "I worked, using Agile methodologies, as a frontend developer on the Diva project in order to improve existing functionalities and develop new ones.",
         },
         {
           type: "subtitle",
@@ -800,10 +854,10 @@ export const projects = {
         {
           type: "text",
           value:
-            "Diva is a player library sell from DeltaTre to different clients that integrate it in their streaming service.\
-                    \nInside is divided in different packages dedicated to:\
-                    \n- Common thing used in different packages\
-                    \n- Specifically component, or list of components, that can be used alone, and sell individually, or used inside other bigger packages",
+            "Diva was a player library sold by DeltaTre to different clients that integrated it into their streaming services.\
+                    \nInside, it was divided into different packages dedicated to:\
+                    \n- Common functionalities used across different packages\
+                    \n- Specific components, or sets of components, that could be used standalone and sold individually, or integrated into larger packages",
         },
         {
           type: "subtitle",
@@ -812,18 +866,18 @@ export const projects = {
         {
           type: "text",
           value:
-            "- *React* as frontend framework (with *Typescript* and *SCSS*) \
-                    \n- *Typescript* to manage the different structure used in the project and found errors in compile time\
-                    \n- *RXjs* to make easy manage the asynchronous and callack-base code caused from video streaming\
-                    \n- *SCSS* to manage the styles of components we create internally in the application and have a more organize architecture than CSS\
-                    \n- *Storybook.JS* to manage the documentation for some common components used in different packages included in the project\
-                    \n- *Git* as management as version control system\
-                    \n- *VS Code* as IDE\
-                    \n- *Yarn* to run and compile different part of Diva\
+            "- *React* as the frontend framework (with *Typescript* and *SCSS*) \
+                    \n- *Typescript* to manage the different structures used in the project and to catch errors at compile time\
+                    \n- *RXjs* to simplify the management of asynchronous and callback-based code caused by video streaming\
+                    \n- *SCSS* to manage component styles and maintain a more organized architecture compared to plain CSS\
+                    \n- *Storybook.JS* to manage the documentation for shared components used across different packages in the project\
+                    \n- *Git* as the version control system\
+                    \n- *VS Code* as the IDE\
+                    \n- *Yarn* to run and build different parts of Diva\
                     \n- *Jest* to manage unit tests\
-                    \n- *JSON* as standard format to pass data between frontend and backend\
-                    \n- *Jira* to manage the tasks and issues of the project\
-                    \n- *Windows* or *MacOS* as operative systems",
+                    \n- *JSON* as the standard format to exchange data between frontend and backend\
+                    \n- *Jira* to manage project tasks and issues\
+                    \n- *Windows* or *MacOS* as operating systems",
         },
         {
           type: "subtitle",
@@ -832,72 +886,24 @@ export const projects = {
         {
           type: "text",
           value:
-            "We work in sprint of 2 weeks and between each sprint we present the work done and decide which user story take for the next sprints.\
-                      The stories can be created by the teams that analyze next components to implement or by me and my team if we want:\
-                      \n- Do a big refactor in the code\
-                      \n- Do an update to old component\
-                      \n\nWhen we complete an user story we put it in *dev* environment to test it on ourself, next we deploy it to *test* environment in order to give the possibility to our test team to see if the requirements are reached without errors. If the requirements are not reached or there are some errors we proceed to fix problems and deploy again first in *dev* and then in *test*. We continue to do this until we reach the requirements requested in the user story without bugs or errors.\
-                      \nIn out workflow we have 3 different environments: *dev*, *test* and *prod*.\
-                      \n- *dev* is used to test the application by other developers and to see if the requirements are reached without errors\
-                      \n- *test* is when we have a stable solution in dev in order to have a 'semi-prod' environment to do official demo when needs\
-                      \n- *prod* is the final environment where the application is deployed and used by the real customers",
+            "We worked in 2-week sprints, and between each sprint we presented the completed work and decided which user stories to take for the next iterations.\
+                      The stories could be created by the teams analyzing upcoming components to implement, or by me and my team when we wanted to:\
+                      \n- Perform a large refactor of the codebase\
+                      \n- Update existing components\
+                      \n\nWhen we completed a user story, we deployed it to the *dev* environment to test it internally. Afterwards, we deployed it to the *test* environment to allow the QA team to verify that all requirements were met without errors. If requirements were not met or issues were found, we fixed the problems and redeployed first to *dev* and then to *test*. We repeated this process until the user story fully met the requirements without bugs or errors.\
+                      \nIn our workflow we used three different environments: *dev*, *test*, and *prod*.\
+                      \n- *dev* was used for developer testing and early validation of requirements\
+                      \n- *test* was used as a stable pre-production environment for official demos when needed\
+                      \n- *prod* was the final environment where the application was deployed and used by real customers",
         },
-      ],
-    },
-    // Curriculum online
-    {
-      title: "Portfolio Online",
-      description:
-        "I create this portfolio online to show my skills and experience.\
-            \nI used React with Typescript and style-components and I publish it on my github account through github pages.",
-      links: [
-        {
-          label: "Website",
-          url: "https://fangelo94.github.io/",
-          icon: externalLinkIcon,
-        },
-        {
-          label: "Github",
-          url: "https://github.com/FAngelo94/FAngelo94.github.io",
-          icon: githubIcon,
-        },
-      ],
-      mainSkills: ["GiHub Pages", "React", "Style-components", "Typescript"],
-      allSkills: [
-        "gh-pages",
-        "GiHub Pages",
-        "GitHub",
-        "React",
-        "Style-components",
-        "Typescript",
-      ],
-      longtext: [
-        {
-          type: "text",
-          value:
-            "Starting from a model I found online I created this portfolio online improving the code and adding new components.",
-        },
-        {
-          type: "subtitle",
-          value: "Technologies and Libraries Used",
-        },
-        {
-          type: "text",
-          value:
-            "- *React* as framework\
-                    \n- *Typescript* as language\
-                    \n- *style-components* as library to manage styles\
-                    \n- *GitHub* as version control system\
-                    \n- *GitHub Pages* as static site generator\
-                    \n- *gh-pages* package to deploy the website in react using GitHub Pages",
-        },
-      ],
+      ]
+      ,
     },
     // Digital Box
     {
       title: "TeamSystems - Digital Box",
       description:
-        "This is an application web designed for professional firms who wish to achieve information sharing processes and improve the relationship with their customers, involve and exchange information also in real time.",
+        "Web application designed for professional firms that wanted to achieve information-sharing processes, improve relationships with their customers, and involve them by exchanging information also in real time.",
       links: [
         {
           label: "Digital Box",
@@ -924,7 +930,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "I work, using Agile methodologies, as frontend developer, to Digital Box application in order to update the functionalities already available,implement new ones. Furthermore I fix bugs and refactored old components in order to create a more understandable code and improve the performance.",
+            "I worked, using Agile methodologies, as a frontend developer on the Digital Box application in order to update the functionalities already available and implement new ones. Furthermore, I fixed bugs and refactored old components to create more readable code and improve performance.",
         },
         {
           type: "subtitle",
@@ -933,20 +939,20 @@ export const projects = {
         {
           type: "text",
           value:
-            "- *React* as frontend framework (with *Javascript* and *html* obviusly) \
+            "- *React* as the frontend framework (with *Javascript* and *HTML*, obviously) \
                     \n- *Redux* as state management inside the application\
-                    \n- *CSS* to manage the styles of components we create internally in the application\
+                    \n- *CSS* to manage the styles of components created internally in the application\
                     \n- *Jest* to manage unit tests\
                     \n- *Cypress* to manage integration tests\
-                    \n- *Storybook.JS* to manage the documentation for some common components used in different place in the application\
-                    \n- *Git* as management as version control system\
-                    \n- *Python* to automatize some task during the development process\
-                    \n- *Docker* to execute the backend locally\
-                    \n- *VS Code* as IDE\
-                    \n- *JSON* as standard format to pass data between frontend and backend\
-                    \n- *Swagger* as documentation to analyze backend API\
-                    \n- *Jira* to manage the tasks and issues of the project\
-                    \n- *Windows* or *MacOS* as operative systems",
+                    \n- *Storybook.JS* to manage the documentation for common components used in different parts of the application\
+                    \n- *Git* as the version control system\
+                    \n- *Python* to automate some tasks during the development process\
+                    \n- *Docker* to run the backend locally\
+                    \n- *VS Code* as the IDE\
+                    \n- *JSON* as the standard format to exchange data between frontend and backend\
+                    \n- *Swagger* as documentation to analyze backend APIs\
+                    \n- *Jira* to manage project tasks and issues\
+                    \n- *Windows* or *MacOS* as operating systems",
         },
         {
           type: "subtitle",
@@ -955,15 +961,15 @@ export const projects = {
         {
           type: "text",
           value:
-            "We work in sprint of 2 weeks and between each sprint we present the work done and decide which user story take for the next sprints.\
-                    The stories can be created by the teams that analyze next components to implement or by me and my team if we want:\
-                    \n- Do a big refactor in the code\
-                    \n- Do an update to old component\
-                    \n\nWhen we complete an user story we put it in *dev* environment to test it on ourself, next we deploy it to *test* environment in order to give the possibility to our test team to see if the requirements are reached without errors. If the requirements are not reached or there are some errors we proceed to fix problems and deploy again first in *dev* and then in *test*. We continue to do this until we reach the requirements requested in the user story without bugs or errors.\
-                    \nIn out workflow we have 3 different environments: *dev*, *test* and *prod*.\
-                    \n- *dev* is used to test the application by other developers and to see if the requirements are reached without errors\
-                    \n- *test* is when we have a stable solution in dev in order to have a 'semi-prod' environment to do official demo when needs\
-                    \n- *prod* is the final environment where the application is deployed and used by the real customers",
+            "We worked in 2-week sprints, and between each sprint we presented the completed work and decided which user stories to take for the next sprints.\
+                    The stories could be created by teams analyzing upcoming components to implement, or by my team and me when we wanted to:\
+                    \n- Perform a large refactor of the codebase\
+                    \n- Update existing components\
+                    \n\nWhen we completed a user story, we deployed it to the *dev* environment to test it internally. Then we deployed it to the *test* environment to allow the QA team to verify that all requirements were met without errors. If requirements were not met or issues were found, we fixed the problems and redeployed first to *dev* and then to *test*. We repeated this process until the user story fully met the requirements without bugs or errors.\
+                    \nIn our workflow, we used three different environments: *dev*, *test*, and *prod*.\
+                    \n- *dev* was used for developer testing and early validation of requirements\
+                    \n- *test* was used as a stable pre-production environment for official demos when needed\
+                    \n- *prod* was the final environment where the application was deployed and used by real customers",
         },
         {
           type: "subtitle",
@@ -972,12 +978,13 @@ export const projects = {
         {
           type: "text",
           value:
-            "We don't have only one server for backend but different services, some of them are developed with Springboot (Java), other in NodeJS (Javascript)\
-                    \nWhen we deploy a new components or functionalities in our application could be that we already have the API needs or we don't have it.\
-                    \nIn the first case we just use them and, if necessary, we suggest some updates\
-                    \nIn the second case we mock the server reply in our redux store, we pass to backend the JSON format of mocked data and they create the API.",
+            "We did not rely on a single backend server, but on multiple services, some of which were developed with Spring Boot (Java) and others with NodeJS (JavaScript).\
+                    \nWhen we deployed new components or functionalities in the application, the required APIs could already exist or not.\
+                    \nIn the first case, we used them directly and, if necessary, suggested improvements.\
+                    \nIn the second case, we mocked server responses in the Redux store, shared the JSON structure of the mocked data with the backend team, and they implemented the APIs.",
         },
       ],
+
     },
     // Traveltips
     {
@@ -1006,7 +1013,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "This is an application that user will use to share information about cities and tourist places like a social network focused on travel.\n I developed both backend and frontend for a startup but I didn't finish the project because they aren't interested anymore on it. Backend is down at the moment, only frontend is visible.",
+            "Web application that user will use to share information about cities and tourist places like a social network focused on travel.\n I developed both backend and frontend for a startup but I didn't finish the project because they aren't interested anymore on it. Backend is down at the moment, only frontend is visible.",
         },
         {
           type: "subtitle",
@@ -1014,7 +1021,7 @@ export const projects = {
         },
         {
           type: "text",
-          value: "For the frontend these are the main technologies I’m using:",
+          value: "For the frontend these are the main technologies I used:",
         },
         {
           type: "text",
@@ -1024,7 +1031,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "I organize the architecture of the application in 6 mainfolder:",
+            "I organized the architecture of the application in 6 main folders:",
         },
         {
           type: "text",
@@ -1042,7 +1049,7 @@ export const projects = {
         },
         {
           type: "text",
-          value: "For the backend these are the main technologies I’m using:",
+          value: "For the backend these are the main technologies I used:",
         },
         {
           type: "text",
@@ -1088,7 +1095,7 @@ export const projects = {
     {
       title: "Stellantis - Validation of ADAS System",
       description:
-        "As consultant I’m working inside Stellantis (previous FCA) in an engineering team that manage the different tools used by other team in order to validate the autonomous driving algorithm. We work together other teams that are in different part of the world.",
+        "As consultant I worked inside Stellantis (previous FCA) in an engineering team that manage the different tools used by other team in order to validate the autonomous driving algorithm. We worked together other teams that are in different part of the world.",
       links: [],
       mainSkills: ["C++", "Docker", "Python", "Ubuntu"],
       allSkills: [
@@ -1113,22 +1120,22 @@ export const projects = {
         {
           type: "text",
           value:
-            "As consultant I’m working inside Stellantis (previous FCA) in one big project regarding the autonomous driving.",
+            "As a consultant, I worked at Stellantis (previously FCA) on a large project related to autonomous driving.",
         },
         {
           type: "subtitle",
-          value: "What I do?",
+          value: "What I did",
         },
         {
           type: "text",
           value:
-            "I’m working, using AGILE methodology, in an engineering team that manage the different tools used by other team in order to validate the autonomous driving algorithm. We work together other teams that are in different part of the world.\
-                    \nSome of our main activities are:\
-                    \n- Customize the simulation software bought with Stellantis specific requirements (using c++ for core and c#/Unity for GUI)\
-                    \n- Implement docker images with specific test and push them in a cluster to give the possibility to other teams to run test remotely\
-                    \n- Implement DAGs in Airflow (using Python) to manage pipeline tasks like push KPI in a database\
-                    \nBuild Grafana dashboards to visualize simulations outputs\
-                    \n- Define with other teams next features and tests to implement in our simulation tool",
+            "I worked, using the AGILE methodology, within an engineering team that managed different tools used by other teams to validate autonomous driving algorithms. We collaborated with multiple teams located in different parts of the world.\
+                    \nSome of our main activities were:\
+                    \n- Customizing simulation software purchased by Stellantis according to specific requirements (using C++ for the core and C#/Unity for the GUI)\
+                    \n- Implementing Docker images with specific tests and pushing them to a cluster, enabling other teams to run tests remotely\
+                    \n- Implementing DAGs in Airflow (using Python) to manage pipeline tasks such as pushing KPIs to a database\
+                    \n- Building Grafana dashboards to visualize simulation outputs\
+                    \n- Defining upcoming features and tests to implement in the simulation tool together with other teams",
         },
         {
           type: "subtitle",
@@ -1137,8 +1144,8 @@ export const projects = {
         {
           type: "text",
           value:
-            "We work in AGILE SCRUM with sprints that last 2 weeks.\
-                    \nWe not only take care items added by our APO but we also propose items that help us to reach goals delivery",
+            "We worked using AGILE SCRUM with 2-week sprints.\
+                    \nWe not only took care of items added by our APO, but we also proposed items that helped us achieve our delivery goals.",
         },
         {
           type: "subtitle",
@@ -1158,7 +1165,8 @@ export const projects = {
         },
         {
           type: "text",
-          value: "- *Ubuntu* (mainly)\
+          value:
+            "- *Ubuntu* (mainly)\
                     \n- *Windows 10*",
         },
         {
@@ -1176,11 +1184,12 @@ export const projects = {
                     \n- *Jenkins*\
                     \n- *Codebeamer*\
                     \n- *Grafana*\
-                    \n- *NDS and OpenDRIVE* map format\
-                    \n- *Online Google Sheets* (word, excel, presetation)\
+                    \n- *NDS and OpenDRIVE* map formats\
+                    \n- *Online Google Sheets* (documents, spreadsheets, presentations)\
                     \n- *ROS*",
         },
-      ],
+      ]
+      ,
     },
     // React-Redux application
     {
@@ -1219,9 +1228,9 @@ export const projects = {
         {
           type: "text",
           value:
-            "In my fourth project I developed a web application using React with Redux.\
-                    \nIn this project I worked in agile mode (scrum in the specific) and the team included mainly with 2 frontend developers, 2 functional, 1 UI designer, 2 backend developer and 1 scrum master.\
-                    \nI realized a React application to collect and visualize multiple data, coming in an asynchronous way from different station distributed in Italy.",
+            "In my fourth project, I developed a web application using React with Redux.\
+      \nI worked in Agile mode (Scrum specifically) in a team composed mainly of 2 frontend developers, 2 functional analysts, 1 UI designer, 2 backend developers, and 1 Scrum Master.\
+      \nI built a React application to collect and visualize multiple data points arriving asynchronously from various stations distributed across Italy.",
         },
         {
           type: "subtitle",
@@ -1230,12 +1239,12 @@ export const projects = {
         {
           type: "text",
           value:
-            "- *html*\
-                    \n- *CSS*\
-                    \n- *Sass*\
-                    \n- *JS6*\
-                    \n- *Python*\
-                    \n- *Java*",
+            "- *HTML*\
+      \n- *CSS*\
+      \n- *Sass*\
+      \n- *JS6*\
+      \n- *Python*\
+      \n- *Java*",
         },
         {
           type: "subtitle",
@@ -1245,15 +1254,15 @@ export const projects = {
           type: "text",
           value:
             "- *React*\
-                    \n- *Redux Saga*\
-                    \n- *NodeJS*\
-                    \n- *Stencil JS*\
-                    \n- *Storybook UI*\
-                    \n- *Chrome, Firefox, Safari and IE11* to test and modify at runtime the components\
-                    \n- *Visual Studio Code* as editor\
-                    \n- *Git* to repository online\
-                    \n- *Jupyter* notebook for Python code\
-                    \n- *MQTT* to connect with the server",
+      \n- *Redux Saga*\
+      \n- *NodeJS*\
+      \n- *Stencil JS*\
+      \n- *Storybook UI*\
+      \n- *Chrome, Firefox, Safari, and IE11* to test and modify components at runtime\
+      \n- *Visual Studio Code* as the editor\
+      \n- *Git* for the online repository\
+      \n- *Jupyter Notebook* for Python code\
+      \n- *MQTT* to connect with the server",
         },
         {
           type: "subtitle",
@@ -1262,19 +1271,19 @@ export const projects = {
         {
           type: "text",
           value:
-            "We introduced few libraries only to implement some complex components.\
-                    \n- *LeafletJS* to implement an interactive map that are one the main component in website put in the homepage\
-                    \n- *D3.js* to draw dynamic and custum svg\
-                    \n- *React intl* to support multi language in the website",
+            "We introduced only a few libraries to implement complex components.\
+      \n- *LeafletJS* to implement an interactive map, one of the main components on the homepage\
+      \n- *D3.js* to draw dynamic and custom SVGs\
+      \n- *React Intl* to support multi-language functionality on the website",
         },
         {
           type: "subtitle",
-          value: "What I did",
+          value: "What I Did",
         },
         {
           type: "text",
           value:
-            "I describe here the main components I developed during the project without enter in details about the client.",
+            "Here I describe the main components I developed during the project, without going into client-specific details.",
         },
         {
           type: "subtitle",
@@ -1283,11 +1292,11 @@ export const projects = {
         {
           type: "text",
           value:
-            "One of the first component was a map center in Italy. To build this component I used Leaflet JS.\
-                    \nI put in the map one icon, using the geographic coordinates, for each station of the company. When user clicks in one icon a popup appear showing some data relatives the station. The data in the popup change in realtime.\
-                    \nFrom the popup user can also reach the station page clicking the title of popup.\
-                    \nNext in the map I put an image on top of Italy (using the geographic coordinates for top left and bottom right corner of the image). I put an other image on Europe and Nord Africa to apply an opacity filter to all countries except Italy.\
-                    \nI limited the zoom and the moving in the map to concentrate the attention of the user to the Italy. And some object in the map disappear when user zooms in too much in order to have only the stations in the map.",
+            "One of the first components was a map centered on Italy. To build it, I used Leaflet JS.\
+      \nI placed an icon on the map using geographic coordinates for each company station. When the user clicked an icon, a popup appeared showing station-related data, which updated in real time.\
+      \nFrom the popup, the user could also navigate to the station's page by clicking the popup title.\
+      \nLater, I added an image over Italy and another over Europe and North Africa to apply an opacity filter to all countries except Italy.\
+      \nI restricted zooming and panning to focus user attention on Italy. Some objects disappeared when zooming in too much to keep only the stations visible.",
         },
         {
           type: "subtitle",
@@ -1296,7 +1305,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "When we start to develop frontend we don’t have backed, for this reason I create a NodeJS local server to send fake data to the frontend using a GET (to take basic information about stations) and a socket to send asynchronous data every seconds.",
+            "When we started frontend development, we did not have a backend, so I created a local NodeJS server to send fake data to the frontend using GET requests (for basic station info) and a socket to send asynchronous data every second.",
         },
         {
           type: "subtitle",
@@ -1305,20 +1314,19 @@ export const projects = {
         {
           type: "text",
           value:
-            "For each station there are different pages that shows data coming from server. For some page there are a graphics that represent components in the station with the data. To realize these graphics I used 3D js.\
-                    \nThanks to this library I created SVG graphics that adapt their dimensions to the page space without lost quality.\
-                    \nA lot of page have similar draw components. In order to avoid repeated code, for each type of component, I created a function that draw and customize the component using a JSON configuration passed from the page where we are.",
+            "Each station had different pages displaying data from the server. Some pages included graphics representing station components with data. I used D3.js to create SVG graphics that adapted to page dimensions without losing quality.\
+      \nMany pages had similar drawing components. To avoid repeated code, I created a function for each component type that drew and customized it using a JSON configuration passed from the current page.",
         },
         {
           type: "subtitle",
-          value: "4) Support multi language",
+          value: "4) Multi-language Support",
         },
         {
           type: "text",
           value:
-            "I used React intl to support english and italian. With this library I created 2 file JSON, one for italian terms and one for english terms where I assign to the same set of keys the correct translation.\
-                    \nThen I created a global function that is possible to use everywhere in the code, you pass a key and the function return the correct translated word, depending on the language set in the local storage.\
-                    \nWhen the user changes language I save the new setting in the session storage and the page will be reloaded to change the language.",
+            "I used React Intl to support English and Italian. I created two JSON files, one for Italian terms and one for English, assigning the same set of keys to the correct translation.\
+      \nI then created a global function usable throughout the code: pass a key and the function returned the correct translation based on the language set in local storage.\
+      \nWhen the user changed the language, I saved the new setting in session storage and the page reloaded to update the language.",
         },
         {
           type: "subtitle",
@@ -1327,33 +1335,32 @@ export const projects = {
         {
           type: "text",
           value:
-            "To save data coming from the server we use Redux-Saga.\
-                    \nWe receive asynchronous data and thanks to Redux we avoid to have different values for the same property. Moreover we can manage easier the state of the website because is centralized. And thanks to a tool installed on chrome we can see how the state of the application is evolving (making easy the debug).\
-                    \nUsing redux we can divide data from application. It means that the application doesn’t need to get data from server or manage the connection. The application just use the data.\
-                    \nIn Redux we implemented all the logic about comunication and recovery of data.\
-                    \nIn this way the code is more clean and maintainable.",
+            "We used Redux-Saga to store data from the server.\
+      \nWe received asynchronous data, and Redux prevented duplicate values for the same property. The centralized state made website management easier, and with a Chrome tool, we could monitor state evolution to simplify debugging.\
+      \nRedux separated application data, so the frontend did not need to manage server connections but only use the data provided.\
+      \nAll communication and data retrieval logic was implemented in Redux, keeping the code clean and maintainable.",
         },
         {
           type: "subtitle",
-          value: "6) Build JSON format data",
+          value: "6) Building JSON Data",
         },
         {
           type: "text",
           value:
-            "After we decided the better format to store data in our application I created JSON with random data using python.\
-                    \nI used python for 2 reasons:\
-                    \n- Data aren’t completely random but enter in certain range\
-                    \n- I manipulated and changed these json many time so thanks to python it I spent less time\
-                    \nWhen we obtained the real data from csv files I used Python to manipulate them and build a realistic JSON data to give to the backend so they know in which format send the real data.",
+            "After deciding the best format to store data in our application, I created JSON files with random data using Python.\
+      \nI used Python for two reasons:\
+      \n- The data was not fully random but constrained within specific ranges\
+      \n- I repeatedly manipulated these JSON files, saving time thanks to Python\
+      \nWhen real data arrived from CSV files, I used Python to process them and build realistic JSON data for the backend so they knew the correct format for real data.",
         },
         {
           type: "subtitle",
-          value: "7) Pure CSS components",
+          value: "7) Pure CSS Components",
         },
         {
           type: "text",
           value:
-            "To have better performance we avoid to use script when we can. For example we use pure CSS accordion and toggle for filters.",
+            "To improve performance, we avoided scripts when possible. For example, we used pure CSS accordions and toggles for filters.",
         },
         {
           type: "subtitle",
@@ -1362,7 +1369,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "When backend was ready we tried a first connection with socket but the backend technologies supported only mqtt communication. So we realized a mqtt connection subscribing our client to a topic where server put data in a queue.",
+            "When the backend was ready, we first tried a socket connection, but backend technologies only supported MQTT communication. We then implemented an MQTT connection by subscribing our client to a topic where the server queued data.",
         },
         {
           type: "subtitle",
@@ -1371,18 +1378,19 @@ export const projects = {
         {
           type: "text",
           value:
-            "To draw the cartesian graph of some complex function given the equations I used Python to calculate a set of points that then I used in React to draw the function.\
-                    \nThen, in these cartesian graph, I implemented 2 functionalities:\
-                    \nThe possibility to drag and zoom in/out the graph\
-                    \nThe possibility to select a specific section of the graph and zoom in it",
+            "To draw the Cartesian graph of some complex functions, I used Python to calculate a set of points, then used them in React to render the function.\
+      \nIn these graphs, I implemented two features:\
+      \n- The ability to drag and zoom the graph in/out\
+      \n- The ability to select a specific section and zoom into it",
         },
-      ],
+      ]
+
     },
     // Gazzetta dello Sport
     {
       title: "Accenture - Gazzetta dello Sport",
       description:
-        "In my second project in Accenture I work in a very big and interesting project. In this case the goal was the performances because the website is read by thousand and thousand of people.",
+        "In my second project in Accenture I worked in a very big and interesting project. In this case the goal was the performances because the website is read by thousand and thousand of people.",
       links: [
         {
           label: "Gazzetta dello Sport",
@@ -1412,26 +1420,26 @@ export const projects = {
         {
           type: "text",
           value:
-            "- *html*\
-                    \n- *CSS*\
-                    \n- *Sass*\
-                    \n- *JS6*",
+            "- *HTML*\
+      \n- *CSS*\
+      \n- *Sass*\
+      \n- *ES6 JavaScript*",
         },
         {
           type: "subtitle",
-          value: "Tecnologies Used",
+          value: "Technologies Used",
         },
         {
           type: "text",
           value:
-            "- *Gulp*\
-                    \n- *Docker* to create a container when we run the project\
-                    \n- *Chrome* to test and modify at runtime the components\
-                    \n- *Visual Studio Code* as editor\
-                    \n- *Galen* to test some parts of the website\
-                    \n- *Jenkins* to manage the deploys\
-                    \n- *Jira* to manage the different tasks\
-                    \n- *GitHub* to repository online",
+            "- *Gulp* for task automation\
+      \n- *Docker* to create containers for running the project\
+      \n- *Chrome* for testing and live editing components\
+      \n- *Visual Studio Code* as the code editor\
+      \n- *Galen* to test page layouts and responsive design\
+      \n- *Jenkins* to manage deployments\
+      \n- *Jira* to track tasks and issues\
+      \n- *GitHub* for the online repository",
         },
         {
           type: "subtitle",
@@ -1440,8 +1448,8 @@ export const projects = {
         {
           type: "text",
           value:
-            "*Some part of *Bulma* framework\
-                    \n*SMACSS* and *BEM* to organize the code and name convention",
+            "- Partial use of the *Bulma* framework\
+      \n- *SMACSS* and *BEM* to structure and name CSS classes consistently",
         },
         {
           type: "subtitle",
@@ -1450,58 +1458,55 @@ export const projects = {
         {
           type: "text",
           value:
-            "This was a very long and complex project so I divide it in little chapters based on the tasks I did.\
-                    \nObviously I didn’t execute them one after other but often I worked on more task parallel, for example I made a few desktop pages, after a few mobile pages and after a few other desktop pages.",
+            "This was a long and complex project, so I divided it into smaller sections based on the tasks I handled.\
+      \nTasks were not executed sequentially; I often worked on multiple tasks in parallel. For example, I completed a few desktop pages, then a few mobile pages, and then returned to additional desktop pages.",
         },
         {
           type: "subtitle",
-          value: "1) Desktop pages",
+          value: "1) Desktop Pages",
         },
         {
           type: "text",
           value:
-            "First of all I worked with an other guy to build the main pages of the website for desktop using html and sass.\
-                    \nDuring the development we followed some important guidelines:\
-                    \n- write less code possible to have a light website\
-                    \n- divide the website in reusable components that have a common css to make the website more scalable and maintainable\
-                    \n- use the most general names possible for components for the maintainability, because, for example, the same component will be used in different position or maybe change position so it is better not say a name connected to the position like “top-media”\
-                    \n- architecture of code inspired of SMACSS and BEM\
-                    \n- write code to make the website usable and well designed in different website like Firefox, Chrome, Safari, Explorer 11and others",
+            "Initially, I collaborated with another developer to build the main desktop pages using HTML and Sass.\
+      \nDuring development, we followed key guidelines:\
+      \n- Write minimal code to keep the site lightweight\
+      \n- Divide the site into reusable components with common CSS for scalability and maintainability\
+      \n- Use general component names to allow reusability in different positions rather than position-specific names like 'top-media'\
+      \n- Organize code architecture following SMACSS and BEM principles\
+      \n- Ensure cross-browser compatibility and responsive design across Chrome, Firefox, Safari, IE11, and others",
         },
         {
           type: "subtitle",
-          value: "2) Mobile pages",
+          value: "2) Mobile Pages",
         },
         {
           type: "text",
           value:
-            "After the pages for the desktop we made the pages for mobile using the same architecture of desktop but dividing the css code to improve the performance because in this way who use the desktop not download useless css code written for the mobile.",
+            "After completing the desktop pages, I developed mobile pages using the same architecture. CSS was separated to improve performance, ensuring desktop users did not download unnecessary mobile styles.",
         },
         {
           type: "subtitle",
-          value: "3) Test with Galen",
+          value: "3) Testing with Galen",
         },
         {
           type: "text",
           value:
-            "After we did the first pages, our clients want to introduce in the work galen to test the graphic of some pages already done.\
-                    \nI was the responsibility to study Galen and use it.\
-                    I met a lot of difficult with galen. It is a easy instrument to do basic things but if you want to do more sophisticated tests it’s a nightmare because online there is only the official guide and it is very difficult (for not say impossible) to find complex examples.\
-                    \nFor this reason it was also funny because I used all my problem solving skills to find original ways to do sophisticated test using the most simple possible code because the goal for the client was create a simple and standard way to test in order to be used from everyone to test in a fastly way website pages of this project but also of future projects.\
-                    \nI used Galen syntax and JS for some important scripts for the tests.\
-                    \nHere I will upload the guide when I will have finished it and will have removed possible sensible data (I don’t write the guide directly here or this article becomes too huge).\
-                    \nIn the guide I will write the main problems met and how I resolved them.",
+            "Once the first pages were completed, the client introduced Galen for layout testing.\
+      \nI took responsibility for learning and applying Galen. Although it was straightforward for basic tests, implementing more advanced tests was challenging due to limited documentation and examples online.\
+      \nI leveraged my problem-solving skills to develop creative solutions for advanced tests using simple code. The goal was to create a standardized testing approach usable by anyone for quick testing of current and future project pages.\
+      \nI used a combination of Galen syntax and JavaScript for key test scripts. A detailed guide documenting problems and solutions will be shared once sensitive data is removed.",
         },
         {
           type: "subtitle",
-          value: "4) Integration with JS",
+          value: "4) Integration with JavaScript",
         },
         {
           type: "text",
           value:
-            "When we finished the html and css structure for the first pages other guys did the Javascript components to make the website really useable.\
-                    \nI worked with some of them to find the best Javascript solution adding some data (like data-target, new classes or transition) in the html or css when it was needed.\
-                    \nMoreover I also develped some complex components in Javascript (like a custom scrollbar).",
+            "After the HTML and CSS structure was complete, other developers implemented JavaScript components to make the site fully functional.\
+      \nI collaborated with them to identify optimal JavaScript solutions, adding attributes like data-targets, new classes, or transitions in HTML or CSS when needed.\
+      \nI also developed some complex JavaScript components, including a custom scrollbar.",
         },
         {
           type: "subtitle",
@@ -1510,18 +1515,18 @@ export const projects = {
         {
           type: "text",
           value:
-            "Apart to use the guidelines I wrote above for CSS and html, to improve more the speed of the website we adopted other different methodologies:\
-                    \n- Use an orchestrator to manage when, and in which order, loading the JS scripts\
-                    \n- Put the CSS of the first visible object inline to reduce the initial loading of webpage",
+            "Beyond CSS and HTML best practices, we adopted additional strategies to improve website speed:\
+      \n- Used a script orchestrator to control loading order of JavaScript files\
+      \n- Inlined CSS for above-the-fold content to reduce initial page load time",
         },
         {
           type: "subtitle",
-          value: "6) Compability and Bug fixing",
+          value: "6) Compatibility and Bug Fixing",
         },
         {
           type: "text",
           value:
-            "In order to resolv different bugs and have the compability with all the main browser (Firefox, Chrome, Safary, Edge and also IE11 with different types of device) I learned to inspect the code of the webpage with all browser and also using virtual machine (for Windows) and emulator (for Android and Safary)",
+            "To ensure cross-browser compatibility and resolve various bugs, I inspected code using all major browsers (Chrome, Firefox, Safari, Edge, IE11) and tested on different devices using virtual machines for Windows and emulators for Android and Safari.",
         },
         {
           type: "subtitle",
@@ -1530,19 +1535,17 @@ export const projects = {
         {
           type: "text",
           value:
-            "This project was a great experience and I learn a lot from it.\
-                    \nIn particular I understand how write and organize CSS, html and Javascript to have a performance website.",
+            "This project was a valuable experience from which I learned a lot.\
+      \nI gained a deeper understanding of how to write and organize HTML, CSS, and JavaScript for high-performance, maintainable websites.",
         },
-      ],
+      ]
+      ,
     },
     // Static Website for Financial Client - Accenture
     {
       title: "Accenture - Static Website for Financial Client",
       description:
-        "I worked on an already started project.\
-            \nI developed some components for the website of a big client in the financial sector.\
-            \nHere the website was divided in “molecules”.\
-            \nEvery molecules it was implemented to be responsive and work as in desktop as in mobile devices.",
+        "I contributed to an ongoing project, developing several components for the website of a major client in the financial sector. The website was structured using a “molecules” approach, and each component was designed to be fully responsive, functioning seamlessly on both desktop and mobile devices.",
       links: [],
       mainSkills: ["html", "JS6", "Sass"],
       allSkills: [
@@ -1565,109 +1568,107 @@ export const projects = {
         {
           type: "text",
           value:
-            "In my third project in Accenture I worked on an already started project.\
-                    \nI developed some components for the website of a big client in the financial sector.\
-                    \nHere the website was divided in “molecules”.\
-                    \nEvery molecules it was implemented to be responsive and work as in desktop as in mobile devices.\
-                    \nIn this projects I worked with a very huge teams. The most difficult and challenging thing in this project was interact to so many people. When I resolved bugs often they aren’t bugs I could directly resolve. So I had to understand which team I needed to contact to resolve it (backend team, maintanence team, integration team), explain the problem and follow each phases until the bug was solved.",
+            "In my third project at Accenture, I joined an ongoing initiative and contributed to the website of a major client in the financial sector.\
+      \nThe website was structured using a “molecules” approach, and each molecule was implemented to be fully responsive, working seamlessly on both desktop and mobile devices.\
+      \nThis project involved a very large team, and one of the main challenges was coordinating with so many people. Often, when I addressed bugs, they were not issues I could fix directly, so I had to identify the appropriate team (backend, maintenance, or integration), explain the problem, and follow the resolution process until the bug was fully resolved."
         },
         {
           type: "subtitle",
-          value: "Languages Used",
+          value: "Languages Used"
         },
         {
           type: "text",
           value:
-            "- *html*\
-                    \n- *CSS*\
-                    \n- *Sass*\
-                    \n- *JS6*",
+            "- *HTML*\
+      \n- *CSS*\
+      \n- *Sass*\
+      \n- *ES6 JavaScript*"
         },
         {
           type: "subtitle",
-          value: "Tecnologies Used",
+          value: "Technologies Used"
         },
         {
           type: "text",
           value:
             "- *Gulp*\
-                    \n- *Chrome, Firefox, Safari and IE11* to test and modify at runtime the components\
-                    \n- *Visual Studio Code* as editor\
-                    \n- *Git* to repository online\
-                    \n- *Webpack*",
+      \n- *Chrome, Firefox, Safari, and IE11* for runtime testing and component debugging\
+      \n- *Visual Studio Code* as IDE\
+      \n- *Git* for online repository management\
+      \n- *Webpack* for script bundling"
         },
         {
           type: "subtitle",
-          value: "Libraries Used",
+          value: "Libraries Used"
         },
         {
           type: "text",
           value:
-            "This projects doesn’t need very hight performance so, to speed up the development, we used some libraries:\
-                    \n- *Swiper* to manage the carousels\
-                    \n- *Plyr* to manage have a simple, accessible and customisable media player for Youtube and Vimeo",
+            "The project did not require extremely high performance, so we used a few libraries to accelerate development:\
+      \n- *Swiper* for implementing carousels\
+      \n- *Plyr* for a simple, accessible, and customizable media player for YouTube and Vimeo"
         },
         {
           type: "subtitle",
-          value: "What I did",
+          value: "Key Contributions"
         },
         {
           type: "text",
           value:
-            "I described here the main features I developed during the project.",
+            "Below are the main features and components I developed during the project."
         },
         {
           type: "subtitle",
-          value: "1) Carousel and Video",
+          value: "1) Carousel and Video"
         },
         {
           type: "text",
           value:
-            "I wrote the html, CSS and JS to develop a carousel using Swiper. I also added a listener to activate the automatic loop of carousel images when user don’t put the mouse on it and deactivate it when user put the mouse.\
-                    \nUsing Ply I created a custom component to add video in page from Youtube or Vimeo and, optionally, start automatically with mute active.\
-                    \nFinally I also added Ply in the carousel in order to have a video in the carousel that start automatically with mute activated when the current slide has a video and stop it when slide change.\
-                    \nAfter some weeks I updated the hero carousel to be used also in the middle of page, inside other molecules, without full the screen. To do this I checked if the carousel was inside an other molecules.",
+            "I developed the HTML, CSS, and JavaScript for a carousel using Swiper. I added a listener to automatically loop the carousel images when the user was inactive and pause when the mouse hovered over it.\
+      \nUsing Plyr, I created a custom component to embed videos from YouTube or Vimeo, with optional autoplay and muted mode.\
+      \nI also integrated Plyr within the carousel so that videos in slides would start muted automatically when active and stop when the slide changed.\
+      \nLater, I updated the hero carousel to be used in the middle of pages within other molecules, adapting it to work without filling the full screen."
         },
         {
           type: "subtitle",
-          value: "2) Optimization of JS",
+          value: "2) JavaScript Optimization"
         },
         {
           type: "text",
           value:
-            "I started to work to this project when it was near the final deliver and most of the work was already done but Javascript code was written by different persons, without use classes or try-catch and this was a problem because if in the code incurred in an error in the first rows the other code will not be executed because Gulp copied all javascript together.\
-                    \nTo solve this problem I work with an other guy in order to:\
-                    \n- Organize the different molecules script in different classes; then, for each class we instantiated them in different try-catch, so if some class was broken it would not stop the others.\
-                    \n- To organize better the scripts we substituted Gulp with Webpack because it didn’t just copy all scripts in a file and the code became more robust and the scripts more independent from each other.",
+            "I joined the project near its final delivery, where most work was already done. The JavaScript code was written by multiple developers without using classes or try-catch blocks, which caused errors to halt execution because Gulp combined all scripts into a single file.\
+      \nTo address this, I worked with another developer to:\
+      \n- Organize scripts into classes and instantiate each within separate try-catch blocks to prevent one broken component from stopping others.\
+      \n- Replace Gulp with Webpack, making scripts more modular, independent, and the code more robust."
         },
         {
           type: "subtitle",
-          value: "3) Autocomplete",
+          value: "3) Autocomplete"
         },
         {
           type: "text",
           value:
-            "First of all I developed a search bar inside the header that user can show or hide pressing a button.\
-                    \nIn this search bar I implemented the autocomplete. A listener make a fetch to a server with the value of input field anytime the user inserts new char (or remove ones). If the fetch ends successful I builds a list with the results returned to show them to the user.\
-                    \nUser can interact with the autocomplete in the following ways:\
-                    \n- If he press enter button the research start and it will be redirect in a new page with the research results.\
-                    \n- If he pressed exit button the search bar is cleaned and hidden\
-                    \n- He can also start the research clicking in an option in the suggest list created or navigating in the suggested list with the arrows and click enter button to chose the desired option",
+            "I developed a search bar in the header, toggleable via a button, with autocomplete functionality. A listener triggered a fetch request to the server whenever the user typed or deleted characters. Successful responses generated a suggestion list.\
+      \nUser interactions included:\
+      \n- Pressing Enter to execute the search and redirect to a results page.\
+      \n- Pressing the exit button to clear and hide the search bar.\
+      \n- Selecting suggestions with the mouse or keyboard navigation (arrows + Enter)."
         },
         {
           type: "subtitle",
-          value: "4) Research",
+          value: "4) Search Page"
         },
         {
           type: "text",
           value:
-            "When the user confirm the word, or sentence, that he want to search in the autocomplete field, it is saved in the local storage and the user is redirect in the research page.\
-                    \nIn this page I implemented the research with a fetch that send the word or sentence to the server using a REST api (POST with a JSON payload) and show in page the results of the research.\
-                    \nThe graphics of the list of results was enough complex to implement because there were three different sublist, different each other from the graphics point of view. Moreover for each field in the lists I showed different parameters depend of the JSON the client received.\
-                    \nAnd for last I implemented this page, like all website, to be seen good as in mobile as in desktop.\
-                    \nTo realize this page I made a great use of flex in order to adapt it in each screen size and I used mixin only where it was extremely necessary in order to use less css code possible.",
-        },
-      ],
+            "Once the user confirmed a search query, it was saved in local storage, and the user was redirected to the search results page.\
+      \nOn this page, I implemented a fetch to the server using a REST API (POST with JSON payload) and displayed the results.\
+      \nThe results list layout was complex, consisting of three different sublists with distinct graphical structures. Each field displayed different parameters based on the JSON received from the client.\
+      \nAs with the rest of the site, the page was fully responsive and optimized for both desktop and mobile.\
+      \nI relied heavily on Flexbox for layout adaptation and only used mixins where absolutely necessary to minimize CSS code."
+        }
+      ]
+      ,
     },
     /** 
             {

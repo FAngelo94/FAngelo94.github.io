@@ -23,10 +23,13 @@ const I18nContext = React.createContext<I18nContextValue>({
 
 const getInitialLocale = (): keyof typeof locales => {
   if (typeof window === "undefined") return "en";
-  const stored = window.localStorage.getItem("locale") as keyof typeof locales | null;
-  if (stored && locales[stored]) return stored;
-  const nav = navigator.language?.toLowerCase();
-  if (nav?.startsWith("it")) return "it";
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const lang = params.get("lang");
+    if (lang === "it") return "it";
+  } catch (e) {
+    // ignore parsing errors and fallback to EN
+  }
   return "en";
 };
 
@@ -35,8 +38,21 @@ export const I18nProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const setLocale = (loc: keyof typeof locales) => {
     setLocaleState(loc);
+    // update URL parameter lang=it when switching to Italian, remove otherwise
     if (typeof window !== "undefined") {
-      window.localStorage.setItem("locale", loc);
+      try {
+        const url = new URL(window.location.href);
+        const params = url.searchParams;
+        if (loc === "it") {
+          params.set("lang", "it");
+        } else {
+          params.delete("lang");
+        }
+        const newUrl = `${url.origin}${url.pathname}${params.toString() ? `?${params.toString()}` : ""}${url.hash}`;
+        window.history.replaceState({}, "", newUrl);
+      } catch (e) {
+        // noop on URL errors
+      }
     }
   };
 

@@ -1,12 +1,11 @@
 import React from "react";
 import { Container } from "./styles";
-import githubIcon from "../../assets/github-icon.svg";
-import externalLinkIcon from "../../assets/external-link-icon.svg";
-import bachelor from "../../assets/bachelor.png";
-import suitcase from "../../assets/suitcase.png";
+import project from "../../assets/project.png";
 import ScrollAnimation from "react-animate-on-scroll";
-import { projects } from "../../data";
+import { useI18n } from "../../i18n/I18nProvider";
 import { Card } from "../Card/Card";
+import { Carousel } from "../Carousel/Carousel";
+import { TileCard } from "../Card/TileCard";
 
 interface IProject {
   title: string;
@@ -16,61 +15,62 @@ interface IProject {
   links: Array<{
     label: string;
     url: string;
-    icon: object;
+    icon: string;
   }>;
   longtext: Array<{
     type: string;
     value: string;
   }>;
 }
+// Carousel shows all projects; previous visible count no longer used.
 
 export function Portfolio() {
+  const { t } = useI18n();
   const [showCard, setShowCard] = React.useState<IProject>();
-  let emptyProject: IProject;
+
 
   return (
     <Container id="portfolio">
-      <h2>{projects.title}</h2>
-      <div className="subtitle">{projects.subtitle}</div>
-      <div className="projects">
-        {projects.projects.map((p, index) => (
-          <ScrollAnimation animateIn="flipInX" key={index}>
-            <div className="project" onClick={() => setShowCard(p)}>
-              <header>
-                <img src={suitcase} alt="Suitcase" />
-                <div className="project-links">
-                  {p.links &&
-                    p.links.map((l, index2) => (
-                      <a href={l.url} key={index2} target="_blank">
-                        <img src={l.icon} alt={l.label} />
-                      </a>
-                    ))}
-                </div>
-              </header>
-              <div className="body">
-                <h3>{p.title}</h3>
-                <p>{p.description}</p>
-              </div>
-              <footer>
-                <ul className="tech-list">
-                  {p.mainSkills.map((skill, index) => (
-                    <li key={index}>{skill}</li>
-                  ))}
-                </ul>
-              </footer>
-            </div>
-          </ScrollAnimation>
-        ))}
-      </div>
-      <div className="footer-text">{projects.footerText}</div>
+      <h2>{t.projects.title}</h2>
+      <div className="subtitle">{t.projects.subtitle}</div>
+      <Projects projects={t.projects.projects} setShowCard={setShowCard} />
+      <div className="footer-text">{t.projects.footerText}</div>
       {showCard && (
         <Card
           title={showCard.title}
           text={showCard.longtext}
           skills={showCard.allSkills}
-          handleClose={() => setShowCard(emptyProject)}
+          handleClose={() => setShowCard(undefined)}
         />
       )}
+
     </Container>
   );
+}
+
+const Projects = ({ projects, setShowCard }: { projects: IProject[], setShowCard: (project: IProject) => void }) => {
+  return (
+    <Carousel>
+      {projects.map((p, index) => (
+        <ScrollAnimation animateIn="flipInX" key={index}>
+          <TileCard
+            headerIconSrc={project}
+            headerRight={p.links ? (
+              <>
+                {p.links.map((l, index2) => (
+                  <a href={l.url} key={index2} target="_blank" rel="noreferrer">
+                    <img src={l.icon} alt={l.label} />
+                  </a>
+                ))}
+              </>
+            ) : undefined}
+            title={p.title}
+            body={<p>{p.description}</p>}
+            footerList={p.mainSkills}
+            onClickBody={() => setShowCard(p)}
+          />
+        </ScrollAnimation>
+      ))}
+    </Carousel>
+  )
 }

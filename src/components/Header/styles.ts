@@ -25,21 +25,47 @@ export const Container = styled.header`
     display: flex;
     align-items: center;
     gap: 1.8rem;
-    a{
+    a, button{
       color: #FFFF;
       padding: 0.6rem;
       font-family: 'Red Hat Display', sans-serif;
       font-weight: 500;
       text-transform: uppercase;
       transition: filter 0.25s;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      text-decoration: none;
 
       &.button{
         padding: 0.6rem 5rem;
+        background-color: var(--green);
+        border-radius: 0.5rem;
       }
 
       &:hover{
         filter: brightness(0.6);
       }
+    }
+
+    .button.button-pdf{
+      margin-left: 10px;
+      width: 160px;
+      padding: 5px 0;
+    }
+
+    .lang-switch{
+      background: transparent;
+      width: 40px;
+      border: 1px solid var(--green);
+      color: #fff;
+      border-radius: 0.6rem;
+      padding: 0.4rem 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      transition: filter 0.25s, transform 0.2s;
+      &:hover{ filter: brightness(1.1); transform: translateY(-1px); }
+      &:active{ transform: translateY(0); }
     }
 
   }
@@ -175,7 +201,7 @@ export const Container = styled.header`
       transition: opacity 0.25s;
       background-color: var(--green);
 
-      a.button{
+      a.button, button.button{
         background-color: var(--pink);
       }
 

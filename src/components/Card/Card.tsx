@@ -4,6 +4,7 @@ import close from "../../assets/close.png";
 
 interface ICard {
   title: string;
+  type?: string;
   text: Array<{
     type: string;
     value: string;
@@ -27,18 +28,37 @@ const traslateText = (text: string) => {
   });
 };
 
-export function Card({ title, text, skills, handleClose }: ICard) {
+export function Card({ title, type, text, skills, handleClose }: ICard) {
 
   // Close also when click outside
+  // Close on ESC
   useEffect(() => {
-    const handleClickOutside = (event: any) => {
+    const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         handleClose();
       }
     };
-    document.addEventListener("keydown", handleClickOutside);
+    document.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.removeEventListener("keydown", handleClickOutside);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleClose]);
+
+  // Lock background scroll while the card is open
+  useEffect(() => {
+    const originalOverflow = document.body.style.overflow;
+    const originalPaddingRight = document.body.style.paddingRight;
+
+    // compensate for scrollbar to avoid layout shift
+    const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.body.style.overflow = "hidden";
+    if (scrollBarWidth > 0) {
+      document.body.style.paddingRight = `${scrollBarWidth}px`;
+    }
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      document.body.style.paddingRight = originalPaddingRight;
     };
   }, []);
 
@@ -46,7 +66,10 @@ export function Card({ title, text, skills, handleClose }: ICard) {
     <Container>
       <div className="project">
         <header>
-          <h1>{title}</h1>
+          <h1>
+            {title}
+            {type && type.toLowerCase() !== "custom" && <small>/ {String(type).toLowerCase()}</small>}
+          </h1>
           <img src={close} alt="Suitcase" onClick={() => handleClose()} />
         </header>
         <div className="body">

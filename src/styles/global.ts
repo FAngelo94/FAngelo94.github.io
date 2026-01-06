@@ -11,6 +11,12 @@ export const GlobalStyle = createGlobalStyle`
     --blue: #016fb9;
     scroll-padding-top: 10rem;
 
+    /* Card theming variables (default = dark theme) */
+    --card-bg: #2b2b2b;
+    --card-text: #FFFFFF;
+    --card-link: #FFFFFF;
+    --card-border: rgba(255,255,255,0.06);
+
     &.light{
 
       body{
@@ -43,6 +49,11 @@ export const GlobalStyle = createGlobalStyle`
         background-color: rgba(0,0,0,0.1);
         color: var(--black);
       }
+      /* Light theme card variables */
+      --card-bg: #FFFFFF;
+      --card-text: var(--black);
+      --card-link: var(--blue);
+      --card-border: rgba(0,0,0,0.08);
 
       form{
         input,textarea{
@@ -75,7 +86,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   html{
-    font-size: 62.5%;
+    font-size: clamp(62.5%, 1.2vw, 65%);
   }
 
   body{

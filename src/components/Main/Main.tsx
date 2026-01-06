@@ -1,7 +1,6 @@
 import Particles from "react-tsparticles";
 import { Container } from "./styles";
-import { Hero } from "../Hero/Hero";
-import { About } from "../About/About";
+import { WhoIAm } from "../WhoIAm/WhoIAm";
 import { Contact } from "../Contact/Contact";
 import { Portfolio } from "../Portfolio/Portfolio";
 import { Career } from "../Career/Career";
@@ -21,6 +20,13 @@ import pythonIcon from "../../assets/python.svg";
 import windowsIcon from "../../assets/windows-10.svg";
 import vscodeIcon from "../../assets/vscode.svg";
 import ubuntuIcon from "../../assets/ubuntu.png";
+import djangoIcon from "../../assets/django.svg";
+import copilotIcon from "../../assets/copilot.svg";
+import viteIcon from "../../assets/vite.svg";
+import problemSolvingIcon from "../../assets/problem-solving.svg";
+import openaiIcon from "../../assets/openai.svg";
+import { Home } from "../Home/Home";
+import { Prices } from "../Prices/Prices";
 
 export function Main() {
   const icons = [
@@ -39,6 +45,12 @@ export function Main() {
     { icon: androidIcon, name: "Android" },
     { icon: windowsIcon, name: "Windows" },
     { icon: ubuntuIcon, name: "Ubuntu" },
+    { icon: djangoIcon, name: "Django" },
+    { icon: copilotIcon, name: "Copilot" },
+    { icon: viteIcon, name: "Vite" },
+    { icon: openaiIcon, name: "OpenAI" },
+
+    { icon: problemSolvingIcon, name: "Problem Solving" },
   ];
 
   return (
@@ -216,11 +228,13 @@ export function Main() {
           },
         }}
       />
-      <Hero></Hero>
-      <About></About>
+      <Home></Home>
+      <Prices></Prices>
+      <Contact></Contact>
+      <WhoIAm></WhoIAm>
       <Career></Career>
       <Portfolio></Portfolio>
-      <Contact></Contact>
+      
     </Container>
   );
 }

@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "angelo-falci",
+    "test": "angelo-falci"
+  },
+  "targets": {},
+  "etags": {}
+}

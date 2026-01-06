@@ -7,9 +7,12 @@ import codepen from '../../assets/codepen.png'
 import telegram from '../../assets/telegram.png'
 import codingame from "../../assets/codingame.png"
 import logo from "../../assets/logo.png";
-import { footer} from "../../data"
+import { useI18n } from "../../i18n/I18nProvider"
+
+const version = process.env.REACT_APP_VERSION || "dev";
 
 export function Footer() {
+  const { t } = useI18n();
   return (
     <Container className="footer">
       <a href="/" className="logo">
@@ -17,9 +20,10 @@ export function Footer() {
       </a>
       <div>
         <p>
-          {footer.center} <img src={reactIcon} alt="React" /> {footer.center2}
+          {t.footer.center} <img src={reactIcon} alt="React" /> {t.footer.center2}
           <span>❤️</span>
         </p>
+        <small className="version">v{version}</small>
       </div>
 
       <div className="social-media">

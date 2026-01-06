@@ -2,10 +2,7 @@ import { Container } from "./styles";
 import emailIcon from "../../assets/email-icon.svg";
 import phoneIcon from "../../assets/phone-icon.svg";
 import linkedinIcon from "../../assets/linkedin.png";
-import githubIcon from "../../assets/github-icon.svg";
-import codepen from "../../assets/codepen.png";
 import telegram from "../../assets/telegram.png";
-import codingame from "../../assets/codingame.png";
 import { useI18n } from "../../i18n/I18nProvider";
 import { openCalendarPopup } from "../../utils/calendar";
 

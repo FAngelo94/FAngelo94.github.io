@@ -30,6 +30,7 @@ export function Carousel({ className = 'projects', children }: CarouselProps) {
     swiperInst.pagination.init();
     swiperInst.pagination.render();
     swiperInst.pagination.update();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [swiperInst, paginationRef.current]);
 
   React.useEffect(() => {

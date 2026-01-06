@@ -50,6 +50,7 @@ export const home = {
     "You want propose me a collaboration",
   ],
   footerText: "Not waste your time, contact me and let's build something great together!",
+  caption: "I not count hours of work, I count goals reached",
   ctas: {
     lookPlans: "Look my plans",
     speakGoals: "Speak about your goals",

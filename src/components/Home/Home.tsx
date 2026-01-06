@@ -46,7 +46,12 @@ export function Home() {
         </div>
         <div className="home-image">
           <ScrollAnimation animateIn="fadeInRight" delay={1 * 1000}>
-            <img src={softwareEngineer} alt="Ilustração" />
+            <figure className="image-figure">
+              <img src={softwareEngineer} alt="Ilustração" />
+              <figcaption className="center">
+                <em>{t.home.caption}</em>
+              </figcaption>
+            </figure>
           </ScrollAnimation>
         </div>
       </div>

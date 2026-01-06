@@ -17,7 +17,7 @@ import viteIcon from "../../assets/vite.svg";
 import problemSolvingIcon from "../../assets/problem-solving.svg";
 import ScrollAnimation from "react-animate-on-scroll";
 import openAiIcon from "../../assets/openai.svg";
-import profileImage from "../../assets/profile-image.jpg";
+import profileImage from "../../assets/profile-image.png";
 import { useI18n } from "../../i18n/I18nProvider"
 
 export function WhoIAm() {

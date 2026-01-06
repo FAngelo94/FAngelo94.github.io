@@ -54,6 +54,7 @@ export const Container = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: clamp(12px, 2vw, 20px);
 
     img{
       max-width: 500px;
@@ -121,7 +122,7 @@ export const Container = styled.section`
     }
     
     .home-image{
-      display: block;
+      display: flex;
     }
   }
 `

@@ -42,6 +42,7 @@ export const it: Translations = {
       "Vuoi propormi una collaborazione.",
     ],
     footerText: "Non perdere tempo, contattami e costruiamo insieme qualcosa di grande!",
+    caption: "Non conto le ore di lavoro, conto gli obiettivi raggiunti",
     ctas: {
       ...home.ctas,
       lookPlans: "Guarda i miei piani",

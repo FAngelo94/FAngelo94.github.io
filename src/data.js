@@ -20,21 +20,21 @@ export const hero = {
   contacts: "Contacts",
   mainSkills: "Here are my main skills/knowledge:",
   paragraphs: [
-    "Hi, Angelo and I live in the heart of the alps, Sondrio (north of Milan), Italy. I'm passionate about programming and I'm always looking for new challenges to learn and improve my skills. I’m a very active and motivated person. My best qualities are determination and sincerity. In the other side my defects are.. wait, it is better not say my defects in a curriculum.",
-    "I'm appasionated to AI and I use/test different tools to speed up and improve my work.",
-    "In my free time I like experiment and try new tecnlogies developing fullstack web applications. Below you can see more details about my work experience and projects!",
-    "My other hobbies are: travel, read books, board games, videogames and do sport",
-    "I have patent B and A"
+    "Hi, I'm Angelo and I live in the heart of the Alps, in Sondrio (north of Milan), Italy. I'm passionate about programming and I'm always looking for new challenges to learn and improve my skills. I’m a very active and motivated person. My best qualities are determination and sincerity. As for my flaws... well, maybe it's better not to list them in a résumé.",
+    "I'm passionate about AI and I actively use and test different tools to speed up and improve my work.",
+    "In my free time, I enjoy experimenting with and trying out new technologies by developing full-stack web applications. Below you can find more details about my work experience and projects!",
+    "My other hobbies include traveling, reading books, board games, video games, and sports.",
+    "I hold both category B and A driving licenses."
   ],
 };
 
 export const whoIam = {
   paragraphs: [
     "I’m a passionate software engineer focused on problem solving and building pragmatic solutions to real client needs.",
-    "I’ve worked with both large companies and early-stage startups, collaborating in teams as well as delivering projects end-to-end independently.",
-    "I’m used to working directly with clients, understanding real business needs, and turning them into working software.",
-    "I’m comfortable across the full stack and quick to learn new technologies, also leveraging modern AI tools to work more efficiently",
-    "I value clear and direct communication with my clients. I want them to fully understand how I plan to solve their problem, and I’m always honest if there’s something I don’t know at that moment.",
+    "I’ve worked with both large companies and early-stage startups, collaborating within teams as well as delivering projects end-to-end independently.",
+    "I’m used to working directly with clients, understanding real business needs, and turning them into reliable, working software.",
+    "I’m comfortable across the full stack and quick to learn new technologies, also leveraging modern AI tools to work more efficiently.",
+    "I value clear and direct communication with my clients. I want them to fully understand how I plan to solve their problems, and I’m always honest if there’s something I don’t know at the moment.",
   ],
 }
 
@@ -42,43 +42,48 @@ export const home = {
   title: ["Hire a", "Software Engineer", "in less than 24 hours"],
   subtitle: "I'm the right person for you if:",
   paragraphs: [
-    "You need a web developer for your team.",
-    "You need to improve your website/application with new features or fix existing ones.",
+    "You need a web developer to join your team.",
+    "You want to improve your website or application with new features or fix existing ones.",
     "You need someone to develop all software for your startup from scratch.",
-    "You want a consultant for your idea/project before starting the development",
-    "You aren't sure about what technologies and developer you need for your project",
-    "You want propose me a collaboration",
+    "You want a consultant to validate your idea or project before starting development.",
+    "You’re not sure which technologies or type of developer your project requires.",
+    "You want to propose a collaboration.",
   ],
-  footerText: "Not waste your time, contact me and let's build something great together!",
-  caption: "I not count hours of work, I count goals reached",
+  footerText: "Don’t waste time — contact me and let’s build something great together!",
+  caption: "I don’t count working hours, I count goals achieved",
   ctas: {
-    lookPlans: "Look my plans",
-    speakGoals: "Speak about your goals",
+    lookPlans: "View my plans",
+    speakGoals: "Talk about your goals",
   },
 }
 
+
 export const prices = {
   title: "My Plans",
-  subtitle: "Choose the plan that best suits your needs.",
-  footerText: "If you have special needs or requests, contact me and I will create a custom plan for you!",
+  subtitle: "Choose the plan that best fits your needs.",
+  footerText: "If you have special requirements or requests, contact me and I’ll create a custom plan for you!",
   ctaBookPlan: "Book this plan",
   ctaMoreDetails: "More details",
   plans: [{
     title: "€ 750",
-    description: "Ideally for small tasks or to have a developer available for a short period of time.",
-    included: ["I work in 1 of your project for 1 week", "If you aren't satisfied, I will refund you 100%", "You can contact me for support anytime"],
+    description: "Ideal for small tasks or for having a developer available for a short period of time.",
+    included: [
+      "I work on one of your projects for one week",
+      "If you're not satisfied, you'll receive a 100% refund",
+      "You can contact me anytime for support"
+    ],
     footer: "For small developments",
     type: "WEEKLY",
     icon: weeklyIcon,
     longtext: [
       {
         type: "subtitle",
-        value: "How it works?",
+        value: "How does it work?",
       },
       {
         type: "text",
-        value: "With this plan you 'rent' me for 1 week to work on in 1 of your project without wasting time in contracts or other bureaucracy. Call me and I can start the day after.\
-        \nThis plan is ideal for small tasks or to test me before starting a longer collaboration."
+        value: "With this plan, you \"rent\" me for one week to work on one of your projects, without wasting time on contracts or bureaucracy. Just book a call and I can start as soon as the next day.\
+        \nThis plan is ideal for small tasks or to test working together before starting a longer collaboration."
       },
       {
         type: "subtitle",
@@ -87,29 +92,33 @@ export const prices = {
       {
         type: "text",
         value: "- You can have a developer available in less than 24 hours\
-        \n- I don't waste time in counting hours, I work counting the results updating you periodically\
-        \n- You can pay me until you need me, without long-term contracts\
-        \n- You know exactly how much you will pay upfront\
-        \n- If you aren't satisfied I will refund you the entire week cost"
+        \n- I don’t waste time tracking hours; I focus on results and keep you regularly updated\
+        \n- You pay only for the time you need, with no long-term contracts\
+        \n- You know the total cost upfront\
+        \n- If you're not satisfied, I’ll refund the full cost of the week"
       }
     ],
   },
   {
     title: "€ 2500",
-    description: "Ideally for medium/large projects where you need a developer full-time for a month.",
-    included: ["I work in 1 of your project for 1 month", "If you aren't satisfied, I will refund you 100%", "You can contact me for support anytime"],
-    footer: "The most popular",
+    description: "Ideal for medium to large projects where you need a full-time developer for a month.",
+    included: [
+      "I work on one of your projects for one month",
+      "If you're not satisfied, you'll receive a 100% refund",
+      "You can contact me anytime for support"
+    ],
+    footer: "Most popular",
     type: "MONTHLY",
     icon: monthlyIcon,
     longtext: [
       {
         type: "subtitle",
-        value: "How it works?",
+        value: "How does it work?",
       },
       {
         type: "text",
-        value: "With this plan you 'rent' me for 1 month to work on in 1 of your project without wasting time in contracts or other bureaucracy. Call me and I can start the day after.\
-        \nThis plan is ideal if you need a developer to work with you or your teams for 1 or more month witout long-term contracts."
+        value: "With this plan, you \"rent\" me for one month to work on one of your projects, without wasting time on contracts or bureaucracy. Book a call and I can start as soon as the next day.\
+        \nThis plan is ideal if you need a developer to work closely with you or your team for one or more months, without long-term commitments."
       },
       {
         type: "subtitle",
@@ -118,80 +127,87 @@ export const prices = {
       {
         type: "text",
         value: "- You can have a developer available in less than 24 hours\
-        \n- I don't waste time in counting hours, I work counting the results updating you periodically\
-        \n- You can pay me until you need me, without long-term contracts\
-        \n- You know exactly how much you will pay upfront\
-        \n- If we start and you aren't satisfied you can stop the rent when you want and I will refund you the first week cost"
+        \n- I focus on outcomes, not on counting hours, and provide regular progress updates\
+        \n- You can stop whenever you no longer need me, with no long-term contracts\
+        \n- You know the total cost upfront\
+        \n- If you’re not satisfied, you can stop after the first week and receive a refund for that week"
       }
     ],
   },
   {
     title: "Custom",
-    description: "If you have special needs or requests, contact me and I will create a custom plan for you!",
-    included: ["I will create a custom plan based on your needs", "You can contact me for support anytime"],
+    description: "If you have special requirements or requests, contact me and I’ll create a tailored plan for you.",
+    included: [
+      "A custom plan based on your specific needs",
+      "You can contact me anytime for support"
+    ],
     footer: "Let's create your plan",
     type: "CUSTOM",
     icon: customIcon,
     longtext: [
       {
         type: "subtitle",
-        value: "How it works?",
+        value: "How does it work?",
       },
       {
         type: "text",
         value: "Choose this plan if you’re not sure how much time you’ll need or if you have specific requirements.\
-        \nContact me, we'll discuss about your needs and I'll create a custom plan for you.\
-        \nIn some case I can give you a discount, or rise the price, based on your situation"
+        \nContact me and we’ll discuss your needs in detail. I’ll then create a custom plan tailored to your situation.\
+        \nIn some cases, I may offer a discount or adjust the price depending on the context."
       },
       {
         type: "subtitle",
-        value: "Examples where this is useful",
+        value: "When this plan is useful",
       },
       {
         type: "text",
-        value: "- If you are a startup with few budget, you can have a discount and give me equity in your startup\
-        \n- If you need a developer for a long period of time (more than 3 months) I can give you a discount\
-        \n- If you need someone to mantain your project that necessary few hours per week/month I can give you a discount\
-        \n- If you need to develop your solution in short time I can rise the price to prioritize your project"
+        value: "- If you're a startup with a limited budget, we can combine a discount with equity\
+        \n- If you need a developer for a long period of time (more than 3 months), I can offer a discounted rate\
+        \n- If you need ongoing maintenance that requires only a few hours per week or month\
+        \n- If you need your solution delivered in a very short time, the price may increase to prioritize your project"
       }
     ],
   },
   {
     title: "€ 45",
-    description: "Ideally for small tasks or to have a developer/consultant available for a short period of time.",
-    included: ["If you need to count the hours", "You can contact me for support anytime", "I will fill out your timesheet regularly"],
-    footer: "If you have to account for hours",
+    description: "Ideal for small tasks or for having a developer or consultant available for a short time.",
+    included: [
+      "Suitable when you need to track hours",
+      "You can contact me anytime for support",
+      "I regularly fill in your timesheets"
+    ],
+    footer: "When you need to track hours",
     type: "HOURLY",
     icon: hourlyIcon,
     longtext: [
       {
         type: "text",
-        value: "Generally I prefer not work counting the hours, for my experience it's a waste of time for both sides and it is more difficult count how much you will spend upfront but it can be useful in some specific cases."
+        value: "In general, I prefer not to work on an hourly basis. In my experience, it often leads to inefficiencies on both sides and makes it harder to predict costs upfront. However, in some specific cases, it can be the right approach."
       },
       {
         type: "subtitle",
-        value: "When use this plan",
+        value: "When to use this plan",
       },
       {
         type: "text",
-        value: "- If you need a developer for very small tasks that can be done in few hours\
-        \n- If you need a consulting meeting\
-        \n- If you need to count the hours for your internal processes"
+        value: "- For very small tasks that can be completed in a few hours\
+        \n- For consulting or strategy meetings\
+        \n- When you need to track hours for internal or administrative processes"
       }
     ],
   },
     /* {
-      title: "€ 60",
-      description: "Ideally for small tasks or to have a developer available for a short period of time.",
-      included: [],
-      footer: "For a single consultant",
-      type: "CONSULTANT",
-      icon: hourlyIcon,
-      longtext: [{
-        type: "text",
-        value: "With this plan you can have me available for 1 hour to work on your project with priority over other clients.\nThis plan is ideal for small tasks or to have a developer available for a short period of time with priority."
-      }],
-    } */
+        title: "€ 60",
+        description: "Ideally for small tasks or to have a developer available for a short period of time.",
+        included: [],
+        footer: "For a single consultant",
+        type: "CONSULTANT",
+        icon: hourlyIcon,
+        longtext: [{
+          type: "text",
+          value: "With this plan you can have me available for 1 hour to work on your project with priority over other clients.\nThis plan is ideal for small tasks or to have a developer available for a short period of time with priority."
+        }],
+      } */
   ]
 }
 
@@ -205,46 +221,46 @@ export const header = {
   contacts: "Contacts",
   experience: "Experience",
   toggle: "Toggle",
-  generatePdf: "Generate PDF",
+  generatePdf: "Download PDF",
   menuOpen: "Open menu",
   menuClose: "Close menu",
 };
 
 export const footer = {
-  center: "Website done by React",
+  center: "Website built with React",
   center2: "and love",
 };
 
 export const contacts = {
-  title: "Contact Me😃",
+  title: "Contact Me 😃",
   subtitle:
-    "If you aren't free in available slots, use my other contacts to reach me and I will respond as soon as possible!",
-  bookACall: "Book a Call",
+    "If none of the available time slots work for you, feel free to reach out through my other contacts and I’ll get back to you as soon as possible!",
+  bookACall: "Book a call",
   calendarLink: "https://calendar.app.google/dcnshtZYNqVt4KQx6",
 };
 
 export const form = {
   useModule: "Get in touch using the form below",
-  leaveMessage: "Leave your message",
-  thanks: "Thanks for your message! I'll get back to you as soon as possible!",
+  leaveMessage: "Leave a message",
+  thanks: "Thanks for reaching out! I’ll get back to you as soon as possible.",
   backToTop: "Back to top",
-  send: "Send",
+  send: "Send message",
 };
 
 export const career = {
-  title: "Career and Studies",
+  title: "Career and Education",
   schools: [
     {
-      title: "State Exam for Informatic Engineering",
+      title: "State Examination for Information Engineering",
       where: "Politecnico di Milano, Italy",
-      description: "Passed the state exam for the qualification to practice as an engineer.",
+      description: "Successfully passed the state examination required to practice as a professional engineer.",
       when: "2025",
     },
     {
-      title: "Master of Computer Science and Engineering",
+      title: "Master’s Degree in Computer Science and Engineering",
       where: "Politecnico di Milano, Italy",
       description:
-        "Download all the details about my studies and which subjects I studied here: ",
+        "Download full details about my academic path and the courses I studied here: ",
       when: "2016 - 2018",
       links: [
         {
@@ -258,10 +274,10 @@ export const career = {
       ],
     },
     {
-      title: "Computer Science and Engineering",
+      title: "Bachelor’s Degree in Computer Science and Engineering",
       where: "Politecnico di Milano, Italy",
       description:
-        "Download all the details about my studies and which subjects I studied here: ",
+        "Download full details about my academic path and the courses I studied here: ",
       when: "2013 - 2016",
       links: [
         {
@@ -275,8 +291,8 @@ export const career = {
       ],
     },
     {
-      title: "Diploma in Computer Expert",
-      where: "High school ITIS Enea Mattei (Sondrio, Italy)",
+      title: "High School Diploma in Computer Science",
+      where: "ITIS Enea Mattei, Sondrio (Italy)",
       when: "2008 - 2013",
     },
   ],
@@ -286,55 +302,55 @@ export const career = {
       company: "Freelance",
       link: "https://www.linkedin.com/in/angelo-falci-1292ab76/",
       description:
-        "I work as freelance developing fullstack web application for big companies or startups. I not only develop the project but I also help the clients to improve their ideas and to choose the best technologies and architecture to use based on his needs. In some projects I also coordinated internal teams.",
+        "I work as a freelance software engineer, developing full-stack web applications for both large companies and startups. Beyond development, I help clients refine their ideas and choose the most suitable technologies and architectures based on their needs. On some projects, I also coordinated internal teams.",
       whereAndWhen: "Remote, 04/2025 - Present",
     },
     {
       title: "Senior Frontend Developer",
-      company: "DeltaTre",
+      company: "Deltatre",
       link: "https://www.deltatre.com/",
       description:
-        "I work to Diva project, a custom player video with many features. The main technologies I use are React, Vanilla JS, Typescript, RXjs, Node, Storybook, Webpack, Babel",
+        "I worked on the Diva project, a custom video player with many advanced features. The main technologies I used include React, Vanilla JavaScript, TypeScript, RxJS, Node.js, Storybook, Webpack, and Babel.",
       whereAndWhen: "Remote, 09/2022 - 04/2025",
     },
     {
-      title: "Senior FullStack Developer",
+      title: "Senior Full-Stack Developer",
       company: "TeamSystem",
       link: "https://www.teamsystems.com/",
       description:
-        "I worked mainly with React and Redux to maintain and improve Digitalbox application. I also collaborated occasionally with backend developers to update or fix bugs in API written in NodeJS or Java (Springboot).",
+        "I mainly worked with React and Redux to maintain and enhance the Digitalbox application. I also collaborated with backend developers to update features and fix bugs in APIs written in Node.js or Java (Spring Boot).",
       whereAndWhen: "Remote, 10/2021 - 09/2022",
     },
     {
       title: "Autonomous Driving Software Engineer",
-      company: "Consultant in Stellantis",
+      company: "Consultant at Stellantis",
       link: "https://www.stellantis.com/",
       description:
-        "As NetcomGroup consultant I was responsible of maintain and develop different tools used to validate autonomous driving software. Moreover with my team we studied and teste new methodologies and softwares to improve Stellantis toolchain.",
-      whereAndWhen: "Turin - Italy, 02/2020 - 10/2021",
+        "As a Netcom Group consultant, I was responsible for maintaining and developing various tools used to validate autonomous driving software. Together with my team, we also researched and tested new methodologies and tools to improve the Stellantis toolchain.",
+      whereAndWhen: "Turin, Italy, 02/2020 - 10/2021",
     },
     {
       title: "Autonomous Driving Software Engineer",
-      company: "Consultant in Stellantis",
+      company: "Consultant at Stellantis",
       link: "https://www.stellantis.com/",
       description:
-        "As NetcomGroup consultant I studied how to integrate some tools in Stellantis system in order to create a toolchain able to validate autonomous driving software",
-      whereAndWhen: "Munich - Germany, 10/2019 - 02/2020",
+        "As a Netcom Group consultant, I focused on integrating multiple tools into the Stellantis ecosystem to build a toolchain capable of validating autonomous driving software.",
+      whereAndWhen: "Munich, Germany, 10/2019 - 02/2020",
     },
     {
       title: "Frontend Developer",
       company: "Accenture",
       link: "https://www.accenture.com/",
       description:
-        "I worked as frontend developer to design and develop performance and responsive website for very important clients with using different technologies like React, Redux, JS6, HTML, CSS, Docker and others",
-      whereAndWhen: "Milan - Italy, 11/2018 - 10/2019",
+        "I worked as a frontend developer designing and building high-performance, responsive websites for major clients, using technologies such as React, Redux, ES6 JavaScript, HTML, CSS, Docker, and others.",
+      whereAndWhen: "Milan, Italy, 11/2018 - 10/2019",
     },
     {
       title: "IoT Developer",
-      company: "JOL Laboratory, Tim",
+      company: "JOL Laboratory, TIM",
       description:
-        "For my thesis I worked with a team for an European project that have as main goal the creaton of an Android application that can be used to communicate and collect data from different smart devices (look in my projects section for more details)",
-      whereAndWhen: "Milan - Italy, 05/2018 - 09/2018",
+        "For my thesis, I worked within a team on a European research project focused on developing an Android application to communicate with and collect data from multiple smart devices (see the Projects section for more details).",
+      whereAndWhen: "Milan, Italy, 05/2018 - 09/2018",
     },
   ],
 };
@@ -347,8 +363,8 @@ export const projects = {
     // Smanno
     {
       title: "Smanno",
-      description: "I designed and developed a fullstack application to manage a fleet of different robots and their complex missions.\
-      \nThe platfrom is used in healthcare and hospitality laboratories to automatize different task using robots.",
+      description: "I designed and developed a full-stack application to manage a fleet of different robots and their complex missions.\
+  \nThe platform is used in healthcare and hospitality laboratories to automate various tasks using robots.",
       links: [
         {
           label: "Smanno - Official Website",
@@ -356,19 +372,19 @@ export const projects = {
           icon: externalLinkIcon,
         }
       ],
-      mainSkills: ['Django', 'Docker', 'mysql', 'React'],
-      allSkills: ['Bootstrap 5', "Copilot", 'CSS', 'Django', 'Docker', 'html', 'Javascript', 'Linux', 'MobilePlanner', 'mysql', 'Python', 'React', 'Redux', 'Swagger', 'TMflow', 'VS Code', 'Windows'],
+      mainSkills: ['Django', 'Docker', 'MySQL', 'React'],
+      allSkills: ['Bootstrap 5', "Copilot", 'CSS', 'Django', 'Docker', 'HTML', 'JavaScript', 'Linux', 'MobilePlanner', 'MySQL', 'Python', 'React', 'Redux', 'Swagger', 'TMflow', 'VS Code', 'Windows'],
       longtext: [
         {
           type: "text",
-          value: "Smanno is a startup of 3 people (including me) that develops robots for healthcare and hospitality laboratories and a platform to use them.\
-          \nThe main role of the owner of Smanno was responsible for the business development and client relationships. The other guy, CTO of Smanno, was responsible for the hardware development of robots.\
-          \nLastly I was responsible for the development of all platform software and its deployment in client environments."
+          value: "Smanno is a three-person startup (including myself) that develops robots and a software platform for healthcare and hospitality laboratories.\
+      \nThe founder of Smanno was mainly responsible for business development and client relationships, while the CTO focused on the hardware development of the robots.\
+      \nI was responsible for the development of the entire software platform and its deployment in client environments."
         },
         {
           type: "text",
-          value: "I developed the platform to be more flexible possible in order to manage different types of robots and mission without change the codebase. Briefly to do this I abstracted everything in 2 entities, Actor (like Robots and other machine/place that will interact with robots) and Mission (the task that the robots have to perform).\
-          \nThe platform is divided in 2 main parts: the backend developed in Django and the frontend developed in React, below the details."
+          value: "I designed the platform to be as flexible as possible, allowing it to manage different types of robots and missions without changing the codebase. To achieve this, I abstracted everything into two core entities: Actors (robots and other machines or locations interacting with robots) and Missions (the tasks that robots need to perform).\
+      \nThe platform is divided into two main parts: a backend developed with Django and a frontend developed with React."
         },
         {
           type: "subtitle",
@@ -376,17 +392,17 @@ export const projects = {
         },
         {
           type: "text",
-          value: "I developed the backend of the platform using Django and mysql as database. The main features implemented are:\
-          \n- Database architecture for managing robots, missions and user that will be use the platform\
-          \n- API necessary for frontend adding check for user permissions\
-          \n- Async processing to check the status of robots connected to the platform\
-          \n- Integration with third-party services and library to communicate with different robots\
-          \n- Admin page to access to the database directly and advanced feature like data export/import and fast edit of cells in each table\
-          \n- Creation of Django custom commands to simplify the install and management of the platform\
-          \n- Swagger documentation for all Rest APIs implemented\
-          \n- Documentation to install and manage the platform\
-          \n- Docker compose file to run and setup db, backend and frontend with just one command in the terminal\
-          \n- Socket services to have real-time update in the frontend dashboard about robots and missions status"
+          value: "I developed the backend using Django with MySQL as the database. The main features implemented include:\
+      \n- Database architecture to manage robots, missions, and platform users\
+      \n- REST APIs for the frontend with permission and role-based access control\
+      \n- Asynchronous processes to monitor the status of robots connected to the platform\
+      \n- Integration with third-party services and libraries to communicate with different robot systems\
+      \n- An admin interface to directly access the database, including advanced features such as data import/export and fast inline editing\
+      \n- Custom Django management commands to simplify installation and platform management\
+      \n- Swagger documentation for all implemented REST APIs\
+      \n- Technical documentation for installing and maintaining the platform\
+      \n- Docker Compose setup to run the database, backend, and frontend with a single command\
+      \n- WebSocket services to provide real-time updates in the frontend dashboard for robot and mission statuses"
         },
         {
           type: "subtitle",
@@ -394,14 +410,14 @@ export const projects = {
         },
         {
           type: "text",
-          value: "I developed the frontend using React with Bootstrap 5 to start from a UI library because I didn't have graphics done by some designer. What user can do in the platform: depend on the role and permissions assigned to them, we have user admin, editor, executor and viewer.\
-          \nThe main features implementd are:\
-          \n- Responsive design for mobile and desktop, so user in hospital can access the platform from any device\
-          \n- Possibility to create complex missions, divided in steps, using actors and atomic mission added in the database (atomic mission are the simplest mission that can be performed by a robot, like go to a position, execute some movement with arms, etc.)\
-          \n- User can also encapsulate complex mission in order to reuse them in future in other mission without recreate everything from scratch and, in each mission, it is possible enable/disable some steps\
-          \n- Execute mission created monitoring the status of mission and actors involved returning details in case of mission fail\
-          \n- There is the possibility to stop and resume some mission\
-          \n- See statistics about mission execution and robot performance"
+          value: "I developed the frontend using React and Bootstrap 5 as a UI library, as no custom design was initially provided. Platform capabilities depend on user roles and permissions, such as admin, editor, executor, and viewer.\
+      \nThe main features implemented include:\
+      \n- Responsive UI for both mobile and desktop, allowing hospital staff to access the platform from any device\
+      \n- Creation of complex missions composed of multiple steps, using actors and atomic missions stored in the database (atomic missions represent the smallest executable robot actions, such as moving to a position or performing a specific arm movement)\
+      \n- Ability to encapsulate and reuse complex missions in other workflows, with the option to enable or disable individual steps\
+      \n- Execution and monitoring of missions, with detailed feedback in case of failures\
+      \n- Ability to stop and resume missions when needed\
+      \n- Access to statistics on mission execution and robot performance"
         },
         {
           type: "subtitle",
@@ -409,31 +425,31 @@ export const projects = {
         },
         {
           type: "text",
-          value: "The application need to be installed in the server of Smanno clients (for example an hospital) and run to the devices connected to the same network where application run.\
-          \nFirst of all, as I said in the top, I created a docker compose file to run the database, backend and frontend with just one command in three different container. This also to simplify the work for other members of the team.\
-          \nNext for client I created a script that export these 3 docker images created. The script create also other script to automatize the import and run on the 3 images in the client server with just one command, both in Linux and Windows environment.\
-          \nEverything is saved in an output folder that we can copy-paste in the client server and run.\
-          \nMaybe in future this could be imporoved based on what clients need."
+          value: "The application is installed on client servers (for example, hospitals) and runs on devices connected to the same network.\
+      \nTo simplify deployment, I created a Docker Compose setup to run the database, backend, and frontend in three separate containers with a single command. This also made onboarding easier for other team members.\
+      \nFor clients, I built a script that exports the Docker images and generates additional scripts to automate import and execution on client servers with a single command, supporting both Linux and Windows environments.\
+      \nAll required assets are packaged into an output folder that can be copied directly to the client server and executed.\
+      \nThis setup can be further improved in the future based on client needs."
         }
       ],
     },
     // One TCG Hero
     {
       title: "One TCG Hero",
-      description: "I developed a PWA in React and deployed in Firebase to manage my personal card game collection. I added, and in some case improved, different usefull features I found in different website but not all in one place.",
+      description: "I developed a React-based PWA and deployed it on Firebase to manage my personal trading card game collection. I added, and in some cases improved, several useful features that I found scattered across different websites, bringing them together in a single platform.",
       links: [{
         label: "One TCG Hero - Official Website",
         url: 'https://onetcghero.web.app/',
         icon: externalLinkIcon,
       }],
       mainSkills: ['Lovable', 'React', 'Copilot', 'Firebase'],
-      allSkills: ["CSS", "Firestore", "GitHub", "html", "Javascript", "Redux", "Vite", "VS Code"],
+      allSkills: ["CSS", "Firestore", "GitHub", "HTML", "JavaScript", "Redux", "Vite", "VS Code"],
       longtext: [
         {
           type: "text",
-          value: "I developed a PWA in React to manage my personal card game collection. I added, and in some case improved, different usefull features I found in different website but not all in one place.\
-          \nFor experimental/learn purpose I started this project using Lovable, next I stopped to use it but continued to use massively the AI tools for development wrinting code only when strictly necessary in order to understand the real limits of this new type of develop.\
-          \nOften I created task on Github with technical details and I assigned it to Copilot to generate the code, next I reviewed and, when necessary, modified the code generated to fit my needs."
+          value: "I developed a React PWA to manage my personal trading card game collection. I added, and in some cases improved, several useful features inspired by other platforms but not available all in one place.\
+      \nFor experimentation and learning purposes, I initially started the project using Lovable. I later stopped using it, but continued to heavily leverage AI tools, writing code manually only when strictly necessary to better understand the real limits of this new development approach.\
+      \nI frequently created GitHub issues with detailed technical requirements and assigned them to Copilot to generate code, which I then reviewed and adapted to fit my needs."
         },
         {
           type: "subtitle",
@@ -441,40 +457,39 @@ export const projects = {
         },
         {
           type: "text",
-          value: "Here a list of the main features implemented in the application:\
-          \n- Application with UI responsive for mobile and desktop with both light and dark mode support\
-          \n- User authentication using Firebase Auth with email/password\
-          \n- User can apply complex filters to find a specific card or set\
-          \n- User can create and manage his collection adding cards one by one or importing a list of cards (managing also the merging if necessary)\
-          \n- Use can create and manage his decks and, for each deck, see different statistics like number of cards, rarity distribution, cost curve and others\
-          \n- User can import decks and export them in different formats for different platform (like simulator or CardMarket)\
-          \n- User can print some cards choosing different layout and number of cards per page\
-          \n- If an user is enabled to do it by me, after login he has collection and decks saved in Firestore database in order to have same data in different devices",
+          value: "Here is a list of the main features implemented in the application:\
+      \n- Fully responsive UI for mobile and desktop, with support for both light and dark modes\
+      \n- User authentication via Firebase Auth using email and password\
+      \n- Advanced filtering to quickly find specific cards or card sets\
+      \n- Collection management with the ability to add cards manually or import lists, including automatic merging when needed\
+      \n- Deck creation and management, with detailed statistics such as card count, rarity distribution, and cost curve\
+      \n- Import and export of decks in multiple formats compatible with external platforms (e.g. simulators or CardMarket)\
+      \n- Printing of cards with customizable layouts and number of cards per page\
+      \n- Optional Firestore persistence (enabled by me) to sync collections and decks across multiple devices",
         },
       ],
     },
     // Gut
     {
       title: "GUT",
-      description: "I built a Spotify-like PWA with mobile-first UI, where users can watch music videos and support their favorite artists with donations.\
-      \n I also built a custom CMS to manage the platform’s content used by the PWA and contributed to the backend development.",
+      description: "I built a Spotify-like PWA with a mobile-first UI where users can watch music videos and support their favorite artists through donations.\
+  \nI also developed a custom CMS to manage the platform’s content and contributed to the backend development.",
       links: [{
         label: "GUT - Official Website",
         url: 'https://gutmusic.media/',
         icon: externalLinkIcon,
       }],
-      mainSkills: ['Mux', 'NodeJS', 'React', 'Stripe', 'Typescript'],
-      allSkills: ["Copilot", 'CSS', 'html', 'Javascript', 'Mux', 'NodeJS', 'Panda', 'React', 'Redux', 'Stripe', 'Swagger', 'Typescript', 'Vite', 'VS Code'],
+      mainSkills: ['Mux', 'NodeJS', 'React', 'Stripe', 'TypeScript'],
+      allSkills: ["Copilot", 'CSS', 'HTML', 'JavaScript', 'Mux', 'NodeJS', 'Panda', 'React', 'Redux', 'Stripe', 'Swagger', 'TypeScript', 'Vite', 'VS Code'],
       longtext: [
         {
           type: "text",
           value: "GUT is a startup operating in the music industry.\
-          \nI didn't limited my work to just one area, but I contributed to all aspects of the platform, proposing also new features and improvements based on what GUT presentend to me.\
-          \nThe work was divided in 3 main projects: the PWA in React, the CMS in React and the backend in NodeJS and Express.\
-          \nWe worked in agile methodologies with a teams of 6 people, 3 internal and 3 external (including me). Regarding the projects I was responsible for the architecture of the PWA and CMS and I developed the main part of both applications with the help of another freelancer developer.\
-          \nI also contributed to the backend development collaborating with one of the founder of the startup.\
-          \nBelow the details about each of the 3 main projects.",
-
+      \nMy contribution was not limited to a single area: I worked across the entire platform, also proposing new features and improvements based on the product vision shared by the team.\
+      \nThe work was divided into three main projects: a React PWA, a React-based CMS, and a backend built with Node.js and Express.\
+      \nWe followed agile methodologies within a team of six people: three internal members and three external collaborators (including myself). I was responsible for the architecture of both the PWA and the CMS and developed most of the functionality with the support of another freelance developer.\
+      \nI also collaborated on backend development together with one of the startup’s founders.\
+      \nBelow are the details of each of the three main projects."
         },
         {
           type: "subtitle",
@@ -482,12 +497,12 @@ export const projects = {
         },
         {
           type: "text",
-          value: "I created a single page application using React + Typescript and Vite as build tool. The key features of the PWA are:\
-          \n- Mobile first design with responsive UI using CSS and Styled Components with Panda\
-          \n- Video streaming using Mux SDK, artist can upload their music videos using always Mux with progressive upload percentage showed\
-          \n- Payment system using Stripe to buy subscriptions for artists and gem token for users\
-          \n- Different techniques to optimize the performance like lazy-loaded and strong caching strategies to reduce calls to the backend\
-          \n- Install banner to install the PWA on mobile devices",
+          value: "I built a single-page application using React, TypeScript, and Vite as the build tool. The key features of the PWA include:\
+      \n- Mobile-first design with a responsive UI implemented using CSS and Panda Styled Components\
+      \n- Video streaming via the Mux SDK, allowing artists to upload music videos with real-time upload progress\
+      \n- Payment system powered by Stripe, supporting artist subscriptions and virtual token purchases\
+      \n- Performance optimizations such as lazy loading and aggressive caching strategies to reduce backend calls\
+      \n- Install prompt to allow users to add the PWA to their mobile devices"
         },
         {
           type: "subtitle",
@@ -495,12 +510,12 @@ export const projects = {
         },
         {
           type: "text",
-          value: "I created a content management system (CMS) using React + Typescript and Vite as build tool in order to have 2 similar project easily maintainable also for other people in future.\
-          \nBasically we have a macrosection for the main entities of the platform: User, Content, Collection (group of Content), Audition and Tags.\
-          \nEach macrosection is divided in 2 pages:\
-          \n- A table page to see all the entities, divided in different pages with search and filter functionalities\
-          \n- A detail page to see all the details of the entity, modify it or create a new ones\
-          \nAlso in the CMS I applied caching strategies to reduce the calls to the backend that can be very heavy",
+          value: "I developed a content management system (CMS) using React, TypeScript, and Vite to ensure architectural consistency and long-term maintainability.\
+      \nThe CMS is organized into macro sections representing the platform’s core entities: Users, Content, Collections, Auditions, and Tags.\
+      \nEach section includes:\
+      \n- A table view with pagination, search, and filtering capabilities\
+      \n- A detail view to inspect, edit, or create new entities\
+      \nCaching strategies were also applied to minimize expensive backend requests."
         },
         {
           type: "subtitle",
@@ -508,14 +523,14 @@ export const projects = {
         },
         {
           type: "text",
-          value: "One of the founder was the main resplonsible of the backend development using NodeJS and Express framework using PostgreSQL and Redis for caching.\
-          \nI collaborated with him to:\
-          \n- Design some aspect of the database structure\
-          \n- Implementing caching strategies using Redis\
-          \n- Implementing some REST api used by the PWA and CMS\
-          \n- Do some security check to be sure the APIs were safe from common attacks and not pass sensitive data in the requests\
-          \n- Create a swagger documentation for all the APIs implemented\
-          \n- Debug and solve bugs found during the development of PWA and CMS",
+          value: "One of the founders was primarily responsible for backend development using Node.js and Express, with PostgreSQL as the main database and Redis for caching.\
+      \nI collaborated with him to:\
+      \n- Design parts of the database schema\
+      \n- Implement caching strategies using Redis\
+      \n- Develop REST APIs consumed by both the PWA and the CMS\
+      \n- Perform security reviews to protect against common vulnerabilities and prevent sensitive data leakage\
+      \n- Create Swagger documentation for all implemented APIs\
+      \n- Debug and fix issues discovered during the development of the PWA and CMS"
         }
       ],
     },
@@ -523,8 +538,8 @@ export const projects = {
     {
       title: "Portfolio Online",
       description:
-        "I create this portfolio online to show my skills and experience.\
-            \nI used React with Typescript and style-components and I publish it on Firebase using a custom domain.",
+        "I created this online portfolio to showcase my skills and professional experience.\
+        \nI used React with TypeScript and styled-components, and deployed it on Firebase using a custom domain.",
       links: [
         {
           label: "Website",
@@ -532,27 +547,27 @@ export const projects = {
           icon: externalLinkIcon,
         },
         {
-          label: "Github",
+          label: "GitHub",
           url: "https://github.com/FAngelo94/FAngelo94.github.io",
           icon: githubIcon,
         },
       ],
-      mainSkills: ["Firebase", "React", "Style-components", "Typescript"],
+      mainSkills: ["Firebase", "React", "Styled-components", "TypeScript"],
       allSkills: [
         "Firebase",
         "gh-pages",
-        "GiHub Pages",
+        "GitHub Pages",
         "GitHub",
         "React",
-        "Style-components",
-        "Typescript",
+        "Styled-components",
+        "TypeScript",
       ],
       longtext: [
         {
           type: "text",
           value:
-            "Starting from a model I found online I created this portfolio online improving the code, adding new components and multilanguage support with Italian and English.\
-            \nIn a previous version I published the portfolio using GitHub Pages but now I decided to use Firebase hosting with a custom domain to have more control and flexibility.",
+            "Starting from an online template, I built this portfolio by improving the codebase, adding new components, and implementing multilingual support in Italian and English.\
+        \nIn an earlier version, the portfolio was deployed using GitHub Pages, but I later migrated to Firebase Hosting with a custom domain to gain more control and flexibility.",
         },
         {
           type: "subtitle",
@@ -561,12 +576,12 @@ export const projects = {
         {
           type: "text",
           value:
-            "- *React* as framework\
-                    \n- *Typescript* as language\
-                    \n- *style-components* as library to manage styles\
-                    \n- *GitHub* as version control system\
-                    \n- *Firebase* as hosting service\
-                    \n- *jspdf* and *html2canvas* to generate a simplified PDF version of the portfolio",
+            "- *React* as the main framework\
+                \n- *TypeScript* as the programming language\
+                \n- *styled-components* for styling and theming\
+                \n- *GitHub* for version control\
+                \n- *Firebase* for hosting\
+                \n- *jsPDF* and *html2canvas* to generate a simplified PDF version of the portfolio",
         },
       ],
     },
@@ -574,9 +589,9 @@ export const projects = {
     {
       title: "Startup - Kangury",
       description:
-        "I developed a fullstack application using React for frontend and Django for backend.\
-        \nIn Kangury you can buy photos that will be associated to an album contained your photos or videos.\
-        \nGo to the website to see more!",
+        "I developed a full-stack application using React for the frontend and Django for the backend.\
+    \nKangury allows users to purchase photos and associate them with albums containing their own photos or videos.\
+    \nVisit the website to learn more!",
       links: [
         {
           label: "Kangury - Official Website",
@@ -584,21 +599,21 @@ export const projects = {
           icon: kanguryLogo,
         },
       ],
-      mainSkills: ["Bootstrap 5", "Django", "mysql", "React"],
+      mainSkills: ["Bootstrap 5", "Django", "MySQL", "React"],
       allSkills: [
         "Amazon AWS",
         "Bootstrap 5",
         "Copilot",
         "CSS",
         "Django",
-        "firebase",
-        "github",
-        "html",
-        "Javascript",
-        "mysql",
-        "Paypal",
+        "Firebase",
+        "GitHub",
+        "HTML",
+        "JavaScript",
+        "MySQL",
+        "PayPal",
         "Python",
-        "Pythonanywhere",
+        "PythonAnywhere",
         "React",
         "Redux",
         "S3",
@@ -609,9 +624,9 @@ export const projects = {
         {
           type: "text",
           value:
-            "I developed the application that you can try in the links provided. Inside users can buy different product related the world of photography and, obviously, they can modify and print their photos in different formats.\
-            \nAfter user buy a photo he can associate it to an album where he can upload his photos or videos.\
-            \nIf you are interested to collaborate in this startup contact me and I can provide you also a discount code!",
+            "I developed the application available at the link above. Users can purchase photography-related products and customize or print their photos in various formats.\
+        \nAfter purchasing a photo, users can associate it with an album where they can upload their own photos or videos.\
+        \nIf you’re interested in collaborating on this startup, feel free to contact me—I can also provide a discount code!",
         },
         {
           type: "subtitle",
@@ -620,10 +635,10 @@ export const projects = {
         {
           type: "text",
           value:
-            "I used the following technologies for 3 main reasons:\
-            \n- I already know them and I can develop the application in a short time\
-            \n- I know service where I can deploy the application fast and with zero or low cost in beginning\
-            \n- They are solid and well known technologies used in many big project with a big community that can help me in case of problems",
+            "I chose the following technologies for three main reasons:\
+        \n- I was already familiar with them, allowing me to develop the application quickly\
+        \n- I knew reliable services to deploy the application rapidly with low or zero initial costs\
+        \n- They are stable, widely adopted technologies with strong communities for long-term support",
         },
         {
           type: "subtitle",
@@ -632,13 +647,13 @@ export const projects = {
         {
           type: "text",
           value:
-            "Key features of the web application I used/developed:\
-          \n- Bootstrap 5 with SASS personalizing it in order to have a theme easily to maintain and updates in future; it's also speed up the creation of the app considering I didn't have any UI designer\
-          \n- Redux to manage the store of the application\
-          \n- Firebase to deploy the application in 2 different branch, product and test, in order to have a test environment where I can see the changes before deploy in production\
-          \n- Complex photo editor where user can modify the photo cropping and rotating it\
-          \n- Google Analytics to track the user behavior inside the application\
-          \n- Swiper for different carousels inside the application"
+            "Key features of the web application include:\
+      \n- Bootstrap 5 with customized SASS to create a maintainable theme and speed up development in the absence of a dedicated UI designer\
+      \n- Redux for global state management\
+      \n- Firebase deployment with separate production and test environments to safely validate changes before release\
+      \n- Advanced photo editor allowing users to crop and rotate images\
+      \n- Google Analytics to track user behavior within the application\
+      \n- Swiper for interactive carousels across the platform"
         },
         {
           type: "subtitle",
@@ -647,8 +662,8 @@ export const projects = {
         {
           type: "text",
           value:
-            "For the backend I used Django with mysql database and I organize the different APIs in a Swagger documentation.\
-          \nI used Amazon AWS S3 bucket to store the photos and videos uploaded by the user.",
+            "The backend was developed using Django with a MySQL database, with all APIs documented using Swagger.\
+      \nUser-uploaded photos and videos are stored in an Amazon AWS S3 bucket.",
         },
       ],
     },
@@ -656,7 +671,7 @@ export const projects = {
     {
       title: "Personal Project - Digitalpix",
       description:
-        "I developed, in React, a PWA and store application (for Ios and Android) to customize and buy professional photos.",
+        "I developed a Progressive Web App in React, along with a mobile store application for iOS and Android, to customize and purchase professional photos.",
       links: [
         {
           label: "Digitalpix - Play Store",
@@ -675,18 +690,18 @@ export const projects = {
         "Redux",
         "React Native",
         "Expo",
-        "Javascript",
-        "html",
+        "JavaScript",
+        "HTML",
         "CSS",
         "VS Code",
-        "firebase",
+        "Firebase",
         "Swagger",
       ],
       longtext: [
         {
           type: "text",
           value:
-            "I developed the application that you can try in the links provided. Inside users can buy different product related the world of photography and, obviously, they can modify and print their photos in different formats.",
+            "I developed the application available at the links above. Users can purchase photography-related products and customize or print their photos in different formats.",
         },
         {
           type: "subtitle",
@@ -695,9 +710,9 @@ export const projects = {
         {
           type: "text",
           value:
-            "First of all my job was find the best technologies to develop what Digitalpix needed: a web application more accessible from mobile devices and a mobile application to publish in Google Play Store and Apple App Store.\
-            \nHaving a low budget and working alone I decided to develop a PWA (Progressive Web Application) using React first of all and then develop a mobile application using React Native that include a WebView that show the PWA.\
-            \nIn this way I can use the same code for the web application and the mobile application. Moreover I don't need to publish the mobile app in Google Store and Apple Store everytime I do an updates reducing drastically the deploying time and maintenance for Digitalpix after the release.",
+            "My first task was to identify the most suitable technologies to meet Digitalpix’s needs: a web application optimized for mobile usage and a mobile app available on both the Google Play Store and the Apple App Store.\
+        \nGiven the limited budget and the fact that I was working alone, I decided to first build a Progressive Web App (PWA) using React, and then create a mobile application in React Native embedding the PWA inside a WebView.\
+        \nThis approach allowed me to share the same codebase between web and mobile, while avoiding frequent app store submissions for updates—significantly reducing deployment time and long-term maintenance costs.",
         },
         {
           type: "subtitle",
@@ -706,13 +721,13 @@ export const projects = {
         {
           type: "text",
           value:
-            "Key features of the web application I used/developed:\
-          \n- Bootstrap 5 with SASS personalizing it in order to have a theme easily to maintain and updates in future; it's also speed up the creation of the app considering I didn't have any UI designer\
-          \n- Redux to manage the store of the application\
-          \n- Firebase to deploy the application in 2 different branch, product and test, in order to have a test environment where I can see the changes before deploy in production\
-          \n- Complex photo editor where user can modify the photo cropping and rotating it\
-          \n- Google Analytics to track the user behavior inside the application\
-          \n- Swiper for different carousels inside the application"
+            "Key features of the web application include:\
+      \n- Bootstrap 5 with customized SASS to create a maintainable theme and accelerate development without a UI designer\
+      \n- Redux for application state management\
+      \n- Firebase deployment with separate production and test environments\
+      \n- Advanced photo editor with cropping and rotation features\
+      \n- Google Analytics to track user behavior\
+      \n- Swiper for interactive carousels throughout the application"
         },
         {
           type: "subtitle",
@@ -721,9 +736,9 @@ export const projects = {
         {
           type: "text",
           value:
-            "In order to publish the application also in the mobile store I developed an application in React Native including inside a WebView that show the web application.\
-          \nIn this way I can use the same code for the web application and the mobile application. Moreover I don't need to publish the mobile app in Google Store and Apple Store everytime I do an updates reducing drastically the deploying time.\
-          \nWorking alone and only in my free time I considered this the best solution to have a good result in a short time.",
+            "To publish the application on mobile stores, I developed a React Native app embedding the web application inside a WebView.\
+      \nThis approach allowed full code reuse between web and mobile, while drastically reducing deployment time and update complexity.\
+      \nConsidering I worked alone and only in my free time, this solution provided the best balance between quality and delivery speed.",
         },
         {
           type: "subtitle",
@@ -731,10 +746,11 @@ export const projects = {
         },
         {
           type: "text",
-          value: "During the project I suggested different solutions to improve the software architecture of Digitalpix and to solve some problems we found during the development.\
-          \nThe main updates I suggested was:\
-          \n- Create a Swagger documentation for all the APIs used in order to have a clear documentation to understand how to use them and what data send/receive\
-          \n- Save all software solutions they used internally in a Github profile created for Digitalpix in order to have a version control system and a backup of all the code developed"
+          value:
+            "During the project, I proposed several improvements to Digitalpix’s software architecture to address issues identified during development.\
+      \nThe main suggestions included:\
+      \n- Creating comprehensive Swagger documentation for all APIs to clarify request and response structures\
+      \n- Centralizing all internal software solutions in a dedicated GitHub organization to ensure version control, traceability, and reliable backups"
         },
       ],
     },
@@ -742,8 +758,8 @@ export const projects = {
     {
       title: "Personal Project - Climberworld Web App",
       description:
-        "Web app I developed as fullstack using React as frontend and Flask (Python framework) as backend. This site has the ambition to collect information about all the refuges, excursions and climbing walls of the Alps.\
-            \n(Note: Backend is not online anymore so you can't see the data)",
+        "A web application I developed as a full-stack project, using React for the frontend and Flask (Python framework) for the backend. The goal of this platform is to collect and organize information about alpine refuges, excursions, and climbing gyms across the Alps.\
+            \n(Note: the backend is no longer online, so data is not currently visible)",
       links: [
         {
           label: "Climberworld",
@@ -772,8 +788,8 @@ export const projects = {
         {
           type: "text",
           value:
-            "In my free time I worked on this application in order to learn new things and keep training the knowledge I already have and learn new ones.\
-            \nI developed both frontend and backend.",
+            "I worked on this application in my free time to continuously improve my skills, reinforce existing knowledge, and experiment with new technologies.\
+            \nI developed both the frontend and the backend.",
         },
         {
           type: "subtitle",
@@ -782,10 +798,10 @@ export const projects = {
         {
           type: "text",
           value:
-            "For the frontend these are the main technologies I used:\
-                    \n- *React* as frontend\
-                    \n- *Redux* to manage the store of application\
-                    \n- *Styled* components to manage the style\
+            "For the frontend, these are the main technologies I used:\
+                    \n- *React* as the frontend framework\
+                    \n- *Redux* to manage the application state\
+                    \n- *styled-components* to manage styling\
                     \n- *Firebase* to deploy the application",
         },
         {
@@ -795,22 +811,23 @@ export const projects = {
         {
           type: "text",
           value:
-            "For the backend these are the main technologies I used:\
-                    \n- *Flask* micro-framework developed in Python\
-                    \n- *mysql* to manage the database because the information inside the application are well structured\
-                    \n- *phpmyadmin docker image* used locally to explore the local database using an UI\
-                    \n- *docker* and *docker-compose* to develop easly the backend locally where 3 docker image are run, one for Flask, one for mysql and one for phpmyadmin\
-                    \n- *Swagger* to create a list of API documented well\
-                    \n- *pythonanywhere* to deploy the application\
-                    \n- *marshmallow, SQLAlchemy and connexion* to manage easly the tables in the db inside the API",
+            "For the backend, these are the main technologies I used:\
+                    \n- *Flask*, a micro-framework developed in Python\
+                    \n- *MySQL* to manage the database, since the application data is highly structured\
+                    \n- *phpMyAdmin Docker image* used locally to explore and manage the database through a UI\
+                    \n- *Docker* and *docker-compose* to easily develop the backend locally, running three containers (Flask, MySQL, and phpMyAdmin)\
+                    \n- *Swagger* to create well-documented APIs\
+                    \n- *PythonAnywhere* to deploy the application\
+                    \n- *Marshmallow*, *SQLAlchemy*, and *Connexion* to simplify database modeling and API management",
         },
         {
           type: "subtitle",
-          value: "Other Technologies/Tools",
+          value: "Other Technologies / Tools",
         },
         {
           type: "text",
-          value: "- *Git*:\
+          value:
+            "- *Git*\
                     \n- *Visual Studio Code*",
         },
       ],
@@ -819,8 +836,8 @@ export const projects = {
     {
       title: "Diva - Custom Video Player",
       description:
-        "This is a custom player video with many features developed to be integrated in different platform (web, tv, mobile ecc..).\
-        The project is developed as library divited in different packages, one for the different destination where Diva will be used (web, mobile, tv, etc).",
+        "A custom video player with advanced features, designed to be integrated into multiple platforms (web, TV, mobile, etc.).\
+        The project is developed as a library divided into multiple packages, each targeting a specific platform where Diva is used (web, mobile, TV, and more).",
       links: [
         {
           label: "DeltaTre - Diva",
@@ -846,7 +863,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "I worked, using Agile methodologies, as a frontend developer on the Diva project in order to improve existing functionalities and develop new ones.",
+            "I worked as a frontend developer on the Diva project using Agile methodologies, improving existing features and developing new ones.",
         },
         {
           type: "subtitle",
@@ -855,10 +872,10 @@ export const projects = {
         {
           type: "text",
           value:
-            "Diva was a player library sold by DeltaTre to different clients that integrated it into their streaming services.\
-                    \nInside, it was divided into different packages dedicated to:\
-                    \n- Common functionalities used across different packages\
-                    \n- Specific components, or sets of components, that could be used standalone and sold individually, or integrated into larger packages",
+            "Diva is a video player library sold by DeltaTre to multiple clients, who integrated it into their streaming platforms.\
+                    \nThe project is structured into different packages, dedicated to:\
+                    \n- Shared functionalities reused across multiple packages\
+                    \n- Specific components or groups of components that can be used standalone, sold independently, or integrated into larger packages",
         },
         {
           type: "subtitle",
@@ -867,18 +884,18 @@ export const projects = {
         {
           type: "text",
           value:
-            "- *React* as the frontend framework (with *Typescript* and *SCSS*) \
-                    \n- *Typescript* to manage the different structures used in the project and to catch errors at compile time\
-                    \n- *RXjs* to simplify the management of asynchronous and callback-based code caused by video streaming\
-                    \n- *SCSS* to manage component styles and maintain a more organized architecture compared to plain CSS\
-                    \n- *Storybook.JS* to manage the documentation for shared components used across different packages in the project\
+            "- *React* as the frontend framework (with *Typescript* and *SCSS*)\
+                    \n- *Typescript* to define shared data structures and catch errors at compile time\
+                    \n- *RXjs* to simplify the management of asynchronous and event-based logic caused by video streaming\
+                    \n- *SCSS* to manage component styles and maintain a scalable architecture\
+                    \n- *Storybook.js* to document and showcase shared components used across packages\
                     \n- *Git* as the version control system\
                     \n- *VS Code* as the IDE\
                     \n- *Yarn* to run and build different parts of Diva\
-                    \n- *Jest* to manage unit tests\
-                    \n- *JSON* as the standard format to exchange data between frontend and backend\
-                    \n- *Jira* to manage project tasks and issues\
-                    \n- *Windows* or *MacOS* as operating systems",
+                    \n- *Jest* for unit testing\
+                    \n- *JSON* as the standard format for frontend-backend data exchange\
+                    \n- *Jira* for task and issue tracking\
+                    \n- *Windows* or *macOS* as operating systems",
         },
         {
           type: "subtitle",
@@ -887,24 +904,23 @@ export const projects = {
         {
           type: "text",
           value:
-            "We worked in 2-week sprints, and between each sprint we presented the completed work and decided which user stories to take for the next iterations.\
-                      The stories could be created by the teams analyzing upcoming components to implement, or by me and my team when we wanted to:\
-                      \n- Perform a large refactor of the codebase\
-                      \n- Update existing components\
-                      \n\nWhen we completed a user story, we deployed it to the *dev* environment to test it internally. Afterwards, we deployed it to the *test* environment to allow the QA team to verify that all requirements were met without errors. If requirements were not met or issues were found, we fixed the problems and redeployed first to *dev* and then to *test*. We repeated this process until the user story fully met the requirements without bugs or errors.\
-                      \nIn our workflow we used three different environments: *dev*, *test*, and *prod*.\
-                      \n- *dev* was used for developer testing and early validation of requirements\
-                      \n- *test* was used as a stable pre-production environment for official demos when needed\
-                      \n- *prod* was the final environment where the application was deployed and used by real customers",
+            "We worked in 2-week sprints. At the end of each sprint, we reviewed completed work and selected user stories for the next iteration.\
+                      User stories were created either by analyzing upcoming features or proactively by my team when we needed to:\
+                      \n- Perform major refactors of the codebase\
+                      \n- Improve or extend existing components\
+                      \n\nOnce a user story was completed, it was deployed to the *dev* environment for internal testing, then to the *test* environment for QA validation. If issues were found, we fixed them and redeployed to *dev* and *test* until all requirements were fully met.\
+                      \nOur workflow included three environments: *dev*, *test*, and *prod*.\
+                      \n- *dev* for early validation and developer testing\
+                      \n- *test* as a stable pre-production environment\
+                      \n- *prod* as the final environment used by end customers",
         },
-      ]
-      ,
+      ],
     },
     // Digital Box
     {
-      title: "TeamSystems - Digital Box",
+      title: "TeamSystem - Digital Box",
       description:
-        "Web application designed for professional firms that wanted to achieve information-sharing processes, improve relationships with their customers, and involve them by exchanging information also in real time.",
+        "A web application designed for professional firms to streamline information sharing, strengthen relationships with their customers, and enable real-time data exchange.",
       links: [
         {
           label: "Digital Box",
@@ -931,7 +947,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "I worked, using Agile methodologies, as a frontend developer on the Digital Box application in order to update the functionalities already available and implement new ones. Furthermore, I fixed bugs and refactored old components to create more readable code and improve performance.",
+            "I worked as a frontend developer on the Digital Box application using Agile methodologies, improving existing features, implementing new ones, fixing bugs, and refactoring legacy components to improve readability and performance.",
         },
         {
           type: "subtitle",
@@ -940,20 +956,20 @@ export const projects = {
         {
           type: "text",
           value:
-            "- *React* as the frontend framework (with *Javascript* and *HTML*, obviously) \
-                    \n- *Redux* as state management inside the application\
-                    \n- *CSS* to manage the styles of components created internally in the application\
-                    \n- *Jest* to manage unit tests\
-                    \n- *Cypress* to manage integration tests\
-                    \n- *Storybook.JS* to manage the documentation for common components used in different parts of the application\
+            "- *React* as the frontend framework (with *JavaScript* and *HTML*)\
+                    \n- *Redux* for state management\
+                    \n- *CSS* to style internally developed components\
+                    \n- *Jest* for unit testing\
+                    \n- *Cypress* for integration testing\
+                    \n- *Storybook.js* to document shared UI components\
                     \n- *Git* as the version control system\
-                    \n- *Python* to automate some tasks during the development process\
-                    \n- *Docker* to run the backend locally\
+                    \n- *Python* to automate development-related tasks\
+                    \n- *Docker* to run backend services locally\
                     \n- *VS Code* as the IDE\
-                    \n- *JSON* as the standard format to exchange data between frontend and backend\
-                    \n- *Swagger* as documentation to analyze backend APIs\
-                    \n- *Jira* to manage project tasks and issues\
-                    \n- *Windows* or *MacOS* as operating systems",
+                    \n- *JSON* as the standard data exchange format\
+                    \n- *Swagger* to analyze and understand backend APIs\
+                    \n- *Jira* for task and issue tracking\
+                    \n- *Windows* or *macOS* as operating systems",
         },
         {
           type: "subtitle",
@@ -962,30 +978,29 @@ export const projects = {
         {
           type: "text",
           value:
-            "We worked in 2-week sprints, and between each sprint we presented the completed work and decided which user stories to take for the next sprints.\
-                    The stories could be created by teams analyzing upcoming components to implement, or by my team and me when we wanted to:\
-                    \n- Perform a large refactor of the codebase\
-                    \n- Update existing components\
-                    \n\nWhen we completed a user story, we deployed it to the *dev* environment to test it internally. Then we deployed it to the *test* environment to allow the QA team to verify that all requirements were met without errors. If requirements were not met or issues were found, we fixed the problems and redeployed first to *dev* and then to *test*. We repeated this process until the user story fully met the requirements without bugs or errors.\
-                    \nIn our workflow, we used three different environments: *dev*, *test*, and *prod*.\
-                    \n- *dev* was used for developer testing and early validation of requirements\
-                    \n- *test* was used as a stable pre-production environment for official demos when needed\
-                    \n- *prod* was the final environment where the application was deployed and used by real customers",
+            "We worked in 2-week sprints. At the end of each sprint, we reviewed completed work and selected user stories for the next iteration.\
+                    User stories were created either by analyzing upcoming features or proactively by my team to:\
+                    \n- Perform large-scale refactors of the codebase\
+                    \n- Improve or extend existing components\
+                    \n\nCompleted user stories were first deployed to the *dev* environment for internal testing, then to the *test* environment for QA validation. Issues were fixed iteratively until all requirements were met.\
+                    \nWe used three environments in our workflow: *dev*, *test*, and *prod*.\
+                    \n- *dev* for early validation\
+                    \n- *test* for stable pre-production demos\
+                    \n- *prod* for the live application used by customers",
         },
         {
           type: "subtitle",
-          value: "Interaction with backend",
+          value: "Interaction with Backend",
         },
         {
           type: "text",
           value:
-            "We did not rely on a single backend server, but on multiple services, some of which were developed with Spring Boot (Java) and others with NodeJS (JavaScript).\
-                    \nWhen we deployed new components or functionalities in the application, the required APIs could already exist or not.\
-                    \nIn the first case, we used them directly and, if necessary, suggested improvements.\
-                    \nIn the second case, we mocked server responses in the Redux store, shared the JSON structure of the mocked data with the backend team, and they implemented the APIs.",
+            "The application interacted with multiple backend services, some developed with Spring Boot (Java) and others with Node.js (JavaScript).\
+                    \nWhen introducing new features, required APIs could either already exist or need to be implemented.\
+                    \nIf APIs were available, we consumed them directly and proposed improvements when necessary.\
+                    \nIf not, we mocked server responses in the Redux store, shared the JSON structures with the backend team, and collaborated on the final API implementation.",
         },
       ],
-
     },
     // Traveltips
     {

@@ -2,21 +2,17 @@ import jsPDF from 'jspdf';
 import { en } from '../i18n/en';
 import { it as itLang } from '../i18n/it';
 
-// choose translations based on URL parameter (default EN)
-const getLocaleTranslations = () => {
-  if (typeof window === 'undefined') return en;
+// choose translations based on an optional lang parameter or URL parameter (default EN)
+const getLocaleTranslations = (langParam?: string) => {
+  if (typeof window === 'undefined' && !langParam) return en;
   try {
-    const params = new URLSearchParams(window.location.search);
-    const lang = params.get('lang');
+    const lang = langParam ?? (typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('lang') : null);
     if (lang === 'it') return itLang;
   } catch (e) {
     // ignore parsing errors and fallback to EN
   }
   return en;
 };
-
-const t = getLocaleTranslations();
-const { hero, career, projects, whoIam, home } = t;
 
 export const generateCV = () => {
   const doc = new jsPDF();
@@ -56,22 +52,25 @@ export const generateCV = () => {
     return currentY;
   };
 
-    // Localized section titles
-  const localeParam = (typeof window !== 'undefined') ? new URLSearchParams(window.location.search).get('lang') : null;
-  const isIt = localeParam === 'it';
-  const labels = {
-    aboutMe: isIt ? 'Chi sono' : 'About Me',
-    websiteInvite: isIt ? "Per il CV completo e maggiori dettagli visita il mio sito: https://fangelo94.github.io/" : 'For the full CV and more details please visit my website: https://fangelo94.github.io/',
-    contacts: isIt ? 'Contatti' : 'Contacts',
-    lastExperience: isIt ? 'Ultime esperienze professionali' : 'Last Professional Experience',
-    projects: isIt ? 'Ultimi progetti' : 'Last Projects',
-    projectsInvite: isIt ? 'Per la lista completa dei progetti e i dettagli visita il mio sito.' : 'For the complete list of projects and full details for each project, please visit my website.',
-    allTech: isIt ? "Tutte le tecnologie che ho usato" : 'All technologies I used',
-    mainTech: isIt ? 'Tecnologie principali' : 'Main Technologies',
-    education: isIt ? 'Formazione' : 'Education',
-    visitCareer: isIt ? 'Per vedere tutte le mie esperienze visita il mio sito.' : 'To see my complete list of work experiences please visit my website.',
-    mainSubtitle: isIt ? 'Sono la persona giusta per te se' : 'I am the right person for you if',
-  };
+    // Resolve locale and load translations at runtime
+    const params = (typeof window !== 'undefined') ? new URLSearchParams(window.location.search) : null;
+    const lang = params?.get('lang') || undefined;
+    const t = getLocaleTranslations(lang);
+    const { hero, career, projects, whoIam, home } = t;
+    const isIt = lang === 'it';
+    const labels = {
+      aboutMe: isIt ? 'Chi sono' : 'About Me',
+      websiteInvite: isIt ? "Per il CV completo e maggiori dettagli visita il mio sito: https://angelofalci.com/" : 'For the full CV and more details please visit my website: https://angelofalci.com/',
+      contacts: isIt ? 'Contatti' : 'Contacts',
+      lastExperience: isIt ? 'Ultime esperienze professionali' : 'Last Professional Experience',
+      projects: isIt ? 'Ultimi progetti' : 'Last Projects',
+      projectsInvite: isIt ? 'Per la lista completa dei progetti e i dettagli visita il mio sito.' : 'For the complete list of projects and full details for each project, please visit my website.',
+      allTech: isIt ? "Tutte le tecnologie che ho usato" : 'All technologies I used',
+      mainTech: isIt ? 'Tecnologie principali' : 'Main Technologies',
+      education: isIt ? 'Formazione' : 'Education',
+      visitCareer: isIt ? 'Per vedere tutte le mie esperienze visita il mio sito.' : 'To see my complete list of work experiences please visit my website.',
+      mainSubtitle: isIt ? 'Sono la persona giusta per te se' : 'I am the right person for you if',
+    };
 
   // Header
   doc.setFontSize(24);

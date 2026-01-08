@@ -234,7 +234,7 @@ export const it: Translations = {
     ...career,
     title: "Carriera e studi",
     schools: career.schools.map((school) => {
-      if (school.title === "State Exam for Informatic Engineering") {
+      if (school.title === "State Examination for Information Engineering") {
         return {
           ...school,
           title: "Esame di Stato per Ingegneria Informatica",
@@ -243,7 +243,7 @@ export const it: Translations = {
           when: "2025",
         };
       }
-      if (school.title === "Master of Computer Science and Engineering") {
+      if (school.title === "Master’s Degree in Computer Science and Engineering") {
         return {
           ...school,
           title: "Master of Computer Science and Engineering",
@@ -253,7 +253,7 @@ export const it: Translations = {
           links: school.links?.map((l) => ({ ...l, title: l.title })),
         };
       }
-      if (school.title === "Computer Science and Engineering") {
+      if (school.title === "Bachelor’s Degree in Computer Science and Engineering") {
         return {
           ...school,
           title: "Laurea Triennale in Ingegneria Informatica",
@@ -263,7 +263,7 @@ export const it: Translations = {
           links: school.links?.map((l) => ({ ...l, title: l.title })),
         };
       }
-      if (school.title === "Diploma in Computer Expert") {
+      if (school.title === "High School Diploma in Computer Science") {
         return {
           ...school,
           title: "Diploma perito informatico",
@@ -301,7 +301,7 @@ export const it: Translations = {
           whereAndWhen: "Da remoto, 10/2021 - 09/2022",
         };
       }
-      if (job.company === "Consultant in Stellantis" && job.whereAndWhen.includes("Turin")) {
+      if (job.company === "Consultant at Stellantis" && job.whereAndWhen.includes("Turin")) {
         return {
           ...job,
           title: "Autonomous Driving Software Engineer",
@@ -310,7 +310,7 @@ export const it: Translations = {
           whereAndWhen: "Torino - Italia, 02/2020 - 10/2021",
         };
       }
-      if (job.company === "Consultant in Stellantis" && job.whereAndWhen.includes("Munich")) {
+      if (job.company === "Consultant at Stellantis" && job.whereAndWhen.includes("Munich")) {
         return {
           ...job,
           title: "Autonomous Driving Software Engineer",
@@ -328,7 +328,7 @@ export const it: Translations = {
           whereAndWhen: "Milano - Italia, 11/2018 - 10/2019",
         };
       }
-      if (job.company === "JOL Laboratory, Tim") {
+      if (job.company === "JOL Laboratory, TIM") {
         return {
           ...job,
           title: "IoT Developer",

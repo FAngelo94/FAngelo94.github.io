@@ -1,7 +1,7 @@
 #  CV - Angelo Falci (Work in Progress!)
 
 This project is created with CRA (Create React App).
-Go to this link to see my cv: https://fangelo94.github.io/
+Go to this link to see my cv: https://angelofalci.com/
 
 ## Tecnologie usate:
 - React

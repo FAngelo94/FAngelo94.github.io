@@ -307,7 +307,7 @@ export const career = {
     },
     {
       title: "Senior Frontend Developer",
-      company: "Deltatre",
+      company: "DeltaTre",
       link: "https://www.deltatre.com/",
       description:
         "I worked on the Diva project, a custom video player with many advanced features. The main technologies I used include React, Vanilla JavaScript, TypeScript, RxJS, Node.js, Storybook, Webpack, and Babel.",

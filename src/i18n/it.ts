@@ -206,7 +206,7 @@ export const it: Translations = {
     contacts: "Contatti",
     experience: "Esperienza",
     toggle: "Attiva/Disattiva",
-    generatePdf: "Genera PDF",
+    generatePdf: "Scarica PDF",
     menuOpen: "Apri menu",
     menuClose: "Chiudi menu",
   },

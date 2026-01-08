@@ -1006,7 +1006,7 @@ export const projects = {
     {
       title: "Personal Project - Traveltips Web Application",
       description:
-        "This is an application that user will use to share information about cities and tourist places like a social network focused on travel.\n I developed both backend and frontend for a startup but I didn't finish the project because they aren't interested anymore on it. Backend is down at the moment, only frontend is visible.",
+        "A web application designed as a travel-focused social network, where users can share information about cities and tourist destinations.\nI developed both the backend and frontend for a startup, but the project was not completed because the company decided to discontinue it. The backend is currently offline, so only the frontend is available.",
       links: [
         {
           label: "Traveltips App",
@@ -1029,7 +1029,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "Web application that user will use to share information about cities and tourist places like a social network focused on travel.\n I developed both backend and frontend for a startup but I didn't finish the project because they aren't interested anymore on it. Backend is down at the moment, only frontend is visible.",
+            "A travel-focused social web application where users can share information about cities and tourist destinations.\nI developed both the backend and frontend for a startup, but the project was discontinued due to a change in business priorities. The backend is currently offline, so only the frontend is visible.",
         },
         {
           type: "subtitle",
@@ -1037,27 +1037,27 @@ export const projects = {
         },
         {
           type: "text",
-          value: "For the frontend these are the main technologies I used:",
+          value: "For the frontend, these are the main technologies I used:",
         },
         {
           type: "text",
           value:
-            "*React* as frontend,\n*Redux* to manage the store of application \n*Bootstrap* 5 to manage the graphics property of the application \n*Firebase* to deploy the application\n*Jest* to manage tests",
+            "*React* as the frontend framework,\n*Redux* to manage the application state\n*Bootstrap 5* to manage the UI and layout\n*Firebase* to deploy the application\n*Jest* to manage tests",
         },
         {
           type: "text",
           value:
-            "I organized the architecture of the application in 6 main folders:",
+            "I organized the application architecture into six main folders:",
         },
         {
           type: "text",
           value:
-            "- *bootstrap* contains all scss code that define the classes used in the application\
-                \n- *components* contains all UI components rendered inside the application\
-                \n- *languages* contains one json for each languages user can select in the application\
-                \n- *pages*\
-                \n- *store* to manage the information saved inside the application, included all action other components can use to interact with the store and API services\
-                \n- *utils* contains a list of functionalities used in different parts of the application, divided in some file",
+            "- *bootstrap* contains all SCSS code defining the utility and layout classes used in the application\
+                \n- *components* contains all reusable UI components rendered in the application\
+                \n- *languages* contains one JSON file for each supported language\
+                \n- *pages* contains all application pages\
+                \n- *store* manages the global application state, including actions and API interactions\
+                \n- *utils* contains shared utility functions used across different parts of the application",
         },
         {
           type: "subtitle",
@@ -1065,25 +1065,26 @@ export const projects = {
         },
         {
           type: "text",
-          value: "For the backend these are the main technologies I used:",
+          value: "For the backend, these are the main technologies I used:",
         },
         {
           type: "text",
           value:
-            "- *Flask* micro-framework developed in *Python*, I choose these language for different reason, it’s faster develop in Python and in future it will be easier integrate the backend with recommender algorithms written in Python to improve the user experience\
-                \n- *mysql* to manage the database because the information inside the application are well structured\
-                \n- *phpmyadmin* docker image used locally to explore the local database using an UI\
-                \n- *docker* and *docker-compose* to develop easly the backend locally where 3 docker image are run, one for Flask, one for mysql and one for phpmyadmin\
-                \n- *Swagger* to create a list of API documented well\
-                \n- *marshmallow*, *SQLAlchemy* and *connexion* to manage easly the tables in the db inside the API",
+            "- *Flask*, a micro-framework developed in *Python*. I chose Python because it enables rapid development and makes future integration with recommendation algorithms easier\
+                \n- *MySQL* to manage the database, as the application data is highly structured\
+                \n- *phpMyAdmin* Docker image used locally to explore and manage the database via a UI\
+                \n- *Docker* and *docker-compose* to easily develop the backend locally, running three containers (Flask, MySQL, and phpMyAdmin)\
+                \n- *Swagger* to create well-documented APIs\
+                \n- *Marshmallow*, *SQLAlchemy*, and *Connexion* to simplify database modeling and API management",
         },
         {
           type: "subtitle",
-          value: "Other technologies",
+          value: "Other Technologies",
         },
         {
           type: "text",
-          value: "- *Git*\
+          value:
+            "- *Git*\
                 \n- *Visual Studio Code*",
         },
       ],
@@ -1109,9 +1110,9 @@ export const projects = {
     },
     // FCA Project
     {
-      title: "Stellantis - Validation of ADAS System",
+      title: "Stellantis - Validation of ADAS Systems",
       description:
-        "As consultant I worked inside Stellantis (previous FCA) in an engineering team that manage the different tools used by other team in order to validate the autonomous driving algorithm. We worked together other teams that are in different part of the world.",
+        "As a consultant, I worked at Stellantis (formerly FCA) within an engineering team responsible for managing and maintaining tools used to validate autonomous driving algorithms. We collaborated with teams located across different regions worldwide.",
       links: [],
       mainSkills: ["C++", "Docker", "Python", "Ubuntu"],
       allSkills: [
@@ -1136,22 +1137,22 @@ export const projects = {
         {
           type: "text",
           value:
-            "As a consultant, I worked at Stellantis (previously FCA) on a large project related to autonomous driving.",
+            "As a consultant, I worked at Stellantis (formerly FCA) on a large-scale project related to autonomous driving validation.",
         },
         {
           type: "subtitle",
-          value: "What I did",
+          value: "What I Did",
         },
         {
           type: "text",
           value:
-            "I worked, using the AGILE methodology, within an engineering team that managed different tools used by other teams to validate autonomous driving algorithms. We collaborated with multiple teams located in different parts of the world.\
-                    \nSome of our main activities were:\
-                    \n- Customizing simulation software purchased by Stellantis according to specific requirements (using C++ for the core and C#/Unity for the GUI)\
-                    \n- Implementing Docker images with specific tests and pushing them to a cluster, enabling other teams to run tests remotely\
-                    \n- Implementing DAGs in Airflow (using Python) to manage pipeline tasks such as pushing KPIs to a database\
-                    \n- Building Grafana dashboards to visualize simulation outputs\
-                    \n- Defining upcoming features and tests to implement in the simulation tool together with other teams",
+            "I worked using Agile methodologies within an engineering team responsible for maintaining and extending validation tools used by other teams. We collaborated with multiple international teams.\n\
+                    \nMy main responsibilities included:\n\
+                    \n- Customizing simulation software according to Stellantis requirements (C++ for the core logic and C#/Unity for the GUI)\n\
+                    \n- Creating Docker images containing specific test suites and deploying them to a cluster, allowing teams to run tests remotely\n\
+                    \n- Implementing Airflow DAGs (using Python) to orchestrate pipelines and push KPIs to databases\n\
+                    \n- Building Grafana dashboards to visualize simulation outputs\n\
+                    \n- Defining new features and test scenarios in collaboration with other teams",
         },
         {
           type: "subtitle",
@@ -1160,12 +1161,12 @@ export const projects = {
         {
           type: "text",
           value:
-            "We worked using AGILE SCRUM with 2-week sprints.\
-                    \nWe not only took care of items added by our APO, but we also proposed items that helped us achieve our delivery goals.",
+            "We followed the Agile Scrum methodology with 2-week sprints.\n\
+                    \nIn addition to tasks defined by the APO, we proactively proposed improvements to better meet delivery goals.",
         },
         {
           type: "subtitle",
-          value: "Programming languages",
+          value: "Programming Languages",
         },
         {
           type: "text",
@@ -1173,16 +1174,16 @@ export const projects = {
             "- *C++*\
                     \n- *Python*\
                     \n- *C#*\
-                    \n- *Bash script*",
+                    \n- *Bash scripting*",
         },
         {
           type: "subtitle",
-          value: "Operative Systems",
+          value: "Operating Systems",
         },
         {
           type: "text",
           value:
-            "- *Ubuntu* (mainly)\
+            "- *Ubuntu* (primary)\
                     \n- *Windows 10*",
         },
         {
@@ -1194,26 +1195,24 @@ export const projects = {
           value:
             "- *Visual Studio Code*\
                     \n- *Unity*\
-                    \n- *Github*\
+                    \n- *GitHub*\
                     \n- *Docker*\
                     \n- *Airflow*\
                     \n- *Jenkins*\
                     \n- *Codebeamer*\
                     \n- *Grafana*\
-                    \n- *NDS and OpenDRIVE* map formats\
-                    \n- *Online Google Sheets* (documents, spreadsheets, presentations)\
+                    \n- *NDS* and *OpenDRIVE* map formats\
+                    \n- *Google Workspace* (documents, spreadsheets, presentations)\
                     \n- *ROS*",
         },
-      ]
-      ,
+      ],
     },
     // React-Redux application
     {
       title:
-        "Accenture - React-Redux Application for a Big Company in the Energy Sector",
+        "Accenture - React-Redux Application for a Large Energy Company",
       description:
-        " I developed a web application using React with Redux.\
-            \nI realized a React application to collect and visualize multiple data, coming in an asynchronous way from different station distributed in Italy.",
+        "I developed a web application using React and Redux to collect and visualize asynchronous data coming from multiple stations distributed across Italy.",
       links: [],
       mainSkills: ["NodeJS", "Python", "React", "Redux", "Stencil JS"],
       allSkills: [
@@ -1244,9 +1243,9 @@ export const projects = {
         {
           type: "text",
           value:
-            "In my fourth project, I developed a web application using React with Redux.\
-      \nI worked in Agile mode (Scrum specifically) in a team composed mainly of 2 frontend developers, 2 functional analysts, 1 UI designer, 2 backend developers, and 1 Scrum Master.\
-      \nI built a React application to collect and visualize multiple data points arriving asynchronously from various stations distributed across Italy.",
+            "In my fourth project, I developed a web application using React and Redux.\n\
+      I worked in an Agile (Scrum) environment within a multidisciplinary team composed of frontend developers, functional analysts, a UI designer, backend developers, and a Scrum Master.\n\
+      The application collected and visualized multiple data streams arriving asynchronously from stations distributed across Italy.",
         },
         {
           type: "subtitle",
@@ -1258,7 +1257,7 @@ export const projects = {
             "- *HTML*\
       \n- *CSS*\
       \n- *Sass*\
-      \n- *JS6*\
+      \n- *ES6 JavaScript*\
       \n- *Python*\
       \n- *Java*",
         },
@@ -1274,11 +1273,11 @@ export const projects = {
       \n- *NodeJS*\
       \n- *Stencil JS*\
       \n- *Storybook UI*\
-      \n- *Chrome, Firefox, Safari, and IE11* to test and modify components at runtime\
-      \n- *Visual Studio Code* as the editor\
-      \n- *Git* for the online repository\
-      \n- *Jupyter Notebook* for Python code\
-      \n- *MQTT* to connect with the server",
+      \n- *Chrome, Firefox, Safari, and IE11* for cross-browser testing\
+      \n- *Visual Studio Code* as the IDE\
+      \n- *Git* as the version control system\
+      \n- *Jupyter Notebook* for Python experimentation\
+      \n- *MQTT* to communicate with backend services",
         },
         {
           type: "subtitle",
@@ -1287,10 +1286,10 @@ export const projects = {
         {
           type: "text",
           value:
-            "We introduced only a few libraries to implement complex components.\
-      \n- *LeafletJS* to implement an interactive map, one of the main components on the homepage\
-      \n- *D3.js* to draw dynamic and custom SVGs\
-      \n- *React Intl* to support multi-language functionality on the website",
+            "We intentionally limited external libraries, introducing them only when necessary to build complex components.\n\
+      \n- *LeafletJS* for the interactive map, one of the core homepage components\n\
+      \n- *D3.js* to render dynamic and customizable SVG graphics\n\
+      \n- *React Intl* to support multi-language functionality",
         },
         {
           type: "subtitle",
@@ -1299,7 +1298,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "Here I describe the main components I developed during the project, without going into client-specific details.",
+            "Below is an overview of the main components I developed during the project, without exposing client-specific details.",
         },
         {
           type: "subtitle",
@@ -1308,20 +1307,18 @@ export const projects = {
         {
           type: "text",
           value:
-            "One of the first components was a map centered on Italy. To build it, I used Leaflet JS.\
-      \nI placed an icon on the map using geographic coordinates for each company station. When the user clicked an icon, a popup appeared showing station-related data, which updated in real time.\
-      \nFrom the popup, the user could also navigate to the station's page by clicking the popup title.\
-      \nLater, I added an image over Italy and another over Europe and North Africa to apply an opacity filter to all countries except Italy.\
-      \nI restricted zooming and panning to focus user attention on Italy. Some objects disappeared when zooming in too much to keep only the stations visible.",
+            "One of the first components was a map centered on Italy, built using LeafletJS.\n\
+      Each station was represented by an icon placed using geographic coordinates. Clicking on an icon opened a popup displaying real-time station data, with a link to the station detail page.\n\
+      I later added geographic overlays to highlight Italy while dimming surrounding regions, and restricted zoom and pan interactions to keep user focus on relevant data.",
         },
         {
           type: "subtitle",
-          value: "2) Server with NodeJS",
+          value: "2) NodeJS Server",
         },
         {
           type: "text",
           value:
-            "When we started frontend development, we did not have a backend, so I created a local NodeJS server to send fake data to the frontend using GET requests (for basic station info) and a socket to send asynchronous data every second.",
+            "At the beginning of frontend development, the backend was not yet available. I implemented a local NodeJS server that provided mock data via REST APIs and streamed asynchronous updates through a socket connection.",
         },
         {
           type: "subtitle",
@@ -1330,8 +1327,8 @@ export const projects = {
         {
           type: "text",
           value:
-            "Each station had different pages displaying data from the server. Some pages included graphics representing station components with data. I used D3.js to create SVG graphics that adapted to page dimensions without losing quality.\
-      \nMany pages had similar drawing components. To avoid repeated code, I created a function for each component type that drew and customized it using a JSON configuration passed from the current page.",
+            "Each station page displayed graphical representations of station components and metrics. I used D3.js to generate responsive SVG graphics that scaled without loss of quality.\n\
+      To avoid code duplication, I created reusable rendering functions driven by JSON configurations.",
         },
         {
           type: "subtitle",
@@ -1340,9 +1337,8 @@ export const projects = {
         {
           type: "text",
           value:
-            "I used React Intl to support English and Italian. I created two JSON files, one for Italian terms and one for English, assigning the same set of keys to the correct translation.\
-      \nI then created a global function usable throughout the code: pass a key and the function returned the correct translation based on the language set in local storage.\
-      \nWhen the user changed the language, I saved the new setting in session storage and the page reloaded to update the language.",
+            "I implemented multi-language support using React Intl, defining parallel JSON files for Italian and English.\n\
+      A shared utility function returned the correct translation based on the selected language, which was persisted in storage and applied on reload.",
         },
         {
           type: "subtitle",
@@ -1351,23 +1347,19 @@ export const projects = {
         {
           type: "text",
           value:
-            "We used Redux-Saga to store data from the server.\
-      \nWe received asynchronous data, and Redux prevented duplicate values for the same property. The centralized state made website management easier, and with a Chrome tool, we could monitor state evolution to simplify debugging.\
-      \nRedux separated application data, so the frontend did not need to manage server connections but only use the data provided.\
-      \nAll communication and data retrieval logic was implemented in Redux, keeping the code clean and maintainable.",
+            "Redux-Saga was used to centralize data retrieval and storage.\n\
+      Asynchronous updates were normalized to prevent duplicated values, and the global state simplified debugging and data flow management.\n\
+      All communication logic was isolated from the UI, keeping components clean and maintainable.",
         },
         {
           type: "subtitle",
-          value: "6) Building JSON Data",
+          value: "6) JSON Data Generation",
         },
         {
           type: "text",
           value:
-            "After deciding the best format to store data in our application, I created JSON files with random data using Python.\
-      \nI used Python for two reasons:\
-      \n- The data was not fully random but constrained within specific ranges\
-      \n- I repeatedly manipulated these JSON files, saving time thanks to Python\
-      \nWhen real data arrived from CSV files, I used Python to process them and build realistic JSON data for the backend so they knew the correct format for real data.",
+            "Before real data was available, I generated realistic JSON datasets using Python.\n\
+      This approach allowed controlled randomness and fast iteration. Later, Python scripts were also used to convert CSV inputs into backend-ready JSON structures.",
         },
         {
           type: "subtitle",
@@ -1376,7 +1368,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "To improve performance, we avoided scripts when possible. For example, we used pure CSS accordions and toggles for filters.",
+            "To improve performance, we minimized JavaScript usage where possible, relying on pure CSS solutions for components such as accordions and toggle filters.",
         },
         {
           type: "subtitle",
@@ -1385,7 +1377,7 @@ export const projects = {
         {
           type: "text",
           value:
-            "When the backend was ready, we first tried a socket connection, but backend technologies only supported MQTT communication. We then implemented an MQTT connection by subscribing our client to a topic where the server queued data.",
+            "Once the backend was available, we replaced sockets with MQTT due to infrastructure constraints. The client subscribed to specific topics where the server published real-time data.",
         },
         {
           type: "subtitle",
@@ -1394,14 +1386,12 @@ export const projects = {
         {
           type: "text",
           value:
-            "To draw the Cartesian graph of some complex functions, I used Python to calculate a set of points, then used them in React to render the function.\
-      \nIn these graphs, I implemented two features:\
-      \n- The ability to drag and zoom the graph in/out\
-      \n- The ability to select a specific section and zoom into it",
+            "For complex mathematical functions, I used Python to calculate data points and then rendered them in React.\n\
+      These graphs supported drag, zoom, and area selection to analyze specific data ranges.",
         },
-      ]
-
+      ],
     },
+
     // Gazzetta dello Sport
     {
       title: "Accenture - Gazzetta dello Sport",

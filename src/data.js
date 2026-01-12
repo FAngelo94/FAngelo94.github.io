@@ -300,7 +300,7 @@ export const career = {
     {
       title: "Software Engineer",
       company: "Freelance",
-      link: "https://www.linkedin.com/in/angelo-falci-1292ab76/",
+      link: "https://www.linkedin.com/in/angelo-falci/",
       description:
         "I work as a freelance software engineer, developing full-stack web applications for both large companies and startups. Beyond development, I help clients refine their ideas and choose the most suitable technologies and architectures based on their needs. On some projects, I also coordinated internal teams.",
       whereAndWhen: "Remote, 04/2025 - Present",

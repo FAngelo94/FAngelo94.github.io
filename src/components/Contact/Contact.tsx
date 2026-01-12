@@ -41,7 +41,7 @@ export function Contact() {
         <a href="https://web.telegram.org/#/im?p=@fangelo94" target="_blank" rel="noreferrer">
           <img src={telegram} alt="Telegram" />
         </a>
-        <a href="https://www.linkedin.com/in/angelo-falci-1292ab76/" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/angelo-falci/" target="_blank" rel="noreferrer">
           <img src={linkedinIcon} alt="LinkedIn" />
         </a>
       </div>

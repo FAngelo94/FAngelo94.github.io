@@ -114,7 +114,7 @@ export const generateCV = () => {
   doc.setFont("helvetica", "normal");
   yPosition = addWrappedText("Email: a.falci@live.it", margin, yPosition, pageWidth - 2 * margin, 11);
   yPosition = addWrappedText("Phone: +39 347 3927579", margin, yPosition, pageWidth - 2 * margin, 11);
-  yPosition = addWrappedText("LinkedIn: https://www.linkedin.com/in/angelo-falci-1292ab76/", margin, yPosition, pageWidth - 2 * margin, 11);
+  yPosition = addWrappedText("LinkedIn: https://www.linkedin.com/in/angelo-falci/", margin, yPosition, pageWidth - 2 * margin, 11);
   yPosition = addWrappedText("GitHub: https://github.com/FAngelo94/FAngelo94.github.io", margin, yPosition, pageWidth - 2 * margin, 11);
   yPosition += 50;
 

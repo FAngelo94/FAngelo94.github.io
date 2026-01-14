@@ -1,5 +1,6 @@
 import { Container } from "./styles";
 import emailIcon from "../../assets/email-icon.svg";
+import pecIcon from "../../assets/pec-icon.svg";
 import phoneIcon from "../../assets/phone-icon.svg";
 import linkedinIcon from "../../assets/linkedin.png";
 import telegram from "../../assets/telegram.png";
@@ -43,6 +44,9 @@ export function Contact() {
         </a>
         <a href="https://www.linkedin.com/in/angelo-falci/" target="_blank" rel="noreferrer">
           <img src={linkedinIcon} alt="LinkedIn" />
+        </a>
+        <a href="mailto:angelo.falci@ingpec.eu" target="_blank" rel="noreferrer">
+          <img src={pecIcon} alt="PEC" />
         </a>
       </div>
     </Container>

@@ -1,83 +1,74 @@
 import React from "react";
 import { Container } from "./style";
+import { useI18n } from "../i18n/I18nProvider";
+
+function renderParagraph(p: string, key: string) {
+  const lines = p.split("\n");
+  const urlEmailRegex = /(https?:\/\/[^\s]+|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})/g;
+
+  return (
+    <p key={key}>
+      {lines.map((line, li) => (
+        <React.Fragment key={li}>
+          {line
+            .split(urlEmailRegex)
+            .filter(Boolean)
+            .map((part, idx) => {
+              if (/^https?:\/\//.test(part)) {
+                return (
+                  <a key={idx} href={part} target="_blank" rel="noreferrer">
+                    {part}
+                  </a>
+                );
+              }
+              if (/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(part)) {
+                return (
+                  <a key={idx} href={`mailto:${part}`}>
+                    {part}
+                  </a>
+                );
+              }
+              return <span key={idx}>{part}</span>;
+            })}
+          {li < lines.length - 1 && <br />}
+        </React.Fragment>
+      ))}
+    </p>
+  );
+}
 
 export default function CookiePolicy(): JSX.Element {
+  const { t } = useI18n();
+  const page = t.cookie;
+
+  if (!page) {
+    return (
+      <Container>
+        <h1>Cookie Policy</h1>
+        <p>Translation missing.</p>
+      </Container>
+    );
+  }
+
   return (
     <Container>
-      <h1>🍪 Cookie Policy</h1>
-      <small className="updated">Ultimo aggiornamento: <strong>15/01/2026</strong></small>
+      <h1>{page.title}</h1>
+      <small className="updated">{page.updatedLabel}: <strong>15/01/2026</strong></small>
 
-         <h2>1. Cosa sono i cookie</h2>
-         <p>
-           I cookie sono piccoli file di testo che i siti visitati inviano al dispositivo dell'utente, dove vengono
-           memorizzati per essere poi ritrasmessi agli stessi siti alla visita successiva.
-         </p>
-         
-         <hr />
-         
-         <h2>2. Tipologie di cookie utilizzati</h2>
-         <h3>Cookie tecnici</h3>
-         <p>
-           Questo sito utilizza cookie tecnici necessari al corretto funzionamento del sito. Questi cookie
-           <strong> non richiedono il consenso dell'utente</strong>.
-         </p>
-         
-         <hr />
-         
-         <h3>Cookie di analisi (Google Analytics)</h3>
-         <p>
-           Il sito utilizza <strong>Google Analytics</strong> per raccogliere informazioni statistiche in forma aggregata sull'uso del sito.
-         </p>
-         <p>I cookie di Google Analytics consentono di:</p>
-         <ul>
-           <li>capire come gli utenti utilizzano il sito</li>
-           <li>migliorare contenuti e prestazioni</li>
-         </ul>
-         <p>
-           Gli indirizzi IP vengono <strong>anonimizzati</strong> e i dati non vengono utilizzati per identificare l'utente.
-         </p>
-         <p>
-           Questi cookie vengono installati <strong>solo dopo il consenso dell'utente</strong>.
-         </p>
-         
-         <hr />
-         
-         <h2>3. Gestione del consenso</h2>
-         <p>
-           Al primo accesso al sito, l'utente può:
-         </p>
-         <ul>
-           <li>accettare i cookie di analisi</li>
-           <li>rifiutarli</li>
-           <li>modificare le proprie preferenze in qualsiasi momento</li>
-         </ul>
-      
-        <hr />
-
-        <h2>4. Come disabilitare i cookie dal browser</h2>
-        <p>
-          L'utente può inoltre gestire o disabilitare i cookie direttamente dalle impostazioni del proprio browser.
-          La disabilitazione dei cookie di analisi non compromette il corretto funzionamento del sito.
-        </p>
-
-        <hr />
-
-        <h2>5. Cookie di terze parti</h2>
-        <p>
-          I cookie di Google Analytics sono gestiti da Google LLC.
-        </p>
-        <p>Per maggiori informazioni:</p>
-        <p>
-          <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">https://policies.google.com/privacy</a>
-        </p>
-
-        <hr />
-
-        <h2>6. Modifiche alla Cookie Policy</h2>
-        <p>
-          La presente Cookie Policy può essere soggetta a modifiche nel tempo. Le modifiche saranno pubblicate su questa pagina.
-        </p>
-         
+      {page.sections.map((s, idx) => (
+        <section key={idx}>
+          <h2>{s.heading}</h2>
+          {s.paragraphs?.map((p, pi) => renderParagraph(p, `p-${idx}-${pi}`))}
+          {s.list && (
+            <ul>
+              {s.list.map((li, lidx) => (
+                <li key={lidx}>{li}</li>
+              ))}
+            </ul>
+          )}
+          {idx < page.sections.length - 1 && <hr />}
+        </section>
+      ))}
     </Container>
   );
 }

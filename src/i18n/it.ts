@@ -1404,4 +1404,146 @@ export const it: Translations = {
       }
     }),
   },
+  privacy: {
+    title: "🔒 Privacy Policy",
+    updatedLabel: "Ultimo aggiornamento",
+    sections: [
+      {
+        heading: "1. Titolare del trattamento",
+        paragraphs: [
+          "Il titolare del trattamento dei dati è:",
+          "Angelo Falci\nSito web: https://angelofalci.com\nEmail di contatto: a.falci@live.it",
+        ],
+      },
+      {
+        heading: "2. Tipologia di dati trattati",
+        paragraphs: [
+          "Questo sito non raccoglie direttamente dati personali tramite moduli di contatto, registrazioni o commenti.",
+          "Tuttavia, utilizza Google Analytics, un servizio di analisi statistica fornito da Google LLC, che raccoglie dati di utilizzo in forma aggregata, tra cui:",
+        ],
+        list: [
+          "indirizzo IP (parzialmente anonimizzato)",
+          "dati di navigazione (pagine visitate, durata della sessione)",
+          "informazioni su browser, dispositivo e sistema operativo",
+          "area geografica approssimativa",
+        ],
+      },
+      {
+        heading: "3. Finalità del trattamento",
+        paragraphs: [
+          "I dati raccolti tramite Google Analytics vengono utilizzati esclusivamente per:",
+        ],
+        list: [
+          "analizzare il traffico sul sito",
+          "migliorare contenuti, performance ed esperienza utente",
+        ],
+      },
+      {
+        heading: "4. Base giuridica del trattamento",
+        paragraphs: [
+          "Il trattamento dei dati avviene solo previo consenso dell'utente, espresso tramite il banner cookie.",
+        ],
+      },
+      {
+        heading: "5. Modalità del trattamento",
+        paragraphs: [
+          "Il trattamento avviene con strumenti informatici e telematici, nel rispetto delle misure di sicurezza previste dalla normativa vigente.",
+        ],
+      },
+      {
+        heading: "6. Servizi di terze parti",
+        paragraphs: [
+          "Il sito utilizza:",
+          "Google Analytics – Google LLC",
+          "I dati possono essere trasferiti verso Paesi extra UE (in particolare Stati Uniti), nel rispetto delle garanzie previste dal GDPR.",
+          "Maggiori informazioni: https://policies.google.com/privacy",
+        ],
+      },
+      {
+        heading: "7. Conservazione dei dati",
+        paragraphs: [
+          "I dati raccolti tramite Google Analytics vengono conservati per il periodo previsto dalle impostazioni del servizio e comunque non oltre quanto necessario al raggiungimento delle finalità indicate.",
+        ],
+      },
+      {
+        heading: "8. Diritti dell'utente",
+        paragraphs: [
+          "L'utente ha il diritto di:",
+        ],
+        list: [
+          "accedere ai propri dati",
+          "chiederne la rettifica o cancellazione",
+          "opporsi al trattamento",
+          "revocare il consenso in qualsiasi momento",
+          "proporre reclamo all'Autorità Garante per la protezione dei dati personali",
+        ],
+      },
+      {
+        heading: "9. Modifiche a questa Privacy Policy",
+        paragraphs: [
+          "Il titolare si riserva il diritto di modificare la presente informativa in qualunque momento. Le modifiche saranno pubblicate su questa pagina.",
+        ],
+      },
+    ],
+  },
+  cookie: {
+    title: "🍪 Cookie Policy",
+    updatedLabel: "Ultimo aggiornamento",
+    sections: [
+      {
+        heading: "1. Cosa sono i cookie",
+        paragraphs: [
+          "I cookie sono piccoli file di testo che i siti visitati inviano al dispositivo dell'utente, dove vengono memorizzati per essere poi ritrasmessi agli stessi siti alla visita successiva.",
+        ],
+      },
+      {
+        heading: "2. Tipologie di cookie utilizzati",
+        paragraphs: [
+          "Cookie tecnici",
+          "Questo sito utilizza cookie tecnici necessari al corretto funzionamento del sito. Questi cookie non richiedono il consenso dell'utente.",
+        ],
+      },
+      {
+        heading: "Cookie di analisi (Google Analytics)",
+        paragraphs: [
+          "Il sito utilizza Google Analytics per raccogliere informazioni statistiche in forma aggregata sull'uso del sito.",
+          "I cookie di Google Analytics consentono di:",
+        ],
+        list: [
+          "capire come gli utenti utilizzano il sito",
+          "migliorare contenuti e prestazioni",
+        ],
+      },
+      {
+        heading: "3. Gestione del consenso",
+        paragraphs: [
+          "Al primo accesso al sito, l'utente può:",
+        ],
+        list: [
+          "accettare i cookie di analisi",
+          "rifiutarli",
+          "modificare le proprie preferenze in qualsiasi momento",
+        ],
+      },
+      {
+        heading: "4. Come disabilitare i cookie dal browser",
+        paragraphs: [
+          "L'utente può inoltre gestire o disabilitare i cookie direttamente dalle impostazioni del proprio browser. La disabilitazione dei cookie di analisi non compromette il corretto funzionamento del sito.",
+        ],
+      },
+      {
+        heading: "5. Cookie di terze parti",
+        paragraphs: [
+          "I cookie di Google Analytics sono gestiti da Google LLC.",
+          "Per maggiori informazioni: https://policies.google.com/privacy",
+        ],
+      },
+      {
+        heading: "6. Modifiche alla Cookie Policy",
+        paragraphs: [
+          "La presente Cookie Policy può essere soggetta a modifiche nel tempo. Le modifiche saranno pubblicate su questa pagina.",
+        ],
+      },
+    ],
+  },
 };

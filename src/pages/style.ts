@@ -32,6 +32,7 @@ export const Container = styled.main`
   ul {
     margin-left: 1.6rem;
     padding-left: 0.8rem;
+    margin-top: 6px;
 
     li {
         list-style: disc;

@@ -105,6 +105,12 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  html.light hr {
+    border-top: 1px solid rgba(33,33,33,0.18);
+    background: none;
+    height: 0;
+  }
+
   button, .button{
     border: none;
     cursor: pointer;

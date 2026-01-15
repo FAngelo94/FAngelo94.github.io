@@ -5,13 +5,25 @@ import { Main } from './components/Main/Main'
 import { GlobalStyle } from './styles/global'
 import 'react-toastify/dist/ReactToastify.css'
 import { I18nProvider } from './i18n/I18nProvider'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import CookiePolicy from './pages/CookiePolicy'
+
 function App() {
   return (
     <I18nProvider>
-      <GlobalStyle></GlobalStyle>
-      <Header></Header>
-      <Main></Main>
-      <Footer></Footer>
+      <BrowserRouter>
+        <GlobalStyle />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          {/* fallback to main for unknown routes */}
+          <Route path="*" element={<Main />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </I18nProvider>
   )
 }

@@ -1,6 +1,5 @@
-// Firebase initialization for Analytics
+// Firebase initialization helper. Analytics is loaded only after consent.
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBb7bqu_Wmzi-PxhN5RfxYAcrQS1T3qtpU",
@@ -14,15 +13,19 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-// Initialize Analytics only in the browser environment
-let analytics: any = undefined;
-if (typeof window !== "undefined" && typeof window.document !== "undefined") {
+let analyticsInstance: any = null;
+
+export async function initAnalytics() {
+  if (analyticsInstance) return analyticsInstance;
+  if (typeof window === "undefined" || typeof window.document === "undefined") return null;
   try {
-    analytics = getAnalytics(app);
+    const mod = await import(/* webpackChunkName: "firebase-analytics" */ "firebase/analytics");
+    analyticsInstance = mod.getAnalytics(app);
+    return analyticsInstance;
   } catch (e) {
     // Analytics may fail if cookies are blocked or measurement isn't available.
-    // Swallow the error to avoid breaking the app.
+    return null;
   }
 }
 
-export { app, analytics };
+export { app };

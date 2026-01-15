@@ -42,11 +42,15 @@ export const Container = styled.footer`
     justify-content: center;
     text-align: center;
   }
-  .social-media{
+  .policy-links{
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+
+    a {
+    color: #fb804b;
+    }
 
     img,span{
       font-size: 3rem;

@@ -1,5 +1,4 @@
 import { Container } from './styles'
-import { BrowserRouter as Router } from 'react-router-dom'
 import { NavHashLink, HashLink } from 'react-router-hash-link'
 import { useState } from 'react'
 import { useI18n } from "../../i18n/I18nProvider"
@@ -31,8 +30,7 @@ export function Header() {
 
   return (
     <Container className="header-fixed">
-      <Router>
-        <HashLink smooth to="#home" className="logo">
+        <HashLink smooth to="/#home" className="logo">
           <img src={logo} alt="logo" />
         </HashLink>
 
@@ -48,19 +46,19 @@ export function Header() {
 
 
         <nav className={isActive ? 'active' : ''}>
-          <NavHashLink smooth to="#home" onClick={closeMenu}>
+          <NavHashLink smooth to="/#home" onClick={closeMenu}>
             {t.header.home}
           </NavHashLink>
-          <NavHashLink smooth to="#prices" onClick={closeMenu}>
+          <NavHashLink smooth to="/#prices" onClick={closeMenu}>
             {t.header.prices}
           </NavHashLink>
-          <NavHashLink smooth to="#contacts" onClick={closeMenu}>
+          <NavHashLink smooth to="/#contacts" onClick={closeMenu}>
             {t.header.contacts}
           </NavHashLink>
-          <NavHashLink smooth to="#whoiam" onClick={closeMenu}>
+          <NavHashLink smooth to="/#whoiam" onClick={closeMenu}>
             {t.header.whoiam}
           </NavHashLink>
-          <NavHashLink smooth to="#career" onClick={closeMenu}>
+          <NavHashLink smooth to="/#career" onClick={closeMenu}>
             {t.header.experience}
           </NavHashLink>
           <button className="lang-switch" onClick={() => setLocale(locale === 'en' ? 'it' : 'en')}>
@@ -80,7 +78,7 @@ export function Header() {
             setActive(!isActive)
           }}
         ></div>
-      </Router>
+      
     </Container>
   )
 }

@@ -1,13 +1,9 @@
 import { Container } from './styles'
 
 import reactIcon from '../../assets/react-icon.svg'
-import linkedinIcon from '../../assets/linkedin.png'
-import githubIcon from '../../assets/github-icon.svg'
-import codepen from '../../assets/codepen.png'
-import telegram from '../../assets/telegram.png'
-import codingame from "../../assets/codingame.png"
 import logo from "../../assets/logo.png";
 import { useI18n } from "../../i18n/I18nProvider"
+import { Link } from 'react-router-dom'
 
 const version = process.env.REACT_APP_VERSION || "dev";
 
@@ -26,46 +22,10 @@ export function Footer() {
         <small className="version">v{version}</small>
       </div>
 
-      <div className="social-media">
-        <a
-          href="https://www.linkedin.com/in/angelo-falci/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={linkedinIcon} alt="Linkedin" />
-        </a>
-
-        <a
-          href="https://github.com/FAngelo94"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={githubIcon} alt="GitHub" />
-        </a>
-
-        <a
-          href="https://codepen.io/FAngelo94/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={codepen} alt="Codepen" />
-        </a>
-
-        <a
-          href="https://www.codingame.com/profile/431b0c5f5e61df133a64b701315f977d6866633"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={codingame} alt="Codingame" />
-        </a>
-        
-        <a
-          href="https://web.telegram.org/#/im?p=@fangelo94"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img src={telegram} alt="Telegram" />
-        </a>
+      <div className="policy-links">
+        <Link to="/privacy-policy">Privacy Policy</Link>
+        <span style={{ margin: '0 8px' }}>•</span>
+        <Link to="/cookie-policy">Cookie Policy</Link>
       </div>
     </Container>
   )

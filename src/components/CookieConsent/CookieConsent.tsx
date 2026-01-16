@@ -8,7 +8,6 @@ import {
   Description,
   Actions,
   PrimaryBtn,
-  SecondaryBtn,
 } from "./styles";
 
 const STORAGE_KEY = "analytics_consent"; // values: 'granted' | 'denied'

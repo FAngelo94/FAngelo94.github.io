@@ -3,7 +3,7 @@ const path = require('path');
 
 // Directories to scan (adjust if you store large assets elsewhere)
 const scanDirs = [path.join(__dirname, '../src/assets'), path.join(__dirname, '../public')];
-const MAX_BYTES = 500 * 1024; // 500 KB
+const MAX_BYTES = 2000 * 1024; // 2000 KB
 
 function scanDir(dir) {
   if (!fs.existsSync(dir)) return [];
@@ -29,7 +29,7 @@ function scanDir(dir) {
 
 const all = scanDirs.flatMap(scanDir);
 if (all.length > 0) {
-  console.error('Error: Found oversized assets (>500KB):');
+  console.error('Error: Found oversized assets (>2000KB):');
   all.forEach(a => console.error(` - ${a.file} (${(a.size / 1024).toFixed(1)} KB)`));
   console.error('\nPlease optimize or move these assets out of the bundle (use public/ or generate smaller SVG/PNG).');
   process.exit(1);

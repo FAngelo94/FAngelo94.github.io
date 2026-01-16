@@ -54,6 +54,7 @@ const Projects = ({ projects, setShowCard }: { projects: IProject[], setShowCard
       {projects.map((p, index) => (
         <ScrollAnimation animateIn="flipInX" key={index}>
           <TileCard
+            analyticsLabel={p.title}
             headerIconSrc={project}
             headerRight={p.links ? (
               <>

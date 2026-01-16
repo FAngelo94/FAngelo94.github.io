@@ -3,6 +3,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 import softwareEngineer from "../../assets/software-engineer.png";
 import { useI18n } from "../../i18n/I18nProvider"
 import { openCalendarPopup } from "../../utils/calendar"
+import { trackEvent } from "../../utils/analytics"
 
 export function Home() {
   const { t } = useI18n();
@@ -59,13 +60,19 @@ export function Home() {
       <div className="home-actions">
         <button
           className="button"
-          onClick={() => document.getElementById('prices')?.scrollIntoView({ behavior: 'smooth' })}
+          onClick={() => {
+            document.getElementById('prices')?.scrollIntoView({ behavior: 'smooth' });
+            void trackEvent('home_cta_click', { label: 'look_plans' });
+          }}
         >
           {t.home.ctas.lookPlans}
         </button>
         <button
           className="button button-secondary"
-          onClick={() => openCalendarPopup(t.contacts.calendarLink)}
+          onClick={() => {
+            openCalendarPopup(t.contacts.calendarLink);
+            void trackEvent('home_cta_click', { label: 'speak_goals' });
+          }}
         >
           {t.home.ctas.speakGoals}
         </button>

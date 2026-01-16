@@ -70,6 +70,14 @@ export const Container = styled.header`
 
   }
 
+  /* when light theme is active, make the lang-switch text dark to match other menu items */
+  html.light & {
+    .lang-switch {
+      color: #121212;
+    }
+  }
+
+
   .menu-container{
     cursor: pointer;
     padding: 0.6rem 0;

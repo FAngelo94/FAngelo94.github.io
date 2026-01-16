@@ -4,6 +4,7 @@ import reactIcon from '../../assets/react-icon.svg'
 import logo from "../../assets/logo.png";
 import { useI18n } from "../../i18n/I18nProvider"
 import { Link } from 'react-router-dom'
+import { trackEvent } from '../../utils/analytics'
 
 const version = process.env.REACT_APP_VERSION || "dev";
 
@@ -11,7 +12,7 @@ export function Footer() {
   const { t } = useI18n();
   return (
     <Container className="footer">
-      <a href="/" className="logo">
+      <a href="/" className="logo" onClick={() => void trackEvent('footer_logo_click', { to: '/' })}>
         <img src={logo} alt="logo"/>
       </a>
       <div>
@@ -23,9 +24,9 @@ export function Footer() {
       </div>
 
       <div className="policy-links">
-        <Link to="/privacy-policy">Privacy Policy</Link>
-        <span style={{ margin: '0 8px' }}>•</span>
-        <Link to="/cookie-policy">Cookie Policy</Link>
+        <Link to="/privacy-policy" onClick={() => void trackEvent('footer_policy_click', { policy: 'privacy' })}>Privacy Policy</Link>
+        <span>•</span>
+        <Link to="/cookie-policy" onClick={() => void trackEvent('footer_policy_click', { policy: 'cookie' })}>Cookie Policy</Link>
       </div>
     </Container>
   )

@@ -1,7 +1,9 @@
 import React from "react";
 import { TileCard as TileCardContainer } from "./styles";
+import { trackEvent } from "../../utils/analytics";
 
 interface TileCardProps {
+  analyticsLabel: string; // label for analytics tracking
   headerIconSrc: string;
   headerRight?: React.ReactNode; // icons or company link
   title: React.ReactNode; // allow rich title content
@@ -14,7 +16,24 @@ interface TileCardProps {
   onSecondaryCtaClick?: () => void; // handler for secondary CTA
 }
 
-export function TileCard({ headerIconSrc, headerRight, title, body, footerList, onClickBody, ctaLabel, onCtaClick, secondaryCtaLabel, onSecondaryCtaClick }: TileCardProps) {
+export function TileCard({analyticsLabel, headerIconSrc, headerRight, title, body, footerList, onClickBody, ctaLabel, onCtaClick, secondaryCtaLabel, onSecondaryCtaClick }: TileCardProps) {
+  const handleBodyClick = () => {
+    console.log('TileCard body clicked', analyticsLabel);
+    try { 
+      if (onClickBody) onClickBody();
+    } finally {
+      void trackEvent("card_body_click", { card: analyticsLabel });
+    }
+  };
+
+  const handleCta = (cta?: string, cb?: (() => void) | undefined) => {
+    try {
+      if (cb) cb();
+    } finally {
+      void trackEvent("card_cta_click", { card: analyticsLabel, cta: cta || null });
+    }
+  };
+
   return (
     <TileCardContainer className="tile-card">
       <header>
@@ -23,7 +42,7 @@ export function TileCard({ headerIconSrc, headerRight, title, body, footerList, 
           {headerRight}
         </div>
       </header>
-      <div className="body" onClick={onClickBody}>
+      <div className="body" onClick={handleBodyClick}>
         <h3>{title}</h3>
         {body}
       </div>
@@ -36,12 +55,12 @@ export function TileCard({ headerIconSrc, headerRight, title, body, footerList, 
         {(ctaLabel || secondaryCtaLabel) && (
           <div className="card-actions">
             {ctaLabel && (
-              <button className="card-cta" type="button" onClick={onCtaClick}>
+              <button className="card-cta" type="button" onClick={() => handleCta(ctaLabel, onCtaClick)}>
                 {ctaLabel}
               </button>
             )}
             {secondaryCtaLabel && (
-              <button className="card-cta secondary" type="button" onClick={onSecondaryCtaClick}>
+              <button className="card-cta secondary" type="button" onClick={() => handleCta(secondaryCtaLabel, onSecondaryCtaClick)}>
                 {secondaryCtaLabel}
               </button>
             )}

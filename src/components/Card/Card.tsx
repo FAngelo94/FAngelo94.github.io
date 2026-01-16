@@ -82,7 +82,7 @@ export function Card({ title, type, text, skills, handleClose }: ICard) {
           )}
           <ul className="tech-list">
             {skills.map((skill, index) => (
-              <li>{skill}</li>
+              <li key={index}>{skill}</li>
             ))}
           </ul>
         </div>

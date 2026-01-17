@@ -44,6 +44,7 @@ const CareerItems = ({ items }: { items: ICareerItem[] }) => {
       {items.map((item, index) => (
         <ScrollAnimation animateIn="flipInX" key={index}>
           <TileCard
+            analyticsLabel={item.title}
             headerIconSrc={item.type === "job" ? suitcase : bachelor}
             headerRight={item.type === "job" && item.link && item.company ? (
               <a href={item.link}>{item.company}</a>

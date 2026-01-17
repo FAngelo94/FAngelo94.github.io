@@ -51,6 +51,7 @@ const Projects = ({ prices: plans, ctas, contacts, setShowCard }: { prices: IPri
       {plans.map((p, index) => (
         <ScrollAnimation animateIn="flipInX" key={index}>
           <TileCard
+            analyticsLabel={p.title}
             headerIconSrc={p.icon}
             headerRight={<span className="type">
               {p.type}

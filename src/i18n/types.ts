@@ -23,4 +23,22 @@ export interface Translations {
   form: Form;
   career: Career;
   projects: Projects;
+  privacy?:PolicyPage;
+  cookie?:PolicyPage;
+}
+
+export type PolicySection = {
+  heading: string;
+  paragraphs?: string[];
+  list?: string[];
+};
+
+export type PolicyPage = {
+  title: string;
+  updatedLabel?: string;
+  sections: PolicySection[];
+};
+
+declare module "./types" {
+  // augment Translations to include policies
 }

@@ -8,6 +8,7 @@ import { I18nProvider } from './i18n/I18nProvider'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import CookiePolicy from './pages/CookiePolicy'
+import CookieConsent from './components/CookieConsent/CookieConsent'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="*" element={<Main />} />
         </Routes>
         <Footer />
+        <CookieConsent />
       </BrowserRouter>
     </I18nProvider>
   )

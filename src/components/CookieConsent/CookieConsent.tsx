@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { initAnalytics } from "../../firebase";
+import { useI18n } from "../../i18n/I18nProvider";
 import {
   Banner,
   Content,
@@ -13,6 +14,7 @@ import {
 const STORAGE_KEY = "analytics_consent"; // values: 'granted' | 'denied'
 
 export default function CookieConsent(): JSX.Element | null {
+  const { t } = useI18n();
   const [consent, setConsent] = useState<string | null>(null);
 
   useEffect(() => {
@@ -40,12 +42,12 @@ export default function CookieConsent(): JSX.Element | null {
     <Banner role="dialog" aria-live="polite">
       <Content>
         <Text>
-          <Title>Questo sito usa i cookie</Title>
-          <Description>Questo sito utilizza cookie di analisi di terze parti (Google Analytics) per raccogliere informazioni statistiche sull’utilizzo del sito. Puoi accettare o rifiutare l’uso di questi cookie.</Description>
+          <Title>{t.cookieConsent?.title}</Title>
+          <Description>{t.cookieConsent?.description}</Description>
         </Text>
         <Actions>
-          <PrimaryBtn onClick={decline}>Rifiuta</PrimaryBtn>
-          <PrimaryBtn onClick={accept}>Accetta</PrimaryBtn>
+          <PrimaryBtn onClick={decline}>{t.cookieConsent?.decline}</PrimaryBtn>
+          <PrimaryBtn onClick={accept}>{t.cookieConsent?.accept}</PrimaryBtn>
         </Actions>
       </Content>
     </Banner>

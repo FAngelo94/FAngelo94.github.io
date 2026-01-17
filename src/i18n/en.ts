@@ -156,4 +156,11 @@ export const en: Translations = {
     ],
   },
 
+  cookieConsent: {
+    title: "This site uses cookies",
+    description: "This site uses third-party analytics cookies (Google Analytics) to collect statistical information about site usage. You can accept or decline the use of these cookies.",
+    accept: "Accept",
+    decline: "Decline",
+  },
+
 };

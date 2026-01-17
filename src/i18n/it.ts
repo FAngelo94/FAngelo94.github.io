@@ -19,6 +19,12 @@ export const it: Translations = {
       "Ho la patente B e A"
     ],
   },
+  cookieConsent: {
+    title: "Questo sito usa i cookie",
+    description: "Questo sito utilizza cookie di analisi di terze parti (Google Analytics) per raccogliere informazioni statistiche sull’utilizzo del sito. Puoi accettare o rifiutare l’uso di questi cookie.",
+    accept: "Accetta",
+    decline: "Rifiuta",
+  },
   whoIam: {
     ...whoIam,
     paragraphs: [

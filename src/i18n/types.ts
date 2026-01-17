@@ -25,6 +25,7 @@ export interface Translations {
   projects: Projects;
   privacy?:PolicyPage;
   cookie?:PolicyPage;
+  cookieConsent?: CookieConsent;
 }
 
 export type PolicySection = {
@@ -37,6 +38,13 @@ export type PolicyPage = {
   title: string;
   updatedLabel?: string;
   sections: PolicySection[];
+};
+
+export type CookieConsent = {
+  title: string;
+  description: string;
+  accept: string;
+  decline: string;
 };
 
 declare module "./types" {

@@ -42,11 +42,11 @@ export const home = {
   title: ["Hire a", "Software Engineer", "in less than 24 hours"],
   subtitle: "I'm the right person for you if:",
   paragraphs: [
-    "You need a web developer to join your team.",
-    "You want to improve your website or application with new features or fix existing ones.",
+    "You need a full-stack web developer to join your team.",
+    "You want to improve your website or application with new features.",
     "You need someone to develop all software for your startup from scratch.",
-    "You want a consultant to validate your idea or project before starting development.",
-    "You’re not sure which technologies or type of developer your project requires.",
+    "You want a consultant to validate your idea before starting development.",
+    "You need specific training on web development technologies or methodologies.",
     "You want to propose a collaboration.",
   ],
   footerText: "Don’t waste time — contact me and let’s build something great together!",
@@ -431,6 +431,90 @@ export const projects = {
       \nAll required assets are packaged into an output folder that can be copied directly to the client server and executed.\
       \nThis setup can be further improved in the future based on client needs."
         }
+      ],
+    },
+    // Orbiting Rocks
+    {
+      title: "Orbiting Rocks - Trust Legibility Experience",
+      description:
+        "I built the Orbiting Rocks experience that narrates how early-stage founders build trust through legibility while hosting a free Trust Legibility Tool for investors, accelerators, and operators.",
+      links: [
+        {
+          label: "Orbiting Rocks",
+          url: "https://orbiting.rocks",
+          icon: externalLinkIcon,
+        },
+      ],
+      mainSkills: ["TypeScript", "React", "Tailwind CSS", "Firebase"],
+      allSkills: [
+        "Vite",
+        "React Router",
+        "@tanstack/react-query",
+        "Radix UI",
+        "Framer Motion",
+        "Tailwind CSS Animate",
+        "Sonner",
+        "Lucide",
+        "html2canvas",
+        "jsPDF",
+        "Firebase Auth",
+        "Firestore",
+      ],
+      longtext: [
+        {
+          type: "text",
+          value:
+            "Orbiting Rocks is the storytelling home for an independent research initiative that reframes early-stage cybersecurity as trust legibility.\
+      \nThe experience stitches together Home, About, The Lens, Framework, and Contacts pages, all powered by Vite, React, and TypeScript, wrapped with `LanguageProvider` (English/German), `QueryClientProvider`, and `Layout`, so navigation, cookie consent, and shared typography stay consistent while future asynchronous flows share the same React Query cache."
+        },
+        {
+          type: "subtitle",
+          value: "Legibility Tool"
+        },
+        {
+          type: "text",
+          value:
+            "The hero on the Legibility Tool page uses `TrustIndicator` metrics, gradient backdrops, TagPills, and CTA buttons that scroll to the Problem → Approach → Tool narrative.\
+      \nThis marketing funnel explains how acceleration, asymmetry, and external scrutiny shape the Trust Friction Index before inviting the reader to launch the free assessment."
+        },
+        {
+          type: "subtitle",
+          value: "Assessment Logic"
+        },
+        {
+          type: "text",
+          value:
+            "The `/tool` route stages `ToolIntroSection`, `ToolAssessmentSection`, and `ToolReportSection` within a single-page wizard. A typed `DIMENSIONS` catalog defines five pillars (Contextual Exposure, Operational Maturity, Risk Awareness, Articulation Capacity, Semantic Exposure) and the UI renders their questions with grouped options, tooltip descriptions, and progress tracking.\
+      \nAnswers feed `calculateResults`, which normalizes the scores, maps descriptive labels, identifies semantic gaps, and computes the `Trust Friction` gap level using `POSITIONING`, `GAPS_DEF`, `STATEMENTS`, and `ACTIONS`. The wizard persists every session by saving `legibility_reports` in Firestore when the user is authenticated and falling back to localStorage for anonymous readers, exposing helpers to view, compare, or forget historical entries."
+        },
+        {
+          type: "subtitle",
+          value: "Reports & Insights"
+        },
+        {
+          type: "text",
+          value:
+            "The report surface renders the position quadrant, gap badges, and prioritized actions, then uses `html2canvas` + `jsPDF` to export a downloadable Trust Legibility Report.\
+      \nTrajectory helpers show how successive evaluations evolve, while the intro page exposes past reports, compares readings, and lets the user delete individual entries or clear all history with Radix-powered dialogs."
+        },
+        {
+          type: "subtitle",
+          value: "Authentication & Infrastructure"
+        },
+        {
+          type: "text",
+          value:
+            "Firebase Auth, Firestore, and Analytics underpin the experience. The `lib/auth` helpers handle registration, login, email verification, password resets, and secure profile updates, while `useAuth` tracks the current user and toggles gated access to the tool. `initializeAnalytics` conditions analytics on the browser environment, and Firestore writes are namespaced by the authenticated UID, with graceful localStorage fallbacks ensuring the tool still works offline."
+        },
+        {
+          type: "subtitle",
+          value: "Experience & Design"
+        },
+        {
+          type: "text",
+          value:
+            "The UI relies on Tailwind CSS, Tailwind Animate, Framer Motion, Lucide icons, and custom Radix components for tooltips, dialogs, and buttons, while `Sonner` delivers toast feedback. The site stays responsive with fluid spacing, gradient backdrops, and `TrustIndicator` cards, and every CTA has accessible text and focus styles; translations and the `CookieConsent` banner keep the experience international and compliant."
+        },
       ],
     },
     // One TCG Hero

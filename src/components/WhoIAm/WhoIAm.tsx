@@ -10,20 +10,20 @@ import djangoIcon from "../../assets/django.svg";
 import copilotIcon from "../../assets/copilot.svg";
 import mysqlIcon from "../../assets/mysql.svg";
 import pythonIcon from "../../assets/python.svg";
-import windowsIcon from "../../assets/windows-10.svg";
 import vscodeIcon from "../../assets/vscode.svg";
-import ubuntuIcon from "../../assets/ubuntu.png";
 import viteIcon from "../../assets/vite.svg";
 import problemSolvingIcon from "../../assets/problem-solving.svg";
 import ScrollAnimation from "react-animate-on-scroll";
 import openAiIcon from "../../assets/openai.svg";
 import profileImage from "../../assets/profile-image.png";
+import claudeIcon from "../../assets/claude.png";
 import { useI18n } from "../../i18n/I18nProvider"
 
 export function WhoIAm() {
   const { t } = useI18n();
   const icons = [
     { icon: problemSolvingIcon, name: "ProblemSolving" },
+    { icon: claudeIcon, name: "Claude" },
     { icon: jsIcon, name: "JavaScript" },
     { icon: pythonIcon, name: "Python" },
     { icon: reactIcon, name: "React" },
@@ -36,8 +36,6 @@ export function WhoIAm() {
     { icon: mysqlIcon, name: "SQL" },
     { icon: dockerIcon, name: "Docker" },
     { icon: androidIcon, name: "Android" },
-    { icon: windowsIcon, name: "Windows" },
-    { icon: ubuntuIcon, name: "Ubuntu" },
     { icon: copilotIcon, name: "Copilot" },
     { icon: viteIcon, name: "Vite" },
   ];
